@@ -5118,6 +5118,10 @@ PrefabInstance:
       value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: 683650805199822136, guid: 7532420379963334386e67065e0e14db, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 683650805199822136, guid: 7532420379963334386e67065e0e14db, type: 3}
       propertyPath: m_Color.b
       value: 0.9019608
       objectReference: {fileID: 0}

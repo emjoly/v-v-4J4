@@ -1,5 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,16 +24,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private float groundDashCooldown = 0f;
     private bool hasDashedInAir = false;
-
     private int doubleJump;
+    [SerializeField] private float slamForce = 30f;
     [SerializeField] private int doubleJumpV;
     [SerializeField] private int doubleJumpF;
 
     // New variables for apex modifier
     private float _jumpApexThreshold = 0.7f; // Adjust as needed
     private float _apexBonus = 13f; // Adjust as needed
-    private float _minFallSpeed = 5f; // Adjust as needed
-    private float _maxFallSpeed = 20f; // Adjust as needed
 
     void Start()
     {
@@ -69,6 +70,10 @@ public class PlayerMovement : MonoBehaviour
         if (directionX != 0)
         {
             transform.localScale = new Vector3(directionX, 1, 1);
+        }
+        if (Input.GetButtonDown("Slam") && !IsGrounded())
+        {
+            StartCoroutine(SlamThroughPlatforms());
         }
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
@@ -125,11 +130,19 @@ public class PlayerMovement : MonoBehaviour
         extraJump();
     }
 
-    private bool IsGrounded()
-    {
-        bool grounded = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, JumpableGround);
-        return grounded;
-    }
+private bool IsGrounded()
+{
+    // Check for collision with layers specified in JumpableGround layer mask
+    bool groundedOnJumpableGround = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, JumpableGround);
+
+    // Check for collision with layers specified in BrisPlatforme layer mask
+    bool groundedOnBreakablePlatform = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, LayerMask.GetMask("BrisPlateforme"));
+
+    // Check if the player is on the ground
+    bool grounded = groundedOnJumpableGround || groundedOnBreakablePlatform;
+
+    return grounded;
+}
 
     public void PickupItem()
     {
@@ -163,4 +176,26 @@ public class PlayerMovement : MonoBehaviour
             doubleJump = doubleJumpV; // Reset double jump counter when grounded
         }
     }
+    private IEnumerator SlamThroughPlatforms()
+{
+        // Disable collisions with platforms temporarily
+    Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), true);
+
+    // Move the player downward quickly
+    rb.velocity = Vector2.down * slamForce;
+
+    // Wait for a short duration to simulate the slam effect
+    yield return new WaitForSeconds(0.2f);
+
+    // Re-enable collisions with platforms
+    Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), false);
+
+    // Check if the player is colliding with any breakable platforms
+    Collider2D[] hitColliders = Physics2D.OverlapBoxAll(boxCollider.bounds.center, boxCollider.bounds.size, 0f, LayerMask.GetMask("BrisPlateforme"));
+    foreach (Collider2D collider in hitColliders)
+    {
+        // Call the BreakPlatform method of the collided platform
+        collider.GetComponent<DestructionPlateforme>()?.BreakPlatform();
+    }
+}
 }
