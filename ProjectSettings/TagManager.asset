@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - New tag
   - Enemy
+  - Ground
+  - bobo
+  - life
   layers:
   - Default
   - TransparentFX

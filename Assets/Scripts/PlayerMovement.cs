@@ -73,11 +73,15 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
-        //if (directionX != 0)
-        // {
-        // transform.localScale = new Vector3(directionX, 1, 1);
-        //}
-        if (Input.GetButtonDown("Slam") && !IsGrounded())
+        if (directionX < 0)
+         {
+         transform.localScale = new Vector3(-0.4423f, 0.4423f, 0.4423f);
+        }
+         else if (directionX > 0)
+        {         
+          transform.localScale = new Vector3(0.4423f, 0.4423f, 0.4423f);
+        }
+            if (Input.GetButtonDown("Slam") && !IsGrounded())
         {
             StartCoroutine(SlamThroughPlatforms());
         }
