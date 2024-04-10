@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float slamForce = 30f;
     [SerializeField] private int doubleJumpV;
     [SerializeField] private int doubleJumpF;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealtBar healthBar;
+    public GameObject Ennemy;
 
     // New variables for apex modifier
     private float _jumpApexThreshold = 0.7f; // Adjust as needed
@@ -37,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
 
@@ -67,11 +73,15 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
-        //if (directionX != 0)
-        // {
-        // transform.localScale = new Vector3(directionX, 1, 1);
-        //}
-        if (Input.GetButtonDown("Slam") && !IsGrounded())
+        if (directionX < 0)
+         {
+         transform.localScale = new Vector3(-0.4423f, 0.4423f, 0.4423f);
+        }
+         else if (directionX > 0)
+        {         
+          transform.localScale = new Vector3(0.4423f, 0.4423f, 0.4423f);
+        }
+            if (Input.GetButtonDown("Slam") && !IsGrounded())
         {
             StartCoroutine(SlamThroughPlatforms());
         }
@@ -129,6 +139,20 @@ public class PlayerMovement : MonoBehaviour
 
         extraJump();
     }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+/*         if (currentHealth <= 0)
+        {
+            Die();
+        } */
+    }
+
+
+/*  Faire le collisoon enter avec ennemy pour tester la health bar */
+
 
 private bool IsGrounded()
 {
@@ -198,4 +222,11 @@ private bool IsGrounded()
         collider.GetComponent<DestructionPlateforme>()?.BreakPlatform();
     }
 }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(5); // Reduce player's health by 20 upon collision with the enemy
+        }
+    }
 }
