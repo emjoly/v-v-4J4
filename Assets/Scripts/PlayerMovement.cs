@@ -73,10 +73,17 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
-        //if (directionX != 0)
-        // {
-        // transform.localScale = new Vector3(directionX, 1, 1);
-        //}
+        if (directionX < 0)
+        {
+        // Flip the player horizontally
+        transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f); // Flipping the player horizontally and adjusting scale
+        }
+        else if (directionX > 0)
+        {
+        // Reset player scale to its original scale
+        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f); // Keeping the player's original scale
+        }
+
         if (Input.GetButtonDown("Slam") && !IsGrounded())
         {
             StartCoroutine(SlamThroughPlatforms());
@@ -147,7 +154,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-/*  Faire le collisoon enter avec ennemy pour tester la health bar */
 
 
 private bool IsGrounded()
