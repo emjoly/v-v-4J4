@@ -76,12 +76,12 @@ public class PlayerMovement : MonoBehaviour
         if (directionX < 0)
         {
         // Flip the player horizontally
-        transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f); // Flipping the player horizontally and adjusting scale
+        transform.localScale = new Vector3(-1f, 1f, 1f); // Flipping the player horizontally and adjusting scale
         }
         else if (directionX > 0)
         {
         // Reset player scale to its original scale
-        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f); // Keeping the player's original scale
+        transform.localScale = new Vector3(1f, 1f, 1f); // Keeping the player's original scale
         }
 
         if (Input.GetButtonDown("Slam") && !IsGrounded())
