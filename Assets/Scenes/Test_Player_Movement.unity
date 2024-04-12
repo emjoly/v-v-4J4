@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 233025239}
   - component: {fileID: 233025238}
   - component: {fileID: 233025237}
-  - component: {fileID: 233025241}
+  - component: {fileID: 233025242}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1405,7 +1405,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &233025241
+--- !u!114 &233025242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1414,20 +1414,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 233025236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19ef5288f0c884f0a9546fb3fced50f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b6aeb5832fd614ca48ad3b9b23ab34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   JumpableGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   moveSpeed: 7
-  jumpForce: 10
+  jumpForce: 14
   maxFallSpeed: 20
   gravityMultiplier: 2
-  jumpTime: 0.5
+  jumpTime: 0
   slamForce: 30
-  doubleJumpV: 1
-  doubleJumpF: 15
+  doubleJumpV: 0
+  doubleJumpF: 0
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1651202966}
@@ -1858,10 +1858,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    nom: aawdawd
+    nom: emily
     phrases:
-    - aawdawdawd awdawd awdawdawd
-    - ' awdawdawdawd awdawdawd'
+    - caca miel caca miel caca miel caca miel caca miel caca miel
+    - ' awda wdawda wd awd awda wd'
     - awawd awdawdawd dawdawdawd awdawdawd
 --- !u!1 &622533570
 GameObject:
