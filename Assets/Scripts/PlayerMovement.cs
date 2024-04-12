@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D boxCollider;
+    private CapsuleCollider2D capCollider;
     [SerializeField] private LayerMask JumpableGround;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        capCollider = GetComponent<CapsuleCollider2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -76,12 +76,12 @@ public class PlayerMovement : MonoBehaviour
         if (directionX < 0)
         {
         // Flip the player horizontally
-        transform.localScale = new Vector3(-1f, 1f, 1f); // Flipping the player horizontally and adjusting scale
+        transform.localScale = new Vector3(0.1510916f, 0.1510916f, 0.1510916f); // Flipping the player horizontally and adjusting scale
         }
         else if (directionX > 0)
         {
         // Reset player scale to its original scale
-        transform.localScale = new Vector3(1f, 1f, 1f); // Keeping the player's original scale
+        transform.localScale = new Vector3(-0.1510916f, 0.1510916f, 0.1510916f); // Keeping the player's original scale
         }
 
         if (Input.GetButtonDown("Slam") && !IsGrounded())
@@ -159,10 +159,10 @@ public class PlayerMovement : MonoBehaviour
 private bool IsGrounded()
 {
     // Check for collision with layers specified in JumpableGround layer mask
-    bool groundedOnJumpableGround = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, JumpableGround);
+    bool groundedOnJumpableGround = Physics2D.BoxCast(capCollider.bounds.center, capCollider.bounds.size, 0f, Vector2.down, .1f, JumpableGround);
 
     // Check for collision with layers specified in BrisPlatforme layer mask
-    bool groundedOnBreakablePlatform = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, LayerMask.GetMask("BrisPlateforme"));
+    bool groundedOnBreakablePlatform = Physics2D.BoxCast(capCollider.bounds.center, capCollider.bounds.size, 0f, Vector2.down, .1f, LayerMask.GetMask("BrisPlateforme"));
 
     // Check if the player is on the ground
     bool grounded = groundedOnJumpableGround || groundedOnBreakablePlatform;
@@ -217,7 +217,7 @@ private bool IsGrounded()
     Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), false);
 
     // Check if the player is colliding with any breakable platforms
-    Collider2D[] hitColliders = Physics2D.OverlapBoxAll(boxCollider.bounds.center, boxCollider.bounds.size, 0f, LayerMask.GetMask("BrisPlateforme"));
+    Collider2D[] hitColliders = Physics2D.OverlapBoxAll(capCollider.bounds.center, capCollider.bounds.size, 0f, LayerMask.GetMask("BrisPlateforme"));
     foreach (Collider2D collider in hitColliders)
     {
         // Call the BreakPlatform method of the collided platform
