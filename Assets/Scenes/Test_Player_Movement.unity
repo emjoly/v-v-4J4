@@ -1447,13 +1447,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 7
-  jumpForce: 10
   maxFallSpeed: 20
   gravityMultiplier: 2
   jumpTime: 0.5
-  slamForce: 30
+  jumpForce: 10
   doubleJumpV: 1
   doubleJumpF: 15
+  slamForce: 30
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1651202966}
@@ -1497,7 +1497,9 @@ MonoBehaviour:
   attackRange: 0.47
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
+  DommageAttaque: 20
+  debisAttaque: 2
 --- !u!1 &278072672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,7 +1742,8 @@ GameObject:
   - component: {fileID: 606706135}
   - component: {fileID: 606706139}
   - component: {fileID: 606706140}
-  m_Layer: 0
+  - component: {fileID: 606706141}
+  m_Layer: 8
   m_Name: Apple_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1910,7 +1913,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &606706140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,6 +1932,20 @@ MonoBehaviour:
     - aawdawdawd awdawd awdawdawd
     - ' awdawdawdawd awdawdawd'
     - awawd awdawdawd dawdawdawd awdawdawd
+--- !u!114 &606706141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606706134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7454dab23177846aba5534a3edb14760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  animator: {fileID: 606706136}
 --- !u!1 &622533570
 GameObject:
   m_ObjectHideFlags: 0
