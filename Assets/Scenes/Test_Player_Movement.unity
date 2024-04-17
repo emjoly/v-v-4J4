@@ -1281,6 +1281,7 @@ GameObject:
   - component: {fileID: 233025241}
   - component: {fileID: 233025242}
   - component: {fileID: 233025243}
+  - component: {fileID: 233025244}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1443,21 +1444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ef5288f0c884f0a9546fb3fced50f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpableGround:
-    serializedVersion: 2
-    m_Bits: 64
-  moveSpeed: 7
-  maxFallSpeed: 20
-  gravityMultiplier: 2
-  jumpTime: 0.5
-  jumpForce: 10
-  doubleJumpV: 1
-  doubleJumpF: 15
-  slamForce: 30
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 1651202966}
-  Ennemy: {fileID: 606706134}
 --- !u!95 &233025242
 Animator:
   serializedVersion: 7
@@ -1500,6 +1486,33 @@ MonoBehaviour:
     m_Bits: 256
   DommageAttaque: 20
   debisAttaque: 2
+--- !u!114 &233025244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233025236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b6aeb5832fd614ca48ad3b9b23ab34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpableGround:
+    serializedVersion: 2
+    m_Bits: 0
+  moveSpeed: 7
+  maxFallSpeed: 20
+  gravityMultiplier: 2
+  jumpTime: 0
+  jumpForce: 14
+  doubleJumpV: 0
+  doubleJumpF: 0
+  slamForce: 30
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  Ennemy: {fileID: 0}
 --- !u!1 &278072672
 GameObject:
   m_ObjectHideFlags: 0

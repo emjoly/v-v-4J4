@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Variables pour les dashs
     private bool canDash = true; // Flag pour vérifier si le joueur peut dash
     private bool isDashing; // Flag pour vérifier si le joueur est en train de dash
-    private float dashSpeed = 24f; // Vitesse de dash
+    private float dashSpeed = 150f; // Vitesse de dash
     private float dashTime = 0.2f; // Durée de dash
     private float dashCooldown = 0.2f; // Cooldown de dash (permet au joueur de faire un dash toutes les 0.2 secondes)
     private bool hasDashedInAir = false; // Flag pour vérifier si le joueur a déjà dashé dans les airs
@@ -105,12 +105,12 @@ public class PlayerMovement : MonoBehaviour
         // Flip le sprite du joueur en fonction de la direction
         if (directionX < 0)
         {
-        transform.localScale = new Vector3(-1f, 1f, 1f); // Transform le scale du joueur pour ensuite flip le sprite
+        transform.localScale = new Vector3(-0.14f, 0.14f, 0.14f); // Transform le scale du joueur pour ensuite flip le sprite
         }
         // Si la direction est positive, reset le scale du joueur
         else if (directionX > 0)
         {
-        transform.localScale = new Vector3(1f, 1f, 1f); // Reset le scale original ù du joueur
+        transform.localScale = new Vector3(0.14f, 0.14f, 0.14f); // Reset le scale original ù du joueur
         }
 
         // Si le joueur appuie sur la touche Slam et n'est pas au sol
