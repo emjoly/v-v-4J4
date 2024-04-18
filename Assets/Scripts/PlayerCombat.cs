@@ -11,6 +11,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
     public int DommageAttaque = 20;
     public float debisAttaque = 2f;
+    public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
     // Update is called once per frame
@@ -21,31 +22,31 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetButtonDown("Attack"))
             {
                 Attack();
-                prochaineAttaqueTemps = Time.time + 1f / debisAttaque;
+                prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
             }
         }
-        // Si on appuie sur le bouton d'attaque
-        if(Input.GetButtonDown("Attack")){
-            // On appelle la fonction Attack
-            Attack();
-        }
     }
+
     // Fonction pour attaquer
-    void Attack(){
+    void Attack()
+    {
         // On active l'animation d'attaque
         animator.SetTrigger("Attack");
         // Detecter les ennemis dans la range d'attaque
         Collider2D[] EnnemieTouche = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // Appliquer des degats
-        foreach(Collider2D ennemi in EnnemieTouche){
+        foreach (Collider2D ennemi in EnnemieTouche)
+        {
             ennemi.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
         }
     }
+
     // Fonction pour faire apparaitre un cercle dans l'editeur
     void OnDrawGizmosSelected()
     {
         // Si c'est nul, sortir de la fonction
-        if(attackPoint == null){
+        if (attackPoint == null)
+        {
             return;
         }
         // Dessiner un cercle pour la range d'attaque

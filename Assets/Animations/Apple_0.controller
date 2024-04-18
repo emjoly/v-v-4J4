@@ -39,13 +39,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -2541378514189757144}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 130, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -798623922754420649}
     m_Position: {x: 60, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5780494375790914437}
-    m_Position: {x: -80, y: -40, z: 0}
+    m_Position: {x: -160, y: -60, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1186214706830520097}

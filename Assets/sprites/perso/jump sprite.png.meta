@@ -191,7 +191,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jump sprite_0: -4309686356104263199
+      jump sprite_1: 4166024986264824628
+      jump sprite_2: 653599081909803119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

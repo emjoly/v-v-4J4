@@ -282,8 +282,7 @@ public class PlayerMovement : MonoBehaviour
     }
 }
 
-    // Fonction de détection de la collision avec les ennemis
-    void OnCollisionEnter2D(Collision2D collision)
+void OnCollisionEnter2D(Collision2D collision)
     {
         // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
         if (collision.gameObject.CompareTag("Enemy"))

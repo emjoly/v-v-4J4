@@ -4,28 +4,52 @@ using UnityEngine;
 
 public class FallingPlatforms : MonoBehaviour
 {
-    // Float pour le délai avant la chute de la plateforme
-    private float Delai = 1f;
-    private float DestructionDelai = 2f;
+    private float Delai = 0.5f;
+    private float RespawnDelai = 5f;
 
-    // Rigidbody2D de la plateforme
     [SerializeField] private Rigidbody2D rb;
+    private bool playerOnPlatform = false;
+    private Vector3 initialPosition;
 
-    // Fonction pour détecter la collision
-    private void OnCollisionEnter2D(Collision2D collision){
-        // Si la collision est avec le joueur
-        if(collision.gameObject.CompareTag("Player")){
-            // On appelle la coroutine Fall
+    private void Start()
+    {
+        initialPosition = transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerOnPlatform = true;
             StartCoroutine(Fall());
         }
     }
-    // Coroutine pour faire tomber la plateforme
-    private IEnumerator Fall(){
-        // On attend le délai avant de faire tomber la plateforme
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerOnPlatform = false;
+        }
+    }
+
+    private IEnumerator Fall()
+    {
         yield return new WaitForSeconds(Delai);
-        // On change le bodyType de la plateforme en Dynamic
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        // On détruit la plateforme après un certain délai
-        Destroy(gameObject, DestructionDelai);
+
+        if (playerOnPlatform)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            StartCoroutine(Respawn());
+        }
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(RespawnDelai);
+
+        transform.position = initialPosition;
+        rb.bodyType = RigidbodyType2D.Static;
     }
 }
+

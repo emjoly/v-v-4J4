@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Boite
   - Spike
+  - FallingPlatform
   layers:
   - Default
   - TransparentFX

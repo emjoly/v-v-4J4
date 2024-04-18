@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e2c4474d9da79341bee812ee2d0bfba
+guid: 2c93ae0ce36b54ecc991ba07d7ee8da2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8886549356970886300
-    second: BibitteChienM_0
+      213: -209663254022021088
+    second: hand2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BibitteChienM_0
+      name: hand2_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 93
-        width: 1439
-        height: 963
+        x: 249
+        y: 210
+        width: 695
+        height: 675
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c94c935ae8d535b70800000000000000
-      internalID: 8886549356970886300
+      spriteID: 670f99f0d3737432e96a4522d5712dc7
+      internalID: -843703176
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bcfbc6c279a5444678ae3c6e8408b5b3
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BibitteChienM_0: 8886549356970886300
+      hand2_0: -843703176
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

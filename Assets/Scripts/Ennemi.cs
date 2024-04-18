@@ -40,6 +40,16 @@ public class Ennemi : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         // On disable l'ennemy
         this.enabled = false;
-
     }
+
+    // Function to damage player when enemy touches player
+void OnTriggerEnter2D(Collider2D collision)
+{
+    PlayerMovement player = collision.GetComponent<PlayerMovement>();
+    if (player != null)
+    {
+        
+        player.TakeDamage(10);
+    }
+}
 }

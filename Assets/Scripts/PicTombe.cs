@@ -42,6 +42,7 @@ public class PicTombe : MonoBehaviour
     {
         // Si le joueur entre en collision avec le pic, on le détruit
         if(collision.gameObject.tag == "Player"){
+            collision.gameObject.GetComponent<PlayerMovement>().TakeDamage(10);
             Destroy(gameObject);
         }
         // Si le pic entre en collision avec un sol, on désactive la gravité et le boxcollider
