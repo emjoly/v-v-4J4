@@ -105,12 +105,12 @@ public class PlayerMovement : MonoBehaviour
         // Flip le sprite du joueur en fonction de la direction
         if (directionX < 0)
         {
-        transform.localScale = new Vector3(-0.14f, 0.14f, 0.14f); // Transform le scale du joueur pour ensuite flip le sprite
+        transform.localScale = new Vector3(-0.13f, 0.13f, 0.13f); // Transform le scale du joueur pour ensuite flip le sprite
         }
         // Si la direction est positive, reset le scale du joueur
         else if (directionX > 0)
         {
-        transform.localScale = new Vector3(0.14f, 0.14f, 0.14f); // Reset le scale original ù du joueur
+        transform.localScale = new Vector3(0.13f, 0.13f, 0.13f); // Reset le scale original ù du joueur
         }
 
         // Si le joueur appuie sur la touche Slam et n'est pas au sol
