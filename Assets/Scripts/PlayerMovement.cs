@@ -3,12 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-
+ 
 public class PlayerMovement : MonoBehaviour
 {
     // Variables pour le mouvement du joueur
 
-    // Acquérir le Rigidbody2D, le BoxCollider2D et l'animator du joueur
+    // Acquérir le Rigidbody2D et le BoxCollider2D du joueur
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     public Animator animator;
@@ -54,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
     //À implémenter plus tard (pour activer le double jump)
     private bool hasPickedUpItem = false;
 
+    public Transform respawnPoint; // Point de respawn du joueur
+
+
     void Start()
     {
         // Acquérir le Rigidbody2D et le BoxCollider2D du joueur
@@ -68,12 +71,34 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Si le joueur n'est pas en train de dash, on peut le déplacer
+
+        float moveInput = Input.GetAxisRaw("Horizontal"); 
+        if (moveInput != 0) 
+        { 
+            animator.SetBool("Marche", true); 
+        } 
+        else 
+        { 
+            animator.SetBool("Marche", false); 
+        }
+
+        if (currentHealth <= 0)
+        {
+            Die();
+            return;
+        }
+
+        // Si le joueur est en train de dash, ne pas exécuter le code suivant
         if (isDashing)
         {
             return;
         }
 
+        if (isJumping && moveInput != 0)
+        {
+            animator.SetBool("Saute", true);
+            animator.SetBool("Marche", false);
+        }
 
         // Déplacer le joueur avec le clavier (getAxisRaw pour éviter l'accélération du joueur)
         float directionX = Input.GetAxisRaw("Horizontal");
@@ -99,11 +124,6 @@ public class PlayerMovement : MonoBehaviour
 
         // Calculer la vitesse horizontale actuelle du joueur = vitesse de déplacement + apexBonus
         float _currentHorizontalSpeed = moveSpeed + apexBonus;
-
-        if (moveSpeed > 8f)
-        {
-            animator.SetBool("Marche", true);
-        }
 
         // Déplacer le joueur horizontalement
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
@@ -134,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true; // Le joueur est en train de sauter
             hasDashedInAir = false; // Reset le flag de dash dans les airs
             animator.SetBool("Saute", true);
+
         }
         // Si le joueur a ramassé un item et n'est pas au sol
         else if (hasPickedUpItem && !IsGrounded())
@@ -161,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Pour ne pas sauter indéfiniment
             isJumping = false;
+            animator.SetBool("Saute", false);
         }
 
         // Si le joueur appuie sur la touche Dash
@@ -205,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
         // TO IMPLEMENT LATER
         //if (currentHealth <= 0)
         //{
-            //Die();
+        //Die();
         //}
     }
 
@@ -227,9 +249,9 @@ public class PlayerMovement : MonoBehaviour
 
     // Fonction pour ramasser un item
     public void PickupItem()
-        {
-            hasPickedUpItem = true; // Le joueur a ramassé un item
-        }
+    {
+        hasPickedUpItem = true; // Le joueur a ramassé un item
+    }
 
     // Fonction coroutine pour le dash
     private IEnumerator Dash()
@@ -272,29 +294,89 @@ public class PlayerMovement : MonoBehaviour
         // Appliquer une force de slam vers le bas
         rb.velocity = Vector2.down * slamForce;
 
-    // Attendre 0.2 secondes avant de réactiver les collisions avec les plateformes brisables
-    yield return new WaitForSeconds(0.2f);
+        // Attendre 0.2 secondes avant de réactiver les collisions avec les plateformes brisables
+        yield return new WaitForSeconds(0.2f);
 
-    // Réactiver les collisions avec les plateformes brisables
-    Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), false);
+        // Réactiver les collisions avec les plateformes brisables
+        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), false);
 
-    // Créer un box collider pour détecter les plateformes brisables et les mettre dans un tableau
-    // Récupérer les plateformes brisables touchées par le box collider
-    Collider2D[] hitColliders = Physics2D.OverlapBoxAll(boxCollider.bounds.center, boxCollider.bounds.size, 0f, LayerMask.GetMask("BrisPlateforme"));
-    // Pour chaque plateforme touchée
-    foreach (Collider2D collider in hitColliders)
-    {
-        // Appeler la fonction BreakPlatform du script DestructionPlateforme
-        collider.GetComponent<DestructionPlateforme>()?.BreakPlatform();
+        // Créer un box collider pour détecter les plateformes brisables et les mettre dans un tableau
+        // Récupérer les plateformes brisables touchées par le box collider
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(boxCollider.bounds.center, boxCollider.bounds.size, 0f, LayerMask.GetMask("BrisPlateforme"));
+        // Pour chaque plateforme touchée
+        foreach (Collider2D collider in hitColliders)
+        {
+            // Appeler la fonction BreakPlatform du script DestructionPlateforme
+            collider.GetComponent<DestructionPlateforme>()?.BreakPlatform();
+        }
     }
-}
 
-void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
         if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(5); // Réduit la vie du joueur de 5
         }
+        if (collision.gameObject.CompareTag("PicSol"))
+        {
+            Die();
+        }
     }
+
+    void Die()
+    {
+        // Disable player movement and controls
+        rb.velocity = Vector2.zero; // Stop player movement
+        rb.gravityScale = 0; // Disable gravity
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        boxCollider.enabled = false; // Disable the collider to prevent further collisions
+        StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
+
+        // Play death sound
+        //AudioSource audioSource = GetComponent<AudioSource>();
+        //if (audioSource && deathSound)
+        //{
+        //    audioSource.PlayOneShot(deathSound);
+        //}
+
+        // Play death animation
+        //Animator animator = GetComponent<Animator>();
+        //if (animator)
+        //{
+        //    animator.SetTrigger("Die");
+        //}
+
+        // Respawn the player
+        //StartCoroutine(RespawnAfterDelay(2.0f)); // Respawn after 2 seconds
+
+        // Maybe show game over screen
+    }
+
+    IEnumerator ReloadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
+    }
+
+
+    IEnumerator RespawnAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Reset player state
+        boxCollider.enabled = true; // Enable the collider
+        enabled = true; // Enable this script
+
+        // Reset player position to respawn point
+        transform.position = respawnPoint.position;
+
+        // Play respawn animation or sound
+        // animator.SetTrigger("Respawn");
+        // if (respawnSound) audioSource.PlayOneShot(respawnSound);
+    }
+
+
 }
+

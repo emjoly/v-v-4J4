@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class Ennemi : MonoBehaviour
 {
     // Int pour le maximum de vie de l'ennemi
@@ -10,6 +10,11 @@ public class Ennemi : MonoBehaviour
     int currentHealth;
 
     public Animator animator;
+
+
+    private float damageCooldown = 2.0f; // 2 seconds cooldown
+    private float lastDamageTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +30,7 @@ public class Ennemi : MonoBehaviour
         animator.SetTrigger("Mal");
 
         // On vérifie si la vie actuelle est inférieure ou égale à 0
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             // On appelle la fonction Die
             Die();
@@ -42,14 +47,16 @@ public class Ennemi : MonoBehaviour
         this.enabled = false;
     }
 
-    // Function to damage player when enemy touches player
-void OnTriggerEnter2D(Collider2D collision)
-{
-    PlayerMovement player = collision.GetComponent<PlayerMovement>();
-    if (player != null)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        player.TakeDamage(10);
+        PlayerMovement player = collision.GetComponent<PlayerMovement>();
+        if (player != null)
+        {
+            if (Time.time >= lastDamageTime + damageCooldown)
+            {
+                player.TakeDamage(10);
+                lastDamageTime = Time.time;
+            }
+        }
     }
-}
 }
