@@ -9,6 +9,7 @@ TagManager:
   - Boite
   - Spike
   - FallingPlatform
+  - PicSol
   layers:
   - Default
   - TransparentFX

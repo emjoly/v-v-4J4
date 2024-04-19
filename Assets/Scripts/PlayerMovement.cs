@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
 {
     // Variables pour le mouvement du joueur
 
-    // Acquérir le Rigidbody2D et le BoxCollider2D du joueur
+    // Acquérir le Rigidbody2D, le BoxCollider2D et l'animator du joueur
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
+    public Animator animator;
+    public SpriteRenderer playerSprite;
     // LayerMask pour définir les layers sur lesquels le joueur peut sauter
     [SerializeField] private LayerMask JumpableGround;
     // Variables pour le mouvement du joueur
@@ -51,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Ennemy;
     //À implémenter plus tard (pour activer le double jump)
     private bool hasPickedUpItem = false;
-
 
     void Start()
     {
@@ -99,18 +100,23 @@ public class PlayerMovement : MonoBehaviour
         // Calculer la vitesse horizontale actuelle du joueur = vitesse de déplacement + apexBonus
         float _currentHorizontalSpeed = moveSpeed + apexBonus;
 
+        if (moveSpeed > 8f)
+        {
+            animator.SetBool("Marche", true);
+        }
+
         // Déplacer le joueur horizontalement
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
         // Flip le sprite du joueur en fonction de la direction
         if (directionX < 0)
         {
-        transform.localScale = new Vector3(-0.13f, 0.13f, 0.13f); // Transform le scale du joueur pour ensuite flip le sprite
+            playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
         }
         // Si la direction est positive, reset le scale du joueur
         else if (directionX > 0)
         {
-        transform.localScale = new Vector3(0.13f, 0.13f, 0.13f); // Reset le scale original ù du joueur
+            playerSprite.flipX = true; // Reset le scale original ù du joueur
         }
 
         // Si le joueur appuie sur la touche Slam et n'est pas au sol
@@ -127,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
             jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
             isJumping = true; // Le joueur est en train de sauter
             hasDashedInAir = false; // Reset le flag de dash dans les airs
+            animator.SetBool("Saute", true);
         }
         // Si le joueur a ramassé un item et n'est pas au sol
         else if (hasPickedUpItem && !IsGrounded())

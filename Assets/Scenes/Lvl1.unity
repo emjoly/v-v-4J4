@@ -1155,7 +1155,7 @@ Transform:
   m_GameObject: {fileID: 257372873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.944, y: 10.849, z: -10}
+  m_LocalPosition: {x: -4.944, y: 11.48, z: -10}
   m_LocalScale: {x: 27.24, y: 27.24, z: 27.24}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4635,7 +4635,7 @@ SpriteRenderer:
   m_SortingOrder: 9
   m_Sprite: {fileID: -1775650834495775594, guid: 348b3a8b0e1cc614696fb50ad3f9bbdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.8549814, y: 14.56}
@@ -4653,7 +4653,7 @@ Transform:
   m_GameObject: {fileID: 741936373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.944, y: 10.849, z: 0}
+  m_LocalPosition: {x: -4.944, y: 11.48, z: 0}
   m_LocalScale: {x: 0.07394205, y: 0.07394205, z: 0.07394205}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4736,6 +4736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b6aeb5832fd614ca48ad3b9b23ab34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 741936374}
+  playerSprite: {fileID: 741936375}
   JumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -7163,7 +7165,7 @@ GameObject:
   - component: {fileID: 1061892181}
   m_Layer: 0
   m_Name: under2_0 (1)
-  m_TagString: Untagged
+  m_TagString: PicSol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7271,7 +7273,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.7125823}
+  m_Offset: {x: 0, y: -0.79699135}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7281,7 +7283,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 38.399998, y: 4.6748347}
+  m_Size: {x: 38.399998, y: 4.5060167}
   m_EdgeRadius: 0
 --- !u!1 &1065994609
 GameObject:
@@ -14010,7 +14012,7 @@ GameObject:
   - component: {fileID: 1323172419}
   m_Layer: 0
   m_Name: under2_0
-  m_TagString: Untagged
+  m_TagString: PicSol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17832,6 +17834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b6aeb5832fd614ca48ad3b9b23ab34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  playerSprite: {fileID: 0}
   JumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -19643,7 +19647,7 @@ Transform:
   m_GameObject: {fileID: 1956917639}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.944, y: 10.849, z: -10}
+  m_LocalPosition: {x: -4.944, y: 11.48, z: -10}
   m_LocalScale: {x: 0.39792594, y: 0.4599995, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
