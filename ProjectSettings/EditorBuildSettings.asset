@@ -7,15 +7,18 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/Test_Player_Movement.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 1170ba88e38398348b2ccba3bf47de35
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 5b2c8b90306ea490d9499940f077cbbb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lvl1-ej.unity
     guid: 31057276d987f2143bfa503475844b6c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lvl2-ej.unity
     guid: e399c3164fde8094386e90bc3c2548fd
+  - enabled: 1
+    path: Assets/Scenes/IntroCine.unity
+    guid: f3572502e9aff42328e87e1b1edc0e18
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     // Acquérir le Rigidbody2D et le BoxCollider2D du joueur
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
+    public Animator animator;
+    public SpriteRenderer playerSprite;
     // LayerMask pour définir les layers sur lesquels le joueur peut sauter
     [SerializeField] private LayerMask JumpableGround;
     // Variables pour le mouvement du joueur
@@ -52,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
     //À implémenter plus tard (pour activer le double jump)
     private bool hasPickedUpItem = false;
 
+    public Transform respawnPoint; // Point de respawn du joueur
+    public PlayerCombat playerCombat;
+
 
     void Start()
     {
@@ -67,7 +72,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Si le joueur n'est pas en train de dash, on peut le déplacer
+        if (moveSpeed > 8f)
+        {
+            animator.SetBool("Marche", true);
+        }
+
+        if (currentHealth <= 0)
+        {
+            Die();
+            return;
+        }
+
+        // Si le joueur est en train de dash, ne pas exécuter le code suivant
         if (isDashing)
         {
             return;
@@ -102,16 +118,20 @@ public class PlayerMovement : MonoBehaviour
         // Déplacer le joueur horizontalement
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
-        // Flip le sprite du joueur en fonction de la direction
-        if (directionX < 0)
-        {
-        transform.localScale = new Vector3(-0.14f, 0.14f, 0.14f); // Transform le scale du joueur pour ensuite flip le sprite
-        }
-        // Si la direction est positive, reset le scale du joueur
-        else if (directionX > 0)
-        {
-        transform.localScale = new Vector3(0.14f, 0.14f, 0.14f); // Reset le scale original ù du joueur
-        }
+    // Flip le sprite du joueur en fonction de la direction
+    if (directionX < 0 && playerSprite.flipX)
+    {
+        playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
+        playerCombat.FlipPlayer();
+    }
+    // Si la direction est positive, reset le scale du joueur
+    else if (directionX > 0 && !playerSprite.flipX)
+    {
+        playerSprite.flipX = true; // Reset le scale original ù du joueur
+        playerCombat.FlipPlayer();
+    }
+
+        
 
         // Si le joueur appuie sur la touche Slam et n'est pas au sol
         if (Input.GetButtonDown("Slam") && !IsGrounded())
@@ -127,6 +147,8 @@ public class PlayerMovement : MonoBehaviour
             jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
             isJumping = true; // Le joueur est en train de sauter
             hasDashedInAir = false; // Reset le flag de dash dans les airs
+            animator.SetBool("Saute", true);
+
         }
         // Si le joueur a ramassé un item et n'est pas au sol
         else if (hasPickedUpItem && !IsGrounded())
@@ -282,12 +304,72 @@ public class PlayerMovement : MonoBehaviour
     }
 }
 
-void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
-        if (collision.gameObject.CompareTag("Enemy"))
+    void OnCollisionEnter2D(Collision2D collision)
         {
-            TakeDamage(5); // Réduit la vie du joueur de 5
+            // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                TakeDamage(5); // Réduit la vie du joueur de 5
+            }
+            if (collision.gameObject.CompareTag("Pic"))
+            {
+                Die();
+            }
         }
-    }
+
+void Die()
+{
+    // Disable player movement and controls
+    rb.velocity = Vector2.zero; // Stop player movement
+    rb.gravityScale = 0; // Disable gravity
+    rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    boxCollider.enabled = false; // Disable the collider to prevent further collisions
+    StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
+
+    // Play death sound
+    //AudioSource audioSource = GetComponent<AudioSource>();
+    //if (audioSource && deathSound)
+    //{
+    //    audioSource.PlayOneShot(deathSound);
+    //}
+
+    // Play death animation
+    //Animator animator = GetComponent<Animator>();
+    //if (animator)
+    //{
+    //    animator.SetTrigger("Die");
+    //}
+
+    // Respawn the player
+    //StartCoroutine(RespawnAfterDelay(2.0f)); // Respawn after 2 seconds
+
+    // Maybe show game over screen
 }
+
+    IEnumerator ReloadSceneAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
+        }
+
+
+    IEnumerator RespawnAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Reset player state
+        boxCollider.enabled = true; // Enable the collider
+        enabled = true; // Enable this script
+
+        // Reset player position to respawn point
+        transform.position = respawnPoint.position;
+
+        // Play respawn animation or sound
+        // animator.SetTrigger("Respawn");
+        // if (respawnSound) audioSource.PlayOneShot(respawnSound);
+    }
+
+
+}
+

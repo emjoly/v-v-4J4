@@ -4585,6 +4585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b6aeb5832fd614ca48ad3b9b23ab34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 741936374}
+  playerSprite: {fileID: 741936375}
   JumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -4600,6 +4602,8 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 1040254148}
   Ennemy: {fileID: 1622358655}
+  respawnPoint: {fileID: 0}
+  playerCombat: {fileID: 741936381}
 --- !u!61 &741936380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17681,6 +17685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b6aeb5832fd614ca48ad3b9b23ab34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  playerSprite: {fileID: 0}
   JumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -17696,6 +17702,8 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 1040254148}
   Ennemy: {fileID: 1622358655}
+  respawnPoint: {fileID: 0}
+  playerCombat: {fileID: 0}
 --- !u!50 &1692377969
 Rigidbody2D:
   serializedVersion: 4

@@ -14,6 +14,9 @@ public class PlayerCombat : MonoBehaviour
     public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
+    // Add a bool variable to keep track of the player's direction
+    bool isFacingRight = true;
+
     // Update is called once per frame
     void Update()
     {
@@ -51,5 +54,22 @@ public class PlayerCombat : MonoBehaviour
         }
         // Dessiner un cercle pour la range d'attaque
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    // Function to flip the player
+    public void FlipPlayer()
+    {
+        // Flip the player's direction
+        isFacingRight = !isFacingRight;
+
+        // Flip the attackPoint
+        if (!isFacingRight)
+        {
+            attackPoint.localPosition = new Vector3(-Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
+        }
+        else
+        {
+            attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
+        }
     }
 }

@@ -7,7 +7,7 @@ public class Intro : MonoBehaviour
     // Fonction pour jouer au jeu
     public void playGame (){
         // On charge la scène suivante (numéro d'index)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("IntroCine");
     }
     // Fonction pour quitter le jeu
     public void quitGame (){

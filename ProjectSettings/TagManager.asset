@@ -9,6 +9,7 @@ TagManager:
   - Boite
   - Spike
   - FallingPlatform
+  - Pic
   layers:
   - Default
   - TransparentFX
