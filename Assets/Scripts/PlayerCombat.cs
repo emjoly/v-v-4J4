@@ -14,6 +14,8 @@ public class PlayerCombat : MonoBehaviour
     public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
+    bool isFacingRight = false;  // Changed to false for the player to initially face left
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +32,7 @@ public class PlayerCombat : MonoBehaviour
     // Fonction pour attaquer
     void Attack()
     {
+        AudiosSettings.PlaySound("AttackTest");
         // On active l'animation d'attaque
         animator.SetTrigger("Attack");
         // Detecter les ennemis dans la range d'attaque
@@ -51,5 +54,21 @@ public class PlayerCombat : MonoBehaviour
         }
         // Dessiner un cercle pour la range d'attaque
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    // Function to flip the player
+    public void FlipPlayer()
+    {
+        // Flip the player's direction
+        isFacingRight = !isFacingRight;
+
+        // Flip the attackPoint
+        if (!isFacingRight)
+        {
+            attackPoint.localPosition = new Vector3(-Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
+        }
+        else
+        {
+            attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
+        }
     }
 }

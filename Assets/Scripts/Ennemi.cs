@@ -12,7 +12,7 @@ public class Ennemi : MonoBehaviour
     public Animator animator;
 
 
-    private float damageCooldown = 2.0f; // 2 seconds cooldown
+    private float damageCooldown = 1.5f; // 2 seconds cooldown
     private float lastDamageTime;
 
     // Start is called before the first frame update
@@ -24,6 +24,7 @@ public class Ennemi : MonoBehaviour
     // Fonction pour infliger des dégâts
     public void TakeDamage(int damage)
     {
+        AudiosSettings.PlaySound("AttackHitTest");
         // On enlève les dégâts à la vie actuelle
         currentHealth -= damage;
 

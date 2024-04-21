@@ -14,8 +14,6 @@ public class Background : MonoBehaviour
         {
             // On le défini comme étant le script
             backgroundMusic = this;
-            // On ne le détruit pas lors du changement de scène
-            DontDestroyOnLoad(backgroundMusic);
         }
         else
         {

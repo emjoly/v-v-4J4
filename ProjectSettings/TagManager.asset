@@ -10,6 +10,7 @@ TagManager:
   - Spike
   - FallingPlatform
   - PicSol
+  - BossStart
   layers:
   - Default
   - TransparentFX

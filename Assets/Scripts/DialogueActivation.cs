@@ -5,22 +5,34 @@ using UnityEngine;
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
+    private int hitCount = 0; // Variable to track the number of hits
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision detected!");
-        // regarder si le collider est le joueur
+        // Check if the collider is the player
         if (collision.collider.CompareTag("Player"))
         {
-            // On appel la fonction TriggerDialogue
-            TriggerDialogue();
+            // Increase hit count
+            hitCount++;
+
+            // Check if hit count is 3
+            if (hitCount >= 3)
+            {
+                // Trigger the dialogue
+                TriggerDialogue();
+                // Reset hit count for future interactions
+                hitCount = 0;
+            }
         }
     }
-    // Fonction pour déclencher le dialogue
+
+    // Function to trigger the dialogue
     public void TriggerDialogue()
     {
         Debug.Log("Dialogue triggered!");
-        // On trouve l'objet DialogueReglages(le script) et on appel sa fonction CommencerDialogue
+        // Find the DialogueReglages object and call its CommencerDialogue function
         FindObjectOfType<DialogueReglages>().CommencerDialogue(dialogue);
     }
 }
+

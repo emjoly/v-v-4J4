@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     private bool hasPickedUpItem = false;
 
     public Transform respawnPoint; // Point de respawn du joueur
-
+    public PlayerCombat playerCombat;
 
     void Start()
     {
@@ -75,7 +75,11 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal"); 
         if (moveInput != 0) 
         { 
-            animator.SetBool("Marche", true); 
+            
+            animator.SetBool("Marche", true);
+                // THIS IS BUGGIN (Gotta fix it later)
+/*             AudiosSettings.PlaySound("MarcheTest"); */
+
         } 
         else 
         { 
@@ -128,15 +132,17 @@ public class PlayerMovement : MonoBehaviour
         // Déplacer le joueur horizontalement
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
-        // Flip le sprite du joueur en fonction de la direction
-        if (directionX < 0)
+        // Flip le sprite du joueur en fonction de la direction et pour pas que ca soit appelé à chaque frame
+        if (directionX < 0 && playerSprite.flipX)
         {
             playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
+            playerCombat.FlipPlayer(); // Pour flip le attack point aussi
         }
         // Si la direction est positive, reset le scale du joueur
-        else if (directionX > 0)
+        else if (directionX > 0 && !playerSprite.flipX)
         {
             playerSprite.flipX = true; // Reset le scale original ù du joueur
+            playerCombat.FlipPlayer();
         }
 
         // Si le joueur appuie sur la touche Slam et n'est pas au sol
@@ -149,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             // Initialiser le double jump
+            AudiosSettings.PlaySound("SautTest");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
             isJumping = true; // Le joueur est en train de sauter
@@ -180,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
         // Si le joueur relâche la touche Jump
         if (Input.GetButtonUp("Jump"))
         {
+
             // Pour ne pas sauter indéfiniment
             isJumping = false;
             animator.SetBool("Saute", false);
@@ -223,12 +231,6 @@ public class PlayerMovement : MonoBehaviour
         currentHealth -= damage;
         // Mettre à jour la barre de vie du joueur
         healthBar.SetHealth(currentHealth);
-
-        // TO IMPLEMENT LATER
-        //if (currentHealth <= 0)
-        //{
-        //Die();
-        //}
     }
 
 
