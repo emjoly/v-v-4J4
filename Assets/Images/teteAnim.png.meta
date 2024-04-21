@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teteAnim_0: 2684221659975147030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,6 +16,8 @@ public class PlayerCombat : MonoBehaviour
 
     bool faitFaceADroite = false;  // 
 
+    public AudioClip SonAttaque;
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +28,7 @@ public class PlayerCombat : MonoBehaviour
                 animator.SetTrigger("Attack");
                 // On active l'animation d'attaque
                 prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
+                GetComponent<AudioSource>().PlayOneShot(SonAttaque);
             }
         }
     }

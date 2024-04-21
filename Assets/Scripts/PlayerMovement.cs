@@ -57,6 +57,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform respawnPoint; // Point de respawn du joueur
     public PlayerCombat playerCombat;
 
+    // Autres variables
+    public AudioClip SonMort;
+    public AudioClip SonMarche;
+    public AudioClip SonBlesse;
+    public AudioClip SonSaut;
+    
+
     // Si le joueur est mort
     bool isDead = false;
 
@@ -75,159 +82,160 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        float moveInput = Input.GetAxisRaw("Horizontal"); 
-        if (moveInput != 0) 
-        { 
-            
-            animator.SetBool("Marche", true);
-                // THIS IS BUGGIN (Gotta fix it later)
-/*             AudiosSettings.PlaySound("MarcheTest"); */
-
-        } 
-        else 
-        { 
-            animator.SetBool("Marche", false); 
-        }
-
-        if (currentHealth <= 0)
+        // maybe im wrong mais faut faire: if(!= dead){ *tout le code du void update* } comme ca quand il meurt rien peut se passer
+        if (!isDead) // Vérifie si le personnage n'est pas mort
         {
-            Die();
-            return;
-        }
-
-        // Si le joueur est en train de dash, ne pas exécuter le code suivant
-        if (isDashing)
-        {
-            return;
-        }
-
-        if (isJumping && moveInput != 0)
-        {
-            animator.SetBool("Saute", true);
-            animator.SetBool("Marche", false);
-        }
-
-        // Déplacer le joueur avec le clavier (getAxisRaw pour éviter l'accélération du joueur)
-        float directionX = Input.GetAxisRaw("Horizontal");
-
-
-        // Calcul du bonus de vitesse en fonction de la hauteur du saut
-        float _apexPoint = Mathf.InverseLerp(_jumpApexThreshold, 0, Mathf.Abs(rb.velocity.y));
-
-
-        // initialize apexBonus à 0
-        float apexBonus = 0f;
-
-
-        // Si le joueur est au apex point (le point le plus haut) du saut, appliquer le apexBonus
-        if (_apexPoint > 0 && !IsGrounded())
-        {
-            // Calculer le apexBonus en fonction de la direction du saut
-            apexBonus = Mathf.Sign(rb.velocity.y) * _apexBonus * (1 - Mathf.Abs(_apexPoint - 0.5f) * 2);
-        }
-
-        // Appliquer le apexBonus à la velocité verticale du joueur
-        rb.velocity += Vector2.up * apexBonus * Time.deltaTime;
-
-        // Calculer la vitesse horizontale actuelle du joueur = vitesse de déplacement + apexBonus
-        float _currentHorizontalSpeed = moveSpeed + apexBonus;
-
-        // Déplacer le joueur horizontalement
-        rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
-
-if (!isDead) // Vérifie si le personnage n'est pas mort
-{
-    if (directionX < 0 && playerSprite.flipX)
-    {
-        playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
-        playerCombat.FlipPlayer(); // Pour flip le attack point aussi
-    }
-    // Si la direction est positive, reset le scale du joueur
-    else if (directionX > 0 && !playerSprite.flipX)
-    {
-        playerSprite.flipX = true; // Reset le scale original ù du joueur
-        playerCombat.FlipPlayer();
-    }
-}
-
-
-        // Si le joueur appuie sur la touche Slam et n'est pas au sol
-        if (Input.GetButtonDown("Slam") && !IsGrounded())
-        {
-            // Lancer la coroutine SlamThroughPlatforms
-            StartCoroutine(SlamThroughPlatforms());
-        }
-        // Si le joueur appuie sur la touche Jump et est au sol
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            // Initialiser le double jump
-            AudiosSettings.PlaySound("SautTest");
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
-            isJumping = true; // Le joueur est en train de sauter
-            hasDashedInAir = false; // Reset le flag de dash dans les airs
-            animator.SetBool("Saute", true);
-
-        }
-        // Si le joueur a ramassé un item et n'est pas au sol
-        else if (hasPickedUpItem && !IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
-        }
-
-        // Si le joueur appuie sur la touche Jump et est en train de sauter
-        if (Input.GetButton("Jump") && isJumping)
-        {
-            // Si le compteur de temps de saut n'est pas écoulé
-            if (jumpTimeCounter > 0)
+            float moveInput = Input.GetAxisRaw("Horizontal");
+            if (moveInput != 0) //&& le joueur ne bouge pas en y
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
-                jumpTimeCounter -= Time.deltaTime; // Décrémenter le compteur de temps de saut
+
+                animator.SetBool("Marche", true);
+                GetComponent<AudioSource>().PlayOneShot(SonMarche);
+
             }
             else
             {
-                // Le joueur a fini de sauter
+                animator.SetBool("Marche", false);
+            }
+
+            if (currentHealth <= 0)
+            {
+                Die();
+                return;
+            }
+
+            // Si le joueur est en train de dash, ne pas exécuter le code suivant
+            if (isDashing)
+            {
+                return;
+            }
+
+            if (isJumping && moveInput != 0)
+            {
+                animator.SetBool("Saute", true);
+                animator.SetBool("Marche", false);
+            }
+
+            // Déplacer le joueur avec le clavier (getAxisRaw pour éviter l'accélération du joueur)
+            float directionX = Input.GetAxisRaw("Horizontal");
+
+
+            // Calcul du bonus de vitesse en fonction de la hauteur du saut
+            float _apexPoint = Mathf.InverseLerp(_jumpApexThreshold, 0, Mathf.Abs(rb.velocity.y));
+
+
+            // initialize apexBonus à 0
+            float apexBonus = 0f;
+
+
+            // Si le joueur est au apex point (le point le plus haut) du saut, appliquer le apexBonus
+            if (_apexPoint > 0 && !IsGrounded())
+            {
+                // Calculer le apexBonus en fonction de la direction du saut
+                apexBonus = Mathf.Sign(rb.velocity.y) * _apexBonus * (1 - Mathf.Abs(_apexPoint - 0.5f) * 2);
+            }
+
+            // Appliquer le apexBonus à la velocité verticale du joueur
+            rb.velocity += Vector2.up * apexBonus * Time.deltaTime;
+
+            // Calculer la vitesse horizontale actuelle du joueur = vitesse de déplacement + apexBonus
+            float _currentHorizontalSpeed = moveSpeed + apexBonus;
+
+            // Déplacer le joueur horizontalement
+            rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
+
+
+            if (directionX < 0 && playerSprite.flipX)
+            {
+                playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
+                playerCombat.FlipPlayer(); // Pour flip le attack point aussi
+            }
+            // Si la direction est positive, reset le scale du joueur
+            else if (directionX > 0 && !playerSprite.flipX)
+            {
+                playerSprite.flipX = true; // Reset le scale original ù du joueur
+                playerCombat.FlipPlayer();
+            }
+
+            // Si le joueur appuie sur la touche Slam et n'est pas au sol
+            if (Input.GetButtonDown("Slam") && !IsGrounded())
+            {
+                // Lancer la coroutine SlamThroughPlatforms
+                StartCoroutine(SlamThroughPlatforms());
+            }
+            // Si le joueur appuie sur la touche Jump et est au sol
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                // Initialiser le double jump
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
+                isJumping = true; // Le joueur est en train de sauter
+                hasDashedInAir = false; // Reset le flag de dash dans les airs
+                animator.SetBool("Saute", true);
+                GetComponent<AudioSource>().PlayOneShot(SonSaut);
+
+            }
+            // Si le joueur a ramassé un item et n'est pas au sol
+            else if (hasPickedUpItem && !IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
+            }
+
+            // Si le joueur appuie sur la touche Jump et est en train de sauter
+            if (Input.GetButton("Jump") && isJumping)
+            {
+                // Si le compteur de temps de saut n'est pas écoulé
+                if (jumpTimeCounter > 0)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
+                    jumpTimeCounter -= Time.deltaTime; // Décrémenter le compteur de temps de saut
+                }
+                else
+                {
+                    // Le joueur a fini de sauter
+                    isJumping = false;
+                }
+            }
+            // Si le joueur relâche la touche Jump
+            if (Input.GetButtonUp("Jump"))
+            {
+
+                // Pour ne pas sauter indéfiniment
                 isJumping = false;
+                animator.SetBool("Saute", false);
             }
-        }
-        // Si le joueur relâche la touche Jump
-        if (Input.GetButtonUp("Jump"))
-        {
 
-            // Pour ne pas sauter indéfiniment
-            isJumping = false;
-            animator.SetBool("Saute", false);
-        }
-
-        // Si le joueur appuie sur la touche Dash
-        if (Input.GetButtonDown("Dash"))
-        {
-            // Si le joueur n'est pas au sol et n'est pas en train de dash et peut dash
-            if (!IsGrounded() && canDash && !hasDashedInAir)
+            // Si le joueur appuie sur la touche Dash
+            if (Input.GetButtonDown("Dash"))
             {
+                // Si le joueur n'est pas au sol et n'est pas en train de dash et peut dash
+                if (!IsGrounded() && canDash && !hasDashedInAir)
+                {
 
-                StartCoroutine(Dash()); // Lancer la coroutine Dash
-                canDash = false; // Mettre le flag de dash à false (ne peut pas redash dans les airs)
-                hasDashedInAir = true; // Mettre le flag de dash dans les airs à true
+                    StartCoroutine(Dash()); // Lancer la coroutine Dash
+                    canDash = false; // Mettre le flag de dash à false (ne peut pas redash dans les airs)
+                    hasDashedInAir = true; // Mettre le flag de dash dans les airs à true
+                }
+                // Si le joueur est au sol et le cooldown de dash au sol est écoulé
+                else if (IsGrounded() && Time.time >= groundDashCooldown)
+                {
+                    StartCoroutine(Dash()); // Lancer la coroutine Dash (pour pouvoir dasher au sol)
+                    groundDashCooldown = Time.time + 2f; // Mettre le cooldown de dash au sol à 2 secondes
+                }
+
             }
-            // Si le joueur est au sol et le cooldown de dash au sol est écoulé
-            else if (IsGrounded() && Time.time >= groundDashCooldown)
+
+            if (rb.velocity.y < 0) // Si le joueur est en train de tomber
             {
-                StartCoroutine(Dash()); // Lancer la coroutine Dash (pour pouvoir dasher au sol)
-                groundDashCooldown = Time.time + 2f; // Mettre le cooldown de dash au sol à 2 secondes
+                // Appliquer une gravité plus forte
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
+                // Limiter la vitesse de chute maximale
+                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+                // add fall anim
             }
 
+            extraJump();
         }
-
-        if (rb.velocity.y < 0) // Si le joueur est en train de tomber
-        {
-            // Appliquer une gravité plus forte
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
-            // Limiter la vitesse de chute maximale
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-        }
-
-        extraJump();
     }
 
     // Fonction pour prendre des dégats
@@ -325,6 +333,8 @@ if (!isDead) // Vérifie si le personnage n'est pas mort
         if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(5); // Réduit la vie du joueur de 5
+            GetComponent<AudioSource>().PlayOneShot(SonBlesse);
+            // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
         }
         if (collision.gameObject.CompareTag("PicSol"))
         {
@@ -334,21 +344,20 @@ if (!isDead) // Vérifie si le personnage n'est pas mort
 
     void Die()
     {
+        /*
         // Disable player movement and controls
         rb.velocity = Vector2.zero; // Stop player movement
         rb.gravityScale = 0; // Disable gravity
         rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         boxCollider.enabled = false; // Disable the collider to prevent further collisions
-        StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
+        */
         isDead = true; // Set isDead to true
-        animator.enabled = false; // Disable the animator
-        // Jouer le son de mort
-        // audioSource.PlayOneShot(deathSound); A CHANGER POUR LE BON
-
+        StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
         // Jouer l'animation de mort
-        // Animator animator = GetComponent<Animator>();
-        // animator.SetTrigger("Mort");
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("Mort");
+        GetComponent<AudioSource>().PlayOneShot(SonMort); // Jouer le son de mort
 
         // Peut-être screen gameover ? 
     }

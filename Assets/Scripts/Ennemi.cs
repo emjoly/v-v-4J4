@@ -42,7 +42,7 @@ public class Ennemi : MonoBehaviour
     {
         Debug.Log("Ennemi mort");
 
-        animator.SetBool("EstMort", true);
+        animator.SetBool("Meurs", true);
         GetComponent<Collider2D>().enabled = false;
         // On disable l'ennemy
         this.enabled = false;
