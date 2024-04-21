@@ -57,6 +57,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform respawnPoint; // Point de respawn du joueur
     public PlayerCombat playerCombat;
 
+    // Si le joueur est mort
+    bool isDead = false;
+
     void Start()
     {
         // Acquérir le Rigidbody2D et le BoxCollider2D du joueur
@@ -132,18 +135,21 @@ public class PlayerMovement : MonoBehaviour
         // Déplacer le joueur horizontalement
         rb.velocity = new Vector2(directionX * _currentHorizontalSpeed, rb.velocity.y);
 
-        // Flip le sprite du joueur en fonction de la direction et pour pas que ca soit appelé à chaque frame
-        if (directionX < 0 && playerSprite.flipX)
-        {
-            playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
-            playerCombat.FlipPlayer(); // Pour flip le attack point aussi
-        }
-        // Si la direction est positive, reset le scale du joueur
-        else if (directionX > 0 && !playerSprite.flipX)
-        {
-            playerSprite.flipX = true; // Reset le scale original ù du joueur
-            playerCombat.FlipPlayer();
-        }
+if (!isDead) // Vérifie si le personnage n'est pas mort
+{
+    if (directionX < 0 && playerSprite.flipX)
+    {
+        playerSprite.flipX = false; // Transform le scale du joueur pour ensuite flip le sprite
+        playerCombat.FlipPlayer(); // Pour flip le attack point aussi
+    }
+    // Si la direction est positive, reset le scale du joueur
+    else if (directionX > 0 && !playerSprite.flipX)
+    {
+        playerSprite.flipX = true; // Reset le scale original ù du joueur
+        playerCombat.FlipPlayer();
+    }
+}
+
 
         // Si le joueur appuie sur la touche Slam et n'est pas au sol
         if (Input.GetButtonDown("Slam") && !IsGrounded())
@@ -335,25 +341,16 @@ public class PlayerMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         boxCollider.enabled = false; // Disable the collider to prevent further collisions
         StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
+        isDead = true; // Set isDead to true
+        animator.enabled = false; // Disable the animator
+        // Jouer le son de mort
+        // audioSource.PlayOneShot(deathSound); A CHANGER POUR LE BON
 
-        // Play death sound
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //if (audioSource && deathSound)
-        //{
-        //    audioSource.PlayOneShot(deathSound);
-        //}
+        // Jouer l'animation de mort
+        // Animator animator = GetComponent<Animator>();
+        // animator.SetTrigger("Mort");
 
-        // Play death animation
-        //Animator animator = GetComponent<Animator>();
-        //if (animator)
-        //{
-        //    animator.SetTrigger("Die");
-        //}
-
-        // Respawn the player
-        //StartCoroutine(RespawnAfterDelay(2.0f)); // Respawn after 2 seconds
-
-        // Maybe show game over screen
+        // Peut-être screen gameover ? 
     }
 
     IEnumerator ReloadSceneAfterDelay(float delay)
@@ -363,21 +360,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    IEnumerator RespawnAfterDelay(float delay)
+    /* IEnumerator RespawnAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
         // Reset player state
-        boxCollider.enabled = true; // Enable the collider
-        enabled = true; // Enable this script
+        boxCollider.enabled = true; // Re-activer le collider
+        enabled = true; // Reactiver le script
 
-        // Reset player position to respawn point
-        transform.position = respawnPoint.position;
+        transform.position = respawnPoint.position; // Téléporter le joueur au point de respawn
 
-        // Play respawn animation or sound
+        // Peut-être à implémenter mais pour l'instant on reload la scene
         // animator.SetTrigger("Respawn");
         // if (respawnSound) audioSource.PlayOneShot(respawnSound);
-    }
+    } */
 
 
 }

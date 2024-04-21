@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
     public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
-    bool isFacingRight = false;  // Changed to false for the player to initially face left
+    bool faitFaceADroite = false;  // 
 
     // Update is called once per frame
     void Update()
@@ -22,25 +22,37 @@ public class PlayerCombat : MonoBehaviour
         if (Time.time >= prochaineAttaqueTemps)
         {
             if (Input.GetButtonDown("Attack"))
-            {
-                Attack();
+            {                
+                animator.SetTrigger("Attack");
+                // On active l'animation d'attaque
                 prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
             }
         }
     }
 
     // Fonction pour attaquer
-    void Attack()
+    public void PerformAttack()
     {
         AudiosSettings.PlaySound("AttackTest");
-        // On active l'animation d'attaque
-        animator.SetTrigger("Attack");
+
         // Detecter les ennemis dans la range d'attaque
         Collider2D[] EnnemieTouche = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // Appliquer des degats
         foreach (Collider2D ennemi in EnnemieTouche)
         {
-            ennemi.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+            if (ennemi.CompareTag("BossStart"))
+            {
+                DialogueActivation boss = ennemi.GetComponent<DialogueActivation>();
+                boss.hitCount++;
+                if (boss.hitCount >= 4)
+                {
+                    boss.TriggerDialogue();
+                }
+            }
+            else
+            {
+                ennemi.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+            }
         }
     }
 
@@ -59,10 +71,10 @@ public class PlayerCombat : MonoBehaviour
     public void FlipPlayer()
     {
         // Flip the player's direction
-        isFacingRight = !isFacingRight;
+        faitFaceADroite = !faitFaceADroite;
 
         // Flip the attackPoint
-        if (!isFacingRight)
+        if (!faitFaceADroite)
         {
             attackPoint.localPosition = new Vector3(-Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
         }

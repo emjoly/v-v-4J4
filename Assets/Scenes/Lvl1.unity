@@ -1122,7 +1122,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199620937}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bd97b1584c0803a4aa1e7ae2cb60e994, type: 2}
   m_CullingMode: 0
@@ -1166,7 +1166,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2227,6 +2227,7 @@ MonoBehaviour:
     - "Je suis l'ange de la col\xE8re 3"
     - "Je suis l'ange de la col\xE8re 4"
     - "Je suis l'ange de la col\xE8re 5"
+  hitCount: 0
 --- !u!1 &219542443
 GameObject:
   m_ObjectHideFlags: 0
@@ -23748,6 +23749,7 @@ MonoBehaviour:
     - jai fais caca
     - et jaime le pipi
     - dans les toilettes lol
+  hitCount: 0
 --- !u!1 &1625019556
 GameObject:
   m_ObjectHideFlags: 0
@@ -26800,6 +26802,7 @@ MonoBehaviour:
   dialogue:
     nom: 
     phrases: []
+  hitCount: 0
 --- !u!1001 &2023219409
 PrefabInstance:
   m_ObjectHideFlags: 0
