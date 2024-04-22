@@ -58,11 +58,10 @@ public class PlayerMovement : MonoBehaviour
     public PlayerCombat playerCombat;
 
     // Autres variables
-    public AudioClip SonMort;
     public AudioClip SonMarche;
     public AudioClip SonBlesse;
     public AudioClip SonSaut;
-    
+    public AudioClip SonMort;
 
     // Si le joueur est mort
     bool isDead = false;
@@ -85,13 +84,12 @@ public class PlayerMovement : MonoBehaviour
         // maybe im wrong mais faut faire: if(!= dead){ *tout le code du void update* } comme ca quand il meurt rien peut se passer
         if (!isDead) // Vérifie si le personnage n'est pas mort
         {
-            float moveInput = Input.GetAxisRaw("Horizontal");
-            if (moveInput != 0) //&& le joueur ne bouge pas en y
+            // Déplacer le joueur avec le clavier(getAxisRaw pour éviter l'accélération du joueur)
+            float directionX = Input.GetAxisRaw("Horizontal");
+            if (IsGrounded() && directionX != 0) //pour lanim de marche
             {
-
                 animator.SetBool("Marche", true);
                 GetComponent<AudioSource>().PlayOneShot(SonMarche);
-
             }
             else
             {
@@ -110,23 +108,16 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            if (isJumping && moveInput != 0)
+            if (isJumping && directionX != 0)
             {
                 animator.SetBool("Saute", true);
                 animator.SetBool("Marche", false);
             }
 
-            // Déplacer le joueur avec le clavier (getAxisRaw pour éviter l'accélération du joueur)
-            float directionX = Input.GetAxisRaw("Horizontal");
-
-
             // Calcul du bonus de vitesse en fonction de la hauteur du saut
             float _apexPoint = Mathf.InverseLerp(_jumpApexThreshold, 0, Mathf.Abs(rb.velocity.y));
-
-
             // initialize apexBonus à 0
             float apexBonus = 0f;
-
 
             // Si le joueur est au apex point (le point le plus haut) du saut, appliquer le apexBonus
             if (_apexPoint > 0 && !IsGrounded())
@@ -231,10 +222,9 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
                 // Limiter la vitesse de chute maximale
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-                // add fall anim
+                //animator.SetTrigger("Tombe");  le truc avec ca cest que il tombe non stop cest gossant
             }
-
-            extraJump();
+                ExtraJump();
         }
     }
 
@@ -245,6 +235,8 @@ public class PlayerMovement : MonoBehaviour
         currentHealth -= damage;
         // Mettre à jour la barre de vie du joueur
         healthBar.SetHealth(currentHealth);
+        animator.SetTrigger("Mal");
+        GetComponent<AudioSource>().PlayOneShot(SonBlesse);
     }
 
 
@@ -285,7 +277,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Fonction pour le double saut
-    void extraJump()
+    void ExtraJump()
     {
         // Si le joueur appuie sur la touche Jump et a encore des double jumps et n'est pas au sol
         if (Input.GetButtonDown("Jump") && doubleJump > 0 && !IsGrounded())
@@ -333,7 +325,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(5); // Réduit la vie du joueur de 5
-            GetComponent<AudioSource>().PlayOneShot(SonBlesse);
             // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
         }
         if (collision.gameObject.CompareTag("PicSol"))
@@ -359,7 +350,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Mort");
         GetComponent<AudioSource>().PlayOneShot(SonMort); // Jouer le son de mort
 
-        // Peut-être screen gameover ? 
+        // Peut-être screen gameover ?
+        // mais Die est appele meme quand il touche le sol, faudrait quil reapparait sur une plateforme mais je sais pas a quel point cest faisable
     }
 
     IEnumerator ReloadSceneAfterDelay(float delay)
@@ -383,7 +375,4 @@ public class PlayerMovement : MonoBehaviour
         // animator.SetTrigger("Respawn");
         // if (respawnSound) audioSource.PlayOneShot(respawnSound);
     } */
-
-
 }
-

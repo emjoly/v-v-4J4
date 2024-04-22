@@ -5976,10 +5976,10 @@ MonoBehaviour:
   Ennemy: {fileID: 1622358655}
   respawnPoint: {fileID: 0}
   playerCombat: {fileID: 741936381}
-  SonMort: {fileID: 8300000, guid: 1cdd93670f394f944bb81502710dd18f, type: 3}
   SonMarche: {fileID: 8300000, guid: 6d6b104906dbb4921a58e6a3cf0f9c1b, type: 3}
   SonBlesse: {fileID: 8300000, guid: 614160e498017af4c9586e34baaf6b29, type: 3}
   SonSaut: {fileID: 8300000, guid: feb0fbb23b80ba44690bf73bae8c42a4, type: 3}
+  SonMort: {fileID: 8300000, guid: 1cdd93670f394f944bb81502710dd18f, type: 3}
 --- !u!61 &741936380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6047,7 +6047,7 @@ MonoBehaviour:
   DommageAttaque: 20
   debisAttaque: 2
   tempsAttenteAttaque: 1
-  SonAttaque: {fileID: 0}
+  SonAttaque: {fileID: 8300000, guid: 1d0870000e11742b194062e91b7bc721, type: 3}
 --- !u!82 &741936382
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8358,10 +8358,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1044739810}
   - component: {fileID: 1044739811}
-  - component: {fileID: 1044739812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: under2_0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8435,18 +8434,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1044739812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044739809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da72edbdc86ee4852b55c31537b139cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1049733739
 GameObject:
   m_ObjectHideFlags: 0
@@ -19815,10 +19802,10 @@ MonoBehaviour:
   Ennemy: {fileID: 1622358655}
   respawnPoint: {fileID: 0}
   playerCombat: {fileID: 0}
-  SonMort: {fileID: 0}
   SonMarche: {fileID: 0}
   SonBlesse: {fileID: 0}
   SonSaut: {fileID: 0}
+  SonMort: {fileID: 0}
 --- !u!50 &1692377969
 Rigidbody2D:
   serializedVersion: 4
@@ -21450,10 +21437,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1949204994}
+  - component: {fileID: 1949204995}
   - component: {fileID: 1949204993}
   - component: {fileID: 1949204992}
   - component: {fileID: 1949204991}
-  - component: {fileID: 1949204995}
   m_Layer: 8
   m_Name: BibitteChien_0
   m_TagString: Enemy

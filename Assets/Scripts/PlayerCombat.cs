@@ -36,8 +36,6 @@ public class PlayerCombat : MonoBehaviour
     // Fonction pour attaquer
     public void PerformAttack()
     {
-        AudiosSettings.PlaySound("AttackTest");
-
         // Detecter les ennemis dans la range d'attaque
         Collider2D[] EnnemieTouche = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // Appliquer des degats

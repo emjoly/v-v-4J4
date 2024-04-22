@@ -28,7 +28,7 @@ public class Ennemi : MonoBehaviour
         // On enlève les dégâts à la vie actuelle
         currentHealth -= damage;
 
-        animator.SetTrigger("Mal");
+        animator.SetTrigger("AMal");
 
         // On vérifie si la vie actuelle est inférieure ou égale à 0
         if (currentHealth <= 0)
@@ -42,7 +42,7 @@ public class Ennemi : MonoBehaviour
     {
         Debug.Log("Ennemi mort");
 
-        animator.SetBool("Meurs", true);
+        animator.SetBool("EstMort", true);
         GetComponent<Collider2D>().enabled = false;
         // On disable l'ennemy
         this.enabled = false;
