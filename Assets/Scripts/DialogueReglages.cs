@@ -14,6 +14,9 @@ public class DialogueReglages : MonoBehaviour
     // File d'attente de phrases
     private Queue<string> phrases;
 
+    public bool isDialogueOpen = false;
+    public bool hasDialogueActivated = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,14 @@ public class DialogueReglages : MonoBehaviour
     // Fonction pour commencer le dialogue
     public void CommencerDialogue(Dialogue dialogue)
     {
+
+        if (hasDialogueActivated)
+        {
+            return;
+        }
+        hasDialogueActivated = true;
+
+        isDialogueOpen = true;
         // On active l'animation
         animator.SetBool("IsOpen", true);
         // On affiche le nom du la personne ou la chose qui parle
@@ -52,8 +63,6 @@ public class DialogueReglages : MonoBehaviour
         StopAllCoroutines();
         // On lance la coroutine TouchePhrase
         StartCoroutine(TouchePhrase(phrase));
-
-        
     }
     // Fonction pour taper les phrases
     IEnumerator TouchePhrase(string phrase)
@@ -71,8 +80,10 @@ public class DialogueReglages : MonoBehaviour
     // Fonction pour finir le dialogue
     void FinDialogue()
     {
+        isDialogueOpen = false;
         // On désactive l'animation
         animator.SetBool("IsOpen", false);
+        PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement.enabled = true; // Enable player movement
     }
-
 }

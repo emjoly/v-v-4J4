@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip SonSaut;
     public AudioClip SonMort;
 
+    // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
+
     // Si le joueur est mort
     bool isDead = false;
 
@@ -74,8 +76,7 @@ public class PlayerMovement : MonoBehaviour
         // Initialiser les variables de vie du joueur
         currentHealth = maxHealth;
         // Initialiser la barre de vie du joueur
-        healthBar.SetMaxHealth(maxHealth);
-    }
+        healthBar.SetMaxHealth(maxHealth);    }
 
 
     void Update()
@@ -89,7 +90,10 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded() && directionX != 0) //pour lanim de marche
             {
                 animator.SetBool("Marche", true);
+                if (!GetComponent<AudioSource>().isPlaying)
+            {
                 GetComponent<AudioSource>().PlayOneShot(SonMarche);
+            }
             }
             else
             {

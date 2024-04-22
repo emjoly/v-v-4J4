@@ -323,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 60073332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.99, y: 15.79, z: 0}
+  m_LocalPosition: {x: 1.99, y: 14.34, z: 0}
   m_LocalScale: {x: 0.12804934, y: 0.1843694, z: 0.16917421}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 199620940}
   - component: {fileID: 199620941}
   - component: {fileID: 199620942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Big boi VV
   m_TagString: BossStart
   m_Icon: {fileID: 0}
@@ -1108,7 +1108,7 @@ Transform:
   m_GameObject: {fileID: 199620937}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.68, y: 3.1, z: 0}
+  m_LocalPosition: {x: 31.68, y: 2.35, z: 0}
   m_LocalScale: {x: 0.3236029, y: 0.3236029, z: 0.3236029}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2227,7 +2227,6 @@ MonoBehaviour:
     - "Je suis l'ange de la col\xE8re 3"
     - "Je suis l'ange de la col\xE8re 4"
     - "Je suis l'ange de la col\xE8re 5"
-  hitCount: 0
 --- !u!1 &219542443
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,7 +6039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 741936374}
   attackPoint: {fileID: 1024909200}
-  attackRange: 0.75
+  attackRange: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -6048,6 +6047,7 @@ MonoBehaviour:
   debisAttaque: 2
   tempsAttenteAttaque: 1
   SonAttaque: {fileID: 8300000, guid: 1d0870000e11742b194062e91b7bc721, type: 3}
+  dialogueReglages: {fileID: 1816283581}
 --- !u!82 &741936382
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8230,7 +8230,7 @@ Transform:
   m_GameObject: {fileID: 1024909199}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.44, y: -2.39, z: -0.12945049}
+  m_LocalPosition: {x: -3.6, y: -1.3, z: -0.12945049}
   m_LocalScale: {x: 7.6923084, y: 7.6923084, z: 7.6923084}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10260,7 +10260,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: -843703176, guid: 2c93ae0ce36b54ecc991ba07d7ee8da2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10281,7 +10281,7 @@ Transform:
   m_GameObject: {fileID: 1291337082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.55, y: 1.26, z: 0}
+  m_LocalPosition: {x: 28.08, y: 4.43, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -19046,7 +19046,6 @@ MonoBehaviour:
     - jai fais caca
     - et jaime le pipi
     - dans les toilettes lol
-  hitCount: 0
 --- !u!1 &1625019556
 GameObject:
   m_ObjectHideFlags: 0
@@ -20747,6 +20746,8 @@ MonoBehaviour:
   NomTexte: {fileID: 1120852616}
   DialogueTexte: {fileID: 971712011}
   animator: {fileID: 1333167367}
+  isDialogueOpen: 0
+  hasDialogueActivated: 0
 --- !u!4 &1816283582
 Transform:
   m_ObjectHideFlags: 0
@@ -22103,7 +22104,6 @@ MonoBehaviour:
   dialogue:
     nom: 
     phrases: []
-  hitCount: 0
 --- !u!1001 &2023219409
 PrefabInstance:
   m_ObjectHideFlags: 0

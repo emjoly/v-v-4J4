@@ -1,0 +1,927 @@
+Unity Editor version:    2023.2.14f1 (eeca29774eb5)
+Branch:                  2023.2/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.2.1 (Build 23C71)
+Darwin version:          23.2.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+2024-04-22 00:36:47.150 Unity[36058:22578648] WARNING: Secure coding is not enabled for restorable state! Enable secure coding by implementing NSApplicationDelegate.applicationSupportsSecureRestorableState: and returning YES.
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker7
+-projectPath
+/Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled
+-logFile
+Logs/AssetImportWorker7.log
+-srvPort
+51145
+-job-worker-count
+3
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled
+/Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8785404480] Host "[IP] 10.0.0.60 [Port] 0 [Flags] 2 [Guid] 453653206 [EditorId] 453653206 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8785404480] Host "[IP] 10.0.0.60 [Port] 0 [Flags] 2 [Guid] 453653206 [EditorId] 453653206 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 3
+[Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 5.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.2.14f1 (eeca29774eb5)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56058
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2023.2.14f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2023.2.14f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005606 seconds.
+- Loaded All Assemblies, in  1.005 seconds
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+icall.c:1842:
+icall.c:1842:
+- Finished resetting the current domain, in  1.995 seconds
+Domain Reload Profiling: 3002ms
+	BeginReloadAssembly (344ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (86ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (209ms)
+	LoadAllAssembliesAndSetupDomain (340ms)
+		LoadAssemblies (342ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (331ms)
+			TypeCache.Refresh (326ms)
+				TypeCache.ScanAssembly (300ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1997ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1815ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (189ms)
+			SetLoadedEditorAssemblies (15ms)
+			BeforeProcessingInitializeOnLoad (30ms)
+			ProcessInitializeOnLoadAttributes (1166ms)
+			ProcessInitializeOnLoadMethodAttributes (414ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.387 seconds
+Refreshing native plugins compatible for Editor in 3.73 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.927 seconds
+Domain Reload Profiling: 6316ms
+	BeginReloadAssembly (959ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (53ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (74ms)
+	RebuildCommonClasses (77ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (160ms)
+	LoadAllAssembliesAndSetupDomain (1168ms)
+		LoadAssemblies (832ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (528ms)
+			TypeCache.Refresh (358ms)
+				TypeCache.ScanAssembly (325ms)
+			BuildScriptInfoCaches (117ms)
+			ResolveRequiredComponents (50ms)
+	FinalizeReload (3930ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3111ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (15ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (2661ms)
+			ProcessInitializeOnLoadMethodAttributes (280ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
+Launching external process: /Applications/Unity/Hub/Editor/2023.2.14f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.37 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 132 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6048 unused Assets / (6.5 MB). Loaded Objects now: 6665.
+Memory consumption went from 176.2 MB to 169.7 MB.
+Total: 21.355000 ms (FindLiveObjects: 4.224792 ms CreateObjectMapping: 0.659250 ms MarkObjects: 7.734792 ms  DeleteObjects: 8.734625 ms)
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.242 seconds
+Refreshing native plugins compatible for Editor in 2.92 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  4.703 seconds
+Domain Reload Profiling: 6951ms
+	BeginReloadAssembly (750ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (128ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (200ms)
+	RebuildCommonClasses (80ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (104ms)
+	LoadAllAssembliesAndSetupDomain (1288ms)
+		LoadAssemblies (1131ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (450ms)
+			TypeCache.Refresh (37ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (359ms)
+			ResolveRequiredComponents (49ms)
+	FinalizeReload (4705ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3770ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (15ms)
+			BeforeProcessingInitializeOnLoad (118ms)
+			ProcessInitializeOnLoadAttributes (3222ms)
+			ProcessInitializeOnLoadMethodAttributes (391ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (48ms)
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.0 MB). Loaded Objects now: 6666.
+Memory consumption went from 158.8 MB to 153.8 MB.
+Total: 13.740792 ms (FindLiveObjects: 1.679417 ms CreateObjectMapping: 0.689834 ms MarkObjects: 8.101042 ms  DeleteObjects: 3.269041 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.165 seconds
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.32 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.468 seconds
+Domain Reload Profiling: 5638ms
+	BeginReloadAssembly (811ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (141ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (204ms)
+	RebuildCommonClasses (64ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (125ms)
+	LoadAllAssembliesAndSetupDomain (1149ms)
+		LoadAssemblies (1056ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (423ms)
+			TypeCache.Refresh (33ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (337ms)
+			ResolveRequiredComponents (47ms)
+	FinalizeReload (3470ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2524ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (113ms)
+			ProcessInitializeOnLoadAttributes (2105ms)
+			ProcessInitializeOnLoadMethodAttributes (271ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (39ms)
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.2 MB). Loaded Objects now: 6666.
+Memory consumption went from 160.7 MB to 155.5 MB.
+Total: 16.375000 ms (FindLiveObjects: 1.971333 ms CreateObjectMapping: 1.346292 ms MarkObjects: 7.657583 ms  DeleteObjects: 5.397333 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.624 seconds
+Refreshing native plugins compatible for Editor in 2.65 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.806 seconds
+Domain Reload Profiling: 5438ms
+	BeginReloadAssembly (561ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (98ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (158ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (906ms)
+		LoadAssemblies (819ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (299ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (250ms)
+			ResolveRequiredComponents (32ms)
+	FinalizeReload (3812ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3128ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (2716ms)
+			ProcessInitializeOnLoadMethodAttributes (309ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (6.4 MB). Loaded Objects now: 6666.
+Memory consumption went from 162.6 MB to 156.3 MB.
+Total: 13.348959 ms (FindLiveObjects: 2.071417 ms CreateObjectMapping: 0.739709 ms MarkObjects: 5.888541 ms  DeleteObjects: 4.648125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.057 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.992 seconds
+Domain Reload Profiling: 5052ms
+	BeginReloadAssembly (778ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (126ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (272ms)
+	RebuildCommonClasses (81ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (91ms)
+	LoadAllAssembliesAndSetupDomain (1087ms)
+		LoadAssemblies (981ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (368ms)
+			TypeCache.Refresh (37ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (290ms)
+			ResolveRequiredComponents (36ms)
+	FinalizeReload (2993ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2356ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (2027ms)
+			ProcessInitializeOnLoadMethodAttributes (224ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (3.8 MB). Loaded Objects now: 6666.
+Memory consumption went from 164.6 MB to 160.7 MB.
+Total: 21.061250 ms (FindLiveObjects: 3.882458 ms CreateObjectMapping: 2.283083 ms MarkObjects: 10.874208 ms  DeleteObjects: 4.019959 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.584 seconds
+Refreshing native plugins compatible for Editor in 2.02 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.703 seconds
+Domain Reload Profiling: 4292ms
+	BeginReloadAssembly (562ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (92ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (158ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (93ms)
+	LoadAllAssembliesAndSetupDomain (865ms)
+		LoadAssemblies (785ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (295ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (243ms)
+			ResolveRequiredComponents (36ms)
+	FinalizeReload (2705ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2104ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (1811ms)
+			ProcessInitializeOnLoadMethodAttributes (191ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.2 MB). Loaded Objects now: 6666.
+Memory consumption went from 166.4 MB to 161.3 MB.
+Total: 7.914666 ms (FindLiveObjects: 0.502791 ms CreateObjectMapping: 0.377792 ms MarkObjects: 4.696416 ms  DeleteObjects: 2.336375 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.560 seconds
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.737 seconds
+Domain Reload Profiling: 4301ms
+	BeginReloadAssembly (561ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (105ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (143ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (89ms)
+	LoadAllAssembliesAndSetupDomain (844ms)
+		LoadAssemblies (784ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (275ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (225ms)
+			ResolveRequiredComponents (35ms)
+	FinalizeReload (2739ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2121ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (1832ms)
+			ProcessInitializeOnLoadMethodAttributes (184ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.0 MB). Loaded Objects now: 6666.
+Memory consumption went from 168.3 MB to 163.3 MB.
+Total: 7.699833 ms (FindLiveObjects: 0.513959 ms CreateObjectMapping: 0.374292 ms MarkObjects: 4.590791 ms  DeleteObjects: 2.219667 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.614 seconds
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.738 seconds
+Domain Reload Profiling: 4356ms
+	BeginReloadAssembly (569ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (105ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (151ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (120ms)
+	LoadAllAssembliesAndSetupDomain (853ms)
+		LoadAssemblies (776ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (291ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (238ms)
+			ResolveRequiredComponents (33ms)
+	FinalizeReload (2740ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2113ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (74ms)
+			ProcessInitializeOnLoadAttributes (1818ms)
+			ProcessInitializeOnLoadMethodAttributes (195ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (28ms)
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.3 MB). Loaded Objects now: 6666.
+Memory consumption went from 170.3 MB to 165.0 MB.
+Total: 8.233291 ms (FindLiveObjects: 0.976042 ms CreateObjectMapping: 0.383833 ms MarkObjects: 4.674791 ms  DeleteObjects: 2.197709 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.541 seconds
+Refreshing native plugins compatible for Editor in 2.42 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.757 seconds
+Domain Reload Profiling: 4303ms
+	BeginReloadAssembly (563ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (95ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (175ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (832ms)
+		LoadAssemblies (758ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (284ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (235ms)
+			ResolveRequiredComponents (32ms)
+	FinalizeReload (2758ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2183ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (1882ms)
+			ProcessInitializeOnLoadMethodAttributes (197ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.1 MB). Loaded Objects now: 6666.
+Memory consumption went from 172.2 MB to 167.1 MB.
+Total: 8.909708 ms (FindLiveObjects: 0.708208 ms CreateObjectMapping: 0.505958 ms MarkObjects: 5.388792 ms  DeleteObjects: 2.305291 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.528 seconds
+Refreshing native plugins compatible for Editor in 2.38 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.728 seconds
+Domain Reload Profiling: 4261ms
+	BeginReloadAssembly (556ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (88ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (166ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (836ms)
+		LoadAssemblies (779ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (278ms)
+			TypeCache.Refresh (21ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (221ms)
+			ResolveRequiredComponents (33ms)
+	FinalizeReload (2729ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2134ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (1788ms)
+			ProcessInitializeOnLoadMethodAttributes (244ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (28ms)
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (3.8 MB). Loaded Objects now: 6666.
+Memory consumption went from 174.2 MB to 170.4 MB.
+Total: 7.911167 ms (FindLiveObjects: 0.519625 ms CreateObjectMapping: 0.349417 ms MarkObjects: 4.941625 ms  DeleteObjects: 2.099167 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.357 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.640 seconds
+Domain Reload Profiling: 6002ms
+	BeginReloadAssembly (1108ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (313ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (307ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (101ms)
+	LoadAllAssembliesAndSetupDomain (1068ms)
+		LoadAssemblies (998ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (381ms)
+			TypeCache.Refresh (33ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (306ms)
+			ResolveRequiredComponents (37ms)
+	FinalizeReload (3641ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2783ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (17ms)
+			BeforeProcessingInitializeOnLoad (213ms)
+			ProcessInitializeOnLoadAttributes (2276ms)
+			ProcessInitializeOnLoadMethodAttributes (254ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (5.5 MB). Loaded Objects now: 6666.
+Memory consumption went from 175.7 MB to 170.2 MB.
+Total: 10.991542 ms (FindLiveObjects: 1.054750 ms CreateObjectMapping: 0.977417 ms MarkObjects: 6.043083 ms  DeleteObjects: 2.914750 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mathi/Desktop/École Hiver 2024/CRÉATION DE JEU EN ÉQUIPE/JeuEquipe/Untitled/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.741 seconds
+Refreshing native plugins compatible for Editor in 3.36 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.814 seconds
+Domain Reload Profiling: 5561ms
+	BeginReloadAssembly (640ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (110ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (176ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (97ms)
+	LoadAllAssembliesAndSetupDomain (933ms)
+		LoadAssemblies (852ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (324ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (271ms)
+			ResolveRequiredComponents (37ms)
+	FinalizeReload (3817ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3012ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (2625ms)
+			ProcessInitializeOnLoadMethodAttributes (276ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (51ms)
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6046 unused Assets / (3.7 MB). Loaded Objects now: 6666.
+Memory consumption went from 177.7 MB to 174.0 MB.
+Total: 35.742291 ms (FindLiveObjects: 6.931292 ms CreateObjectMapping: 3.315666 ms MarkObjects: 19.794292 ms  DeleteObjects: 5.699750 ms)
+
+Prepare: number of updated asset objects reloaded= 0

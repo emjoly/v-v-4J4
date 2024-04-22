@@ -18,6 +18,8 @@ public class PlayerCombat : MonoBehaviour
 
     public AudioClip SonAttaque;
 
+    public DialogueReglages dialogueReglages;
+
     // Update is called once per frame
     void Update()
     {
@@ -36,19 +38,19 @@ public class PlayerCombat : MonoBehaviour
     // Fonction pour attaquer
     public void PerformAttack()
     {
+        if (dialogueReglages.isDialogueOpen)
+            {
+                return;
+            }
         // Detecter les ennemis dans la range d'attaque
         Collider2D[] EnnemieTouche = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // Appliquer des degats
         foreach (Collider2D ennemi in EnnemieTouche)
         {
-            if (ennemi.CompareTag("BossStart"))
+            DialogueActivation boss = ennemi.GetComponent<DialogueActivation>();
+            if (boss != null)
             {
-                DialogueActivation boss = ennemi.GetComponent<DialogueActivation>();
-                boss.hitCount++;
-                if (boss.hitCount >= 4)
-                {
-                    boss.TriggerDialogue();
-                }
+                boss.TakeHit();
             }
             else
             {

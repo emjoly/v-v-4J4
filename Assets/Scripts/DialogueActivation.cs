@@ -5,15 +5,23 @@ using UnityEngine;
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
-    public int hitCount = 0; // Variable to track the number of hits
+    private int hitCount = 0;
 
-    // Function to trigger the dialogue
     public void TriggerDialogue()
     {
         Debug.Log("Dialogue triggered!");
-        // Find the DialogueReglages object and call its CommencerDialogue function
+        PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement.enabled = false;
         FindObjectOfType<DialogueReglages>().CommencerDialogue(dialogue);
-        // Reset hit count for future interactions
         hitCount = 0;
+    }
+
+    public void TakeHit()
+    {
+        hitCount++;
+        if (hitCount >= 3)
+        {
+            TriggerDialogue();
+        }
     }
 }
