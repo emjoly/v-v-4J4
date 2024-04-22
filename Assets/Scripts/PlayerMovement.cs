@@ -65,8 +65,10 @@ public class PlayerMovement : MonoBehaviour
 
     // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
     // chaque quoi? sons? cest juste marche que le son se repete non?
+    // il dash pas vers la gauche
+    // il marche pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
 
-    // Si le joueur est mort
+    // Si le joueur est mort ou blesse
     bool isDead = false;
     bool isBlesse = false;
 
@@ -83,18 +85,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
-        // maybe im wrong mais faut faire: if(!= dead){ *tout le code du void update* } comme ca quand il meurt rien peut se passer
         if (!isDead && !isBlesse) // Vérifie si le personnage n'est pas mort
         {
             // Déplacer le joueur avec le clavier(getAxisRaw pour éviter l'accélération du joueur)
             float directionX = Input.GetAxisRaw("Horizontal");
-            if (IsGrounded() && directionX != 0) //pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
+            float directionY = Input.GetAxisRaw("Vertical");
+            if (IsGrounded() && directionX != 0)
             {
                 animator.SetBool("Marche", true);
                 if (!GetComponent<AudioSource>().isPlaying)
                 {
-                    GetComponent<AudioSource>().PlayOneShot(SonMarche);
+                    GetComponent<AudioSource>().PlayOneShot(SonMarche); //je comprend pas ca, le son de marche joue pas
                 }
             }
             else
@@ -112,12 +113,6 @@ public class PlayerMovement : MonoBehaviour
             if (isDashing)
             {
                 return;
-            }
-
-            if (isJumping && directionX != 0) 
-            {
-                animator.SetBool("Saute", true);
-                animator.SetBool("Marche", false);
             }
 
             // Calcul du bonus de vitesse en fonction de la hauteur du saut
@@ -196,7 +191,6 @@ public class PlayerMovement : MonoBehaviour
             // Si le joueur relâche la touche Jump
             if (Input.GetButtonUp("Jump"))
             {
-
                 // Pour ne pas sauter indéfiniment
                 isJumping = false;
                 animator.SetBool("Saute", false);
@@ -237,14 +231,16 @@ public class PlayerMovement : MonoBehaviour
     // Fonction pour prendre des dégats
     public void TakeDamage(int damage)
     {
-        // Réduire la vie du joueur par le montant de dégats
-        currentHealth -= damage;
-        // Mettre à jour la barre de vie du joueur
-        healthBar.SetHealth(currentHealth);
-        animator.SetTrigger("Mal");
-        isBlesse = true;
-        GetComponent<AudioSource>().PlayOneShot(SonBlesse);
-        StartCoroutine(BlesseBack2False(1.0f)); // Reload after 1sec
+        if(!isDead) { 
+            // Réduire la vie du joueur par le montant de dégats
+            currentHealth -= damage;
+            // Mettre à jour la barre de vie du joueur
+            healthBar.SetHealth(currentHealth);
+            animator.SetTrigger("Mal");
+            isBlesse = true;
+            GetComponent<AudioSource>().PlayOneShot(SonBlesse);
+            StartCoroutine(BlesseBack2False(1.0f)); // freeze quand il est blessé
+        }   
     }
 
     private IEnumerator BlesseBack2False(float delay)
@@ -349,20 +345,18 @@ public class PlayerMovement : MonoBehaviour
     void Die()
     {
         /*
-        // Disable player movement and controls
-        rb.velocity = Vector2.zero; // Stop player movement
-        rb.gravityScale = 0; // Disable gravity
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        boxCollider.enabled = false; // Disable the collider to prevent further collisions
-        */
+         // Disable player movement and controls
+         rb.velocity = Vector2.zero; // Stop player movement
+         rb.gravityScale = 0; // Disable gravity
+         rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+         boxCollider.enabled = false; // Disable the collider to prevent further collisions*/
+        if (isDead) return;
         isDead = true; // Set isDead to true
-        StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
         // Jouer l'animation de mort
-        Animator animator = GetComponent<Animator>();
-        animator.SetTrigger("Mort");
+        GetComponent<Animator>().SetTrigger("Mort");
+        StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
         GetComponent<AudioSource>().PlayOneShot(SonMort); // Jouer le son de mort
-
         // Peut-être screen gameover ?
         // mais Die est appele meme quand il touche le solPic, faudrait quil reapparait sur une plateforme mais je sais pas a quel point cest faisable
     }

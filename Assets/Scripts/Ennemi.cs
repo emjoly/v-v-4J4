@@ -10,17 +10,51 @@ public class Ennemi : MonoBehaviour
     int currentHealth;
 
     public Animator animator;
-
+    public Rigidbody2D rb;
+    public SpriteRenderer ennemiSprite;
 
     private float damageCooldown = 1.5f; // 2 seconds cooldown
     private float lastDamageTime;
 
+    public GameObject pointA;
+    public GameObject pointB;
+    private Transform currentPosition;
+    public float speed;
+    
     // Start is called before the first frame update
     void Start()
     {
         // On initialise la vie actuelle à la vie maximum
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        currentPosition = pointB.transform;
     }
+
+    private void Update()
+    {
+        Vector2 point = currentPosition.position - transform.position;
+        if(currentPosition == pointB.transform)
+        {
+            rb.velocity = new Vector2(speed, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-speed, 0);
+        }
+        if(Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointB.transform)
+        {
+            currentPosition = pointA.transform;
+            ennemiSprite.flipX = true;
+        }
+        if (Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointA.transform)
+        {
+            currentPosition = pointB.transform;
+            ennemiSprite.flipX = false;
+
+        }
+    }
+
     // Fonction pour infliger des dégâts
     public void TakeDamage(int damage)
     {
