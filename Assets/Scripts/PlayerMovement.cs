@@ -57,16 +57,18 @@ public class PlayerMovement : MonoBehaviour
     public Transform respawnPoint; // Point de respawn du joueur
     public PlayerCombat playerCombat;
 
-    // Autres variables
+    // Variables sons
     public AudioClip SonMarche;
     public AudioClip SonBlesse;
     public AudioClip SonSaut;
     public AudioClip SonMort;
 
     // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
+    // chaque quoi? sons? cest juste marche que le son se repete non?
 
     // Si le joueur est mort
     bool isDead = false;
+    bool isBlesse = false;
 
     void Start()
     {
@@ -83,17 +85,17 @@ public class PlayerMovement : MonoBehaviour
     {
 
         // maybe im wrong mais faut faire: if(!= dead){ *tout le code du void update* } comme ca quand il meurt rien peut se passer
-        if (!isDead) // Vérifie si le personnage n'est pas mort
+        if (!isDead && !isBlesse) // Vérifie si le personnage n'est pas mort
         {
             // Déplacer le joueur avec le clavier(getAxisRaw pour éviter l'accélération du joueur)
             float directionX = Input.GetAxisRaw("Horizontal");
-            if (IsGrounded() && directionX != 0) //pour lanim de marche
+            if (IsGrounded() && directionX != 0) //pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
             {
                 animator.SetBool("Marche", true);
                 if (!GetComponent<AudioSource>().isPlaying)
-            {
-                GetComponent<AudioSource>().PlayOneShot(SonMarche);
-            }
+                {
+                    GetComponent<AudioSource>().PlayOneShot(SonMarche);
+                }
             }
             else
             {
@@ -112,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            if (isJumping && directionX != 0)
+            if (isJumping && directionX != 0) 
             {
                 animator.SetBool("Saute", true);
                 animator.SetBool("Marche", false);
@@ -228,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
                 //animator.SetTrigger("Tombe");  le truc avec ca cest que il tombe non stop cest gossant
             }
-                ExtraJump();
+            ExtraJump();
         }
     }
 
@@ -240,9 +242,16 @@ public class PlayerMovement : MonoBehaviour
         // Mettre à jour la barre de vie du joueur
         healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Mal");
+        isBlesse = true;
         GetComponent<AudioSource>().PlayOneShot(SonBlesse);
+        StartCoroutine(BlesseBack2False(1.0f)); // Reload after 1sec
     }
 
+    private IEnumerator BlesseBack2False(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isBlesse = false; 
+    }
 
     // Fonction pour déterminer si le joueur est au sol
     private bool IsGrounded()
@@ -355,7 +364,7 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(SonMort); // Jouer le son de mort
 
         // Peut-être screen gameover ?
-        // mais Die est appele meme quand il touche le sol, faudrait quil reapparait sur une plateforme mais je sais pas a quel point cest faisable
+        // mais Die est appele meme quand il touche le solPic, faudrait quil reapparait sur une plateforme mais je sais pas a quel point cest faisable
     }
 
     IEnumerator ReloadSceneAfterDelay(float delay)
