@@ -5,6 +5,9 @@ using UnityEngine;
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
+    public AudioSource backgroundMusicSource; 
+    public AudioClip newBackgroundMusic; 
+
     private int hitCount = 0;
 
     public void TriggerDialogue()

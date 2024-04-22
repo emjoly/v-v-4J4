@@ -17,16 +17,20 @@ public class DialogueReglages : MonoBehaviour
     public bool isDialogueOpen = false;
     public bool hasDialogueActivated = false;
 
+    public DialogueActivation dialogueActivation;
+    public AudioSource backgroundMusicSource;
+    public AudioClip newBackgroundMusic; 
+
     // Start is called before the first frame update
     void Start()
     {
         // Initialisation de la file d'attente de phrases
         phrases = new Queue<string>();
     }
+
     // Fonction pour commencer le dialogue
     public void CommencerDialogue(Dialogue dialogue)
     {
-
         if (hasDialogueActivated)
         {
             return;
@@ -47,7 +51,22 @@ public class DialogueReglages : MonoBehaviour
         }
         // On affiche la prochaine phrase
         AfficherProchainePhrase();
+
+        // Change background music
+        if (backgroundMusicSource != null && newBackgroundMusic != null)
+        {
+            Debug.Log("Changing music");
+            backgroundMusicSource.Stop();
+            backgroundMusicSource.clip = newBackgroundMusic;
+            backgroundMusicSource.Play();
+            Debug.Log("Music should be playing now");
+        }
+        else
+        {
+            Debug.Log("Music source or clip is null");
+        }
     }
+
     // Fonction pour afficher la prochaine phrase
     public void AfficherProchainePhrase()
     {
@@ -64,6 +83,7 @@ public class DialogueReglages : MonoBehaviour
         // On lance la coroutine TouchePhrase
         StartCoroutine(TouchePhrase(phrase));
     }
+
     // Fonction pour taper les phrases
     IEnumerator TouchePhrase(string phrase)
     {
@@ -77,6 +97,7 @@ public class DialogueReglages : MonoBehaviour
             yield return null;
         }
     }
+
     // Fonction pour finir le dialogue
     void FinDialogue()
     {
@@ -84,6 +105,7 @@ public class DialogueReglages : MonoBehaviour
         // On désactive l'animation
         animator.SetBool("IsOpen", false);
         PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        playerMovement.enabled = true; // Enable player movement
+        playerMovement.enabled = true; 
+        
     }
 }
