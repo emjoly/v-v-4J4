@@ -23,6 +23,8 @@ public class Ennemi : MonoBehaviour
 
     private bool isDead = false;
 
+    public AudioClip SonBlesse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,8 +68,8 @@ public class Ennemi : MonoBehaviour
         AudiosSettings.PlaySound("AttackHitTest");
         // On enlève les dégâts à la vie actuelle
         currentHealth -= damage;
-
         animator.SetTrigger("AMal");
+        GetComponent<AudioSource>().PlayOneShot(SonBlesse);
 
         // On vérifie si la vie actuelle est inférieure ou égale à 0
         if (currentHealth <= 0)
