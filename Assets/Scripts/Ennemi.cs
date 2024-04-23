@@ -20,7 +20,9 @@ public class Ennemi : MonoBehaviour
     public GameObject pointB;
     private Transform currentPosition;
     public float speed;
-    
+
+    private bool isDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,25 +35,28 @@ public class Ennemi : MonoBehaviour
 
     private void Update()
     {
-        Vector2 point = currentPosition.position - transform.position;
-        if(currentPosition == pointB.transform)
+        // si l'ennemi est mort il ne bouge plus
+        if (!isDead)
         {
-            rb.velocity = new Vector2(speed, 0);
-        }
-        else
-        {
-            rb.velocity = new Vector2(-speed, 0);
-        }
-        if(Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointB.transform)
-        {
-            currentPosition = pointA.transform;
-            ennemiSprite.flipX = true;
-        }
-        if (Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointA.transform)
-        {
-            currentPosition = pointB.transform;
-            ennemiSprite.flipX = false;
-
+            Vector2 point = currentPosition.position - transform.position;
+            if (currentPosition == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, 0);
+            }
+            if (Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointB.transform)
+            {
+                currentPosition = pointA.transform;
+                ennemiSprite.flipX = true;
+            }
+            if (Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointA.transform)
+            {
+                currentPosition = pointB.transform;
+                ennemiSprite.flipX = false;
+            }
         }
     }
 
@@ -75,11 +80,12 @@ public class Ennemi : MonoBehaviour
     void Die()
     {
         Debug.Log("Ennemi mort");
-
         animator.SetBool("EstMort", true);
         GetComponent<Collider2D>().enabled = false;
+        rb.velocity = Vector2.zero;
         // On disable l'ennemy
         this.enabled = false;
+        isDead = true;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

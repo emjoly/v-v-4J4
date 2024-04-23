@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: b19d26f6497ba5c4da34565e4d43f163
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5091651507215115771
+    second: EnnemmiMortAvecExplosion_0
+  - first:
+      213: -7718726507442636322
+    second: EnnemmiMortAvecExplosion_1
+  - first:
+      213: -7315192029427348658
+    second: EnnemmiMortAvecExplosion_2
+  - first:
+      213: 6939630867672142893
+    second: EnnemmiMortAvecExplosion_3
+  - first:
+      213: -1501919468289053230
+    second: EnnemmiMortAvecExplosion_4
+  - first:
+      213: -334512494547878994
+    second: EnnemmiMortAvecExplosion_5
+  - first:
+      213: 1184032276236248476
+    second: EnnemmiMortAvecExplosion_6
+  - first:
+      213: -1347936536332783289
+    second: EnnemmiMortAvecExplosion_7
+  - first:
+      213: 1214477007259460378
+    second: EnnemmiMortAvecExplosion_8
+  - first:
+      213: -8471653703758207468
+    second: EnnemmiMortAvecExplosion_9
+  - first:
+      213: -9117647085489424761
+    second: EnnemmiMortAvecExplosion_10
+  - first:
+      213: -6841704683395240852
+    second: EnnemmiMortAvecExplosion_11
+  - first:
+      213: 3558722099205321434
+    second: EnnemmiMortAvecExplosion_12
+  - first:
+      213: 3104050135467521727
+    second: EnnemmiMortAvecExplosion_13
+  - first:
+      213: 7289927693905170877
+    second: EnnemmiMortAvecExplosion_14
+  - first:
+      213: -1264071777779707828
+    second: EnnemmiMortAvecExplosion_15
+  - first:
+      213: 1428062666154623299
+    second: EnnemmiMortAvecExplosion_16
+  - first:
+      213: -4385619624513105125
+    second: EnnemmiMortAvecExplosion_17
+  - first:
+      213: -491572519937393221
+    second: EnnemmiMortAvecExplosion_18
+  - first:
+      213: -1953672770771339403
+    second: EnnemmiMortAvecExplosion_19
+  - first:
+      213: 532018962867557676
+    second: EnnemmiMortAvecExplosion_20
+  - first:
+      213: 4864842005429929770
+    second: EnnemmiMortAvecExplosion_21
+  - first:
+      213: 6275232270585230361
+    second: EnnemmiMortAvecExplosion_22
+  - first:
+      213: 1295946846716784055
+    second: EnnemmiMortAvecExplosion_23
+  - first:
+      213: 5398581570776012588
+    second: EnnemmiMortAvecExplosion_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1002
+        height: 1586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a5c505ee1d659b0800000000000000
+      internalID: -5091651507215115771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_1
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 108
+        width: 1012
+        height: 1596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed97d75132391e490800000000000000
+      internalID: -7718726507442636322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_2
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 230
+        width: 1065
+        height: 1609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bc6365b973b7a90800000000000000
+      internalID: -7315192029427348658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_3
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 266
+        width: 1125
+        height: 1607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d241fe3a1858e4060800000000000000
+      internalID: 6939630867672142893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_4
+      rect:
+        serializedVersion: 2
+        x: 4850
+        y: 301
+        width: 1166
+        height: 1543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd236b733c182be0800000000000000
+      internalID: -1501919468289053230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_5
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 706
+        width: 486
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab3b8598a29b5bf0800000000000000
+      internalID: -334512494547878994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_6
+      rect:
+        serializedVersion: 2
+        x: 6842
+        y: 595
+        width: 707
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95a8abf4178e6010800000000000000
+      internalID: 1184032276236248476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_7
+      rect:
+        serializedVersion: 2
+        x: 7626
+        y: 512
+        width: 970
+        height: 874
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7413d14acda2b4de0800000000000000
+      internalID: -1347936536332783289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_8
+      rect:
+        serializedVersion: 2
+        x: 8713
+        y: 519
+        width: 996
+        height: 855
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13649d4760bad010800000000000000
+      internalID: 1214477007259460378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_9
+      rect:
+        serializedVersion: 2
+        x: 10051
+        y: 1007
+        width: 476
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416ae5757d3ae6a80800000000000000
+      internalID: -8471653703758207468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_10
+      rect:
+        serializedVersion: 2
+        x: 10573
+        y: 1142
+        width: 152
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786f60a784c977180800000000000000
+      internalID: -9117647085489424761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_11
+      rect:
+        serializedVersion: 2
+        x: 11111
+        y: 1078
+        width: 249
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ca910e6d16d01a0800000000000000
+      internalID: -6841704683395240852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_12
+      rect:
+        serializedVersion: 2
+        x: 11479
+        y: 891
+        width: 262
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad23771f4ee136130800000000000000
+      internalID: 3558722099205321434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_13
+      rect:
+        serializedVersion: 2
+        x: 11988
+        y: 970
+        width: 200
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb67b89f62dc31b20800000000000000
+      internalID: 3104050135467521727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_14
+      rect:
+        serializedVersion: 2
+        x: 9923
+        y: 645
+        width: 317
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db110892d960b2560800000000000000
+      internalID: 7289927693905170877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_15
+      rect:
+        serializedVersion: 2
+        x: 10214
+        y: 651
+        width: 592
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4018da5a6d157ee0800000000000000
+      internalID: -1264071777779707828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_16
+      rect:
+        serializedVersion: 2
+        x: 11037
+        y: 894
+        width: 104
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341c42dbd6f71d310800000000000000
+      internalID: 1428062666154623299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_17
+      rect:
+        serializedVersion: 2
+        x: 11195
+        y: 861
+        width: 152
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b131ae000362323c0800000000000000
+      internalID: -4385619624513105125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_18
+      rect:
+        serializedVersion: 2
+        x: 12198
+        y: 976
+        width: 57
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbdb9c7c5659d29f0800000000000000
+      internalID: -491572519937393221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_19
+      rect:
+        serializedVersion: 2
+        x: 11996
+        y: 783
+        width: 110
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57732da47f823e4e0800000000000000
+      internalID: -1953672770771339403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_20
+      rect:
+        serializedVersion: 2
+        x: 12273
+        y: 845
+        width: 121
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c251e7f8d6c126700800000000000000
+      internalID: 532018962867557676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_21
+      rect:
+        serializedVersion: 2
+        x: 10223
+        y: 523
+        width: 269
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27cc066704638340800000000000000
+      internalID: 4864842005429929770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_22
+      rect:
+        serializedVersion: 2
+        x: 11174
+        y: 574
+        width: 360
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914fc43a08a161750800000000000000
+      internalID: 6275232270585230361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_23
+      rect:
+        serializedVersion: 2
+        x: 11614
+        y: 645
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd67567ac02cf110800000000000000
+      internalID: 1295946846716784055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_24
+      rect:
+        serializedVersion: 2
+        x: 12174
+        y: 685
+        width: 75
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c271311f55d9bea40800000000000000
+      internalID: 5398581570776012588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
