@@ -431,7 +431,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ennemiAttack_0: -6877863183240305049
+      ennemiAttack_1: -2150710757104020974
+      ennemiAttack_10: 4664936887986429299
+      ennemiAttack_11: 4056107686289578249
+      ennemiAttack_12: 3161826858581036650
+      ennemiAttack_2: -8167885118158216434
+      ennemiAttack_3: -3503002251741241619
+      ennemiAttack_4: -2733698870534645896
+      ennemiAttack_5: -3907458728876872559
+      ennemiAttack_6: -1527565730472604445
+      ennemiAttack_7: 1775344267600454435
+      ennemiAttack_8: 1579041580436941311
+      ennemiAttack_9: 5947399564767779928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

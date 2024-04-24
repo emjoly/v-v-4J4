@@ -719,7 +719,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnnemmiMortAvecExplosion_0: -5091651507215115771
+      EnnemmiMortAvecExplosion_1: -7718726507442636322
+      EnnemmiMortAvecExplosion_10: -9117647085489424761
+      EnnemmiMortAvecExplosion_11: -6841704683395240852
+      EnnemmiMortAvecExplosion_12: 3558722099205321434
+      EnnemmiMortAvecExplosion_13: 3104050135467521727
+      EnnemmiMortAvecExplosion_14: 7289927693905170877
+      EnnemmiMortAvecExplosion_15: -1264071777779707828
+      EnnemmiMortAvecExplosion_16: 1428062666154623299
+      EnnemmiMortAvecExplosion_17: -4385619624513105125
+      EnnemmiMortAvecExplosion_18: -491572519937393221
+      EnnemmiMortAvecExplosion_19: -1953672770771339403
+      EnnemmiMortAvecExplosion_2: -7315192029427348658
+      EnnemmiMortAvecExplosion_20: 532018962867557676
+      EnnemmiMortAvecExplosion_21: 4864842005429929770
+      EnnemmiMortAvecExplosion_22: 6275232270585230361
+      EnnemmiMortAvecExplosion_23: 1295946846716784055
+      EnnemmiMortAvecExplosion_24: 5398581570776012588
+      EnnemmiMortAvecExplosion_3: 6939630867672142893
+      EnnemmiMortAvecExplosion_4: -1501919468289053230
+      EnnemmiMortAvecExplosion_5: -334512494547878994
+      EnnemmiMortAvecExplosion_6: 1184032276236248476
+      EnnemmiMortAvecExplosion_7: -1347936536332783289
+      EnnemmiMortAvecExplosion_8: 1214477007259460378
+      EnnemmiMortAvecExplosion_9: -8471653703758207468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

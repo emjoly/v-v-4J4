@@ -311,7 +311,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MechantMarche 1_0: 5166435844793540499
+      MechantMarche 1_1: -7481756014049144070
+      MechantMarche 1_2: -8634100204500277189
+      MechantMarche 1_3: -5628675923661232204
+      MechantMarche 1_4: 8455915177569252033
+      MechantMarche 1_5: 6113679221245868383
+      MechantMarche 1_6: 975585651424101612
+      MechantMarche 1_7: -8574538463915371605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
