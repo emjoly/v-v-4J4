@@ -815,7 +815,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mortChienAvecExplosion_0: 6893321485494330763
+      mortChienAvecExplosion_1: -3589364244817058505
+      mortChienAvecExplosion_10: 533831708622637298
+      mortChienAvecExplosion_11: -625792991151584771
+      mortChienAvecExplosion_12: 7260126376549019987
+      mortChienAvecExplosion_13: 816122186225985471
+      mortChienAvecExplosion_14: -3773864277476287985
+      mortChienAvecExplosion_15: -2237674354910346396
+      mortChienAvecExplosion_16: -9138221020139511387
+      mortChienAvecExplosion_17: -6401673891314560372
+      mortChienAvecExplosion_18: 7466389150369576364
+      mortChienAvecExplosion_19: 2873651174710074140
+      mortChienAvecExplosion_2: 2071116685628784781
+      mortChienAvecExplosion_20: 8133652071204185734
+      mortChienAvecExplosion_21: -212689855278438266
+      mortChienAvecExplosion_22: 7516772683667392547
+      mortChienAvecExplosion_23: -1404152152077044160
+      mortChienAvecExplosion_24: -6054334157266410082
+      mortChienAvecExplosion_25: 8990718165859383548
+      mortChienAvecExplosion_26: 6316797125224651626
+      mortChienAvecExplosion_27: -7386222297867875951
+      mortChienAvecExplosion_28: -8070409297682030712
+      mortChienAvecExplosion_3: 1720280426823377127
+      mortChienAvecExplosion_4: 5220137897339830556
+      mortChienAvecExplosion_5: 3195767206302073709
+      mortChienAvecExplosion_6: -8580193135008141644
+      mortChienAvecExplosion_7: -7560811999233095719
+      mortChienAvecExplosion_8: -5547677228370300051
+      mortChienAvecExplosion_9: 5164429917615328459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

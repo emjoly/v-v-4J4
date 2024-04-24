@@ -11,6 +11,8 @@ TagManager:
   - FallingPlatform
   - PicSol
   - BossStart
+  - bobo
+  - Vie
   layers:
   - Default
   - TransparentFX
