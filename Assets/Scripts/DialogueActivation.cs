@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
@@ -9,14 +10,20 @@ public class DialogueActivation : MonoBehaviour
     public AudioClip newBackgroundMusic; 
 
     private int hitCount = 0;
+    private bool dialogueTriggered = false;
 
     public void TriggerDialogue()
     {
-        Debug.Log("Dialogue triggered!");
+        if (dialogueTriggered)
+        {
+            return;
+        }
+
         PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         playerMovement.enabled = false;
         FindObjectOfType<DialogueReglages>().CommencerDialogue(dialogue);
         hitCount = 0;
+        dialogueTriggered = true;
     }
 
     public void TakeHit()

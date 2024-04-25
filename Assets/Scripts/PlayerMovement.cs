@@ -330,10 +330,20 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Vie"))
+        {
+        // Restaurer la santé du joueur au maximum
+        currentHealth = maxHealth;
+        // Mettre à jour l'interface utilisateur de la barre de santé
+        healthBar.SetHealth(currentHealth);
+        // Détruire l'objet avec le tag "Vie"
+        Destroy(collision.gameObject);
+        // Ajouter un son !!!
+        }
         // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(5); // Réduit la vie du joueur de 5
+            TakeDamage(10); // Réduit la vie du joueur de 10
             // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
         }
         if (collision.gameObject.CompareTag("PicSol"))

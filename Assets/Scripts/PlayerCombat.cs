@@ -10,11 +10,12 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int DommageAttaque = 20;
-    public float debisAttaque = 2f;
     public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
-    bool faitFaceADroite = false;  // 
+    bool faitFaceADroite = false;
+    bool hasAttacked = false; // Add this line
+    bool hasDealtDamage = false; // Add this line
 
     public AudioClip SonAttaque;
 
@@ -25,41 +26,74 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= prochaineAttaqueTemps)
         {
-            if (Input.GetButtonDown("Attack"))
+            if (Input.GetButtonDown("Attack")&& !dialogueReglages.isDialogueOpen)
             {                
                 animator.SetTrigger("Attack");
                 // On active l'animation d'attaque
                 prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
                 GetComponent<AudioSource>().PlayOneShot(SonAttaque);
+                StartCoroutine(AttackCoroutine()); // Start the attack coroutine
             }
         }
     }
 
-    // Fonction pour attaquer
-    public void PerformAttack()
+public void PerformAttack()
+{
+    if (dialogueReglages.isDialogueOpen || hasDealtDamage)
     {
-        if (dialogueReglages.isDialogueOpen)
-            {
-                return;
-            }
-        // Detecter les ennemis dans la range d'attaque
-        Collider2D[] EnnemieTouche = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        // Appliquer des degats
-        foreach (Collider2D ennemi in EnnemieTouche)
-        {
-            DialogueActivation boss = ennemi.GetComponent<DialogueActivation>();
-            if (boss != null)
-            {
-                boss.TakeHit();
-            }
-            else
-            {
-                ennemi.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
-            }
-        }
+        return;
     }
 
-    // Fonction pour faire apparaitre un cercle dans l'editeur
+    // Detect enemies in range
+    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+    // Deal damage if it hasn't been dealt yet
+    foreach (Collider2D enemy in hitEnemies)
+    {
+        DialogueActivation boss = enemy.GetComponent<DialogueActivation>();
+        if (boss != null)
+        {
+            boss.TakeHit();
+        }
+        else
+        {
+            enemy.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+        }
+    }
+    hasDealtDamage = true; // Damage has been dealt
+}
+
+    IEnumerator AttackCoroutine()
+    {
+        hasAttacked = true;
+        float attackEndTime = Time.time + tempsAttenteAttaque;
+        while (Time.time < attackEndTime)
+        {
+            // Detect enemies in range
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            // Deal damage if it hasn't been dealt yet
+            if (!hasDealtDamage)
+            {
+                foreach (Collider2D enemy in hitEnemies)
+                {
+                    DialogueActivation boss = enemy.GetComponent<DialogueActivation>();
+                    if (boss != null)
+                    {
+                        boss.TakeHit();
+                    }
+                    else
+                    {
+                        enemy.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+                    }
+                }
+                hasDealtDamage = true; // Damage has been dealt
+            }
+            yield return null; // Wait for the next frame
+        }
+        hasAttacked = false;
+        hasDealtDamage = false; // Reset this at the end of the attack
+    }
+
     void OnDrawGizmosSelected()
     {
         // Si c'est nul, sortir de la fonction
@@ -68,7 +102,10 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         // Dessiner un cercle pour la range d'attaque
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        if (attackPoint != null)
+        {
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        }
     }
     // Function to flip the player
     public void FlipPlayer()
@@ -76,7 +113,7 @@ public class PlayerCombat : MonoBehaviour
         // Flip the player's direction
         faitFaceADroite = !faitFaceADroite;
 
-        // Flip the attackPoint
+        // Flip le attackPoint
         if (!faitFaceADroite)
         {
             attackPoint.localPosition = new Vector3(-Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
@@ -86,4 +123,9 @@ public class PlayerCombat : MonoBehaviour
             attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
         }
     }
+
+    public void ResetAttack()
+{
+    hasDealtDamage = false;
+}
 }

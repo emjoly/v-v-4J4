@@ -20,6 +20,7 @@ public class Ennemi : MonoBehaviour
     public GameObject pointB;
     private Transform currentPosition;
     public float speed;
+    private float lastDamageTakenTime;
 
     private bool isDead = false;
 
@@ -62,22 +63,23 @@ public class Ennemi : MonoBehaviour
         }
     }
 
-    // Fonction pour infliger des dégâts
-    public void TakeDamage(int damage)
+public void TakeDamage(int damage)
+{
+    if (Time.time >= lastDamageTakenTime + damageCooldown)
     {
         AudiosSettings.PlaySound("AttackHitTest");
-        // On enlève les dégâts à la vie actuelle
         currentHealth -= damage;
         animator.SetTrigger("AMal");
         GetComponent<AudioSource>().PlayOneShot(SonBlesse);
 
-        // On vérifie si la vie actuelle est inférieure ou égale à 0
         if (currentHealth <= 0)
         {
-            // On appelle la fonction Die
             Die();
         }
+
+        lastDamageTakenTime = Time.time;
     }
+}
     // Fonction pour la mort de l'ennemi
     void Die()
     {
