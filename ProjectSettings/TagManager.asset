@@ -13,6 +13,8 @@ TagManager:
   - BossStart
   - bobo
   - Vie
+  - BossHand
+  - BossFist
   layers:
   - Default
   - TransparentFX

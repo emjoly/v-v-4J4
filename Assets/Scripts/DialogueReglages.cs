@@ -105,14 +105,36 @@ public class DialogueReglages : MonoBehaviour
         }
     }
 
-    // Fonction pour finir le dialogue
-    void FinDialogue()
+// Fonction pour finir le dialogue
+void FinDialogue()
+{
+    isDialogueOpen = false;
+    // On désactive l'animation
+    animator.SetBool("IsOpen", false);
+    PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    playerMovement.enabled = true; 
+
+    // Find and activate GameObjects with the tag "BossHand"
+    foreach (GameObject bossHand in Resources.FindObjectsOfTypeAll<GameObject>())
     {
-        isDialogueOpen = false;
-        // On désactive l'animation
-        animator.SetBool("IsOpen", false);
-        PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        playerMovement.enabled = true; 
-        
+        if (bossHand.tag == "BossHand")
+        {
+            bossHand.SetActive(true);
+        }
     }
+
+    // Find and activate the BossHealthSlider GameObject
+    GameObject bossHealthSlider = System.Array.Find(Resources.FindObjectsOfTypeAll<GameObject>(), obj => obj.name == "BossHealthSlider");
+    if (bossHealthSlider != null)
+    {
+        bossHealthSlider.SetActive(true);
+    }
+}
+
+
+
+
+
+
+
 }

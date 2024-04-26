@@ -14,8 +14,8 @@ public class PlayerCombat : MonoBehaviour
     float prochaineAttaqueTemps = 0f;
 
     bool faitFaceADroite = false;
-    bool hasAttacked = false; // Add this line
-    bool hasDealtDamage = false; // Add this line
+    bool hasAttacked = false;
+    bool hasDealtDamage = false;
 
     public AudioClip SonAttaque;
 
@@ -24,9 +24,9 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= prochaineAttaqueTemps)
+        if (!GetComponent<PlayerMovement>().isDead && Time.time >= prochaineAttaqueTemps)
         {
-            if (Input.GetButtonDown("Attack")&& !dialogueReglages.isDialogueOpen)
+            if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
             {                
                 animator.SetTrigger("Attack");
                 // On active l'animation d'attaque
@@ -36,6 +36,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
+
 
 public void PerformAttack()
 {
