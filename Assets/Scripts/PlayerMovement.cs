@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Variables pour les dashs
     private bool canDash = true; // Flag pour vérifier si le joueur peut dash
     private bool isDashing; // Flag pour vérifier si le joueur est en train de dash
-    private float dashSpeed = 150f; // Vitesse de dash
+    private float dashSpeed = 20f; // Vitesse de dash
     private float dashTime = 0.2f; // Durée de dash
     private float dashCooldown = 0.2f; // Cooldown de dash (permet au joueur de faire un dash toutes les 0.2 secondes)
     private bool hasDashedInAir = false; // Flag pour vérifier si le joueur a déjà dashé dans les airs
@@ -65,12 +65,11 @@ public class PlayerMovement : MonoBehaviour
 
     // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
     // chaque quoi? sons? cest juste marche que le son se repete non?
-    // il dash pas vers la gauche
     // il marche pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
 
     // Si le joueur est mort ou blesse
-    bool isDead = false;
-    bool isBlesse = false;
+    public bool isDead = false;
+    public bool isBlesse = false;
 
     void Start()
     {
@@ -277,13 +276,19 @@ public class PlayerMovement : MonoBehaviour
         canDash = false; // Le joueur ne peut pas dash (doit mettre au debut de la coroutine (Prévention de spam de dash))
         float originalGravity = rb.gravityScale; // Sauvegarder la gravité originale du joueur
         rb.gravityScale = 0; // Mettre la gravité du joueur à 0
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0); // Appliquer une vélocité de dash
+
+        // Determine the direction of the dash
+        float dashDirection = playerSprite.flipX ? 1 : -1;
+
+        rb.velocity = new Vector2(dashDirection * dashSpeed, 0); // Appliquer une vélocité de dash
+
         yield return new WaitForSeconds(dashTime); // Attendre la durée de dash
         rb.gravityScale = originalGravity; // Remettre la gravité originale du joueur
         isDashing = false; // Le joueur n'est plus en train de dash (prévention de spam de dash)
         yield return new WaitForSeconds(dashCooldown); // Attendre le cooldown de dash
         canDash = true; // Le joueur peut dash à nouveau (Doit mettre à la fin d'une coroutine (Prévention de spam de dash))
     }
+
 
     // Fonction pour le double saut
     void ExtraJump()
