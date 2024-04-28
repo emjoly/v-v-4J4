@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     // Variables pour le apex point du jump (le point le plus haut du saut)
     private float _jumpApexThreshold = 0.7f; // Le apex point du saut 0.7 = 70% de la hauteur du saut
     private float _apexBonus = 13f; // Bonus de vitesse à appliquer au apex point (donne un effet de flottement au joueur)
-
     // Variables pour le slam
     [SerializeField] private float slamForce = 30f;
 
@@ -79,7 +78,9 @@ public class PlayerMovement : MonoBehaviour
         // Initialiser les variables de vie du joueur
         currentHealth = maxHealth;
         // Initialiser la barre de vie du joueur
-        healthBar.SetMaxHealth(maxHealth);    }
+        healthBar.SetMaxHealth(maxHealth);    
+        
+    }
 
 
     void Update()
@@ -154,22 +155,29 @@ public class PlayerMovement : MonoBehaviour
                 // Lancer la coroutine SlamThroughPlatforms
                 StartCoroutine(SlamThroughPlatforms());
             }
-            // Si le joueur appuie sur la touche Jump et est au sol
-            if (Input.GetButtonDown("Jump") && IsGrounded())
+            // Si le joueur appuie sur la touche Jump
+            if (Input.GetButtonDown("Jump"))
             {
-                // Initialiser le double jump
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
-                isJumping = true; // Le joueur est en train de sauter
-                hasDashedInAir = false; // Reset le flag de dash dans les airs
-                animator.SetBool("Saute", true);
-                GetComponent<AudioSource>().PlayOneShot(SonSaut);
-
-            }
-            // Si le joueur a ramassé un item et n'est pas au sol
-            else if (hasPickedUpItem && !IsGrounded())
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
+                // Si le joueur est au sol
+                if (IsGrounded())
+                {
+                    // Initialiser le double jump
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
+                    isJumping = true; // Le joueur est en train de sauter
+                    hasDashedInAir = false; // Reset le flag de dash dans les airs
+                    animator.SetBool("Monte", true); // Set "Monte" parameter to true when jumping
+                    GetComponent<AudioSource>().PlayOneShot(SonSaut);
+                }
+                // Si le joueur n'est pas au sol et n'a pas encore commencé le double saut
+                else if (!isJumping && doubleJump > 0)
+                {
+                    // Initialiser le double saut
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    doubleJump--; // Décrémenter le double jump
+                    animator.SetBool("Monte", true); // Set "Monte" parameter to true when jumping
+                    GetComponent<AudioSource>().PlayOneShot(SonSaut);
+                }
             }
 
             // Si le joueur appuie sur la touche Jump et est en train de sauter
@@ -185,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     // Le joueur a fini de sauter
                     isJumping = false;
+                    animator.SetBool("Monte", false); // Set "Monte" parameter to false once jump finishes
                 }
             }
             // Si le joueur relâche la touche Jump
@@ -192,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 // Pour ne pas sauter indéfiniment
                 isJumping = false;
-                animator.SetBool("Saute", false);
+                animator.SetBool("Monte", false);
             }
 
             // Si le joueur appuie sur la touche Dash
@@ -221,11 +230,23 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
                 // Limiter la vitesse de chute maximale
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-                //animator.SetTrigger("Tombe");  le truc avec ca cest que il tombe non stop cest gossant
+                //animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
             }
+            if (rb.velocity.y < -1f) // Si le joueur est en train de tomber
+            {
+
+                animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
+            }
+            else
+            {
+                animator.SetBool("Tombe", false);
+            }
+
             ExtraJump();
         }
+        
     }
+
 
     // Fonction pour prendre des dégats
     public void TakeDamage(int damage)
@@ -397,4 +418,6 @@ public class PlayerMovement : MonoBehaviour
         // animator.SetTrigger("Respawn");
         // if (respawnSound) audioSource.PlayOneShot(respawnSound);
     } */
+
+
 }
