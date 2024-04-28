@@ -191,7 +191,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ShockWave spriteSheet_0: 2527674671542513111
+      ShockWave spriteSheet_1: -1039647597543444329
+      ShockWave spriteSheet_2: 6967917278572451083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
