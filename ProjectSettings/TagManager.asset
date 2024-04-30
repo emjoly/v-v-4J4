@@ -6,8 +6,15 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Boite
+  - Spike
+  - FallingPlatform
+  - PicSol
+  - BossStart
   - bobo
-  - life
+  - Vie
+  - BossHand
+  - BossFist
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - UI
   - Ground
   - BrisPlateforme
-  - 
+  - Enemy
   - 
   - 
   - 

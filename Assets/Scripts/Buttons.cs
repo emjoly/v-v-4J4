@@ -5,33 +5,36 @@ using TMPro;
 
 public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    // Variables pour le texte et l'image du bouton
     private Image buttonImage;
     private TextMeshProUGUI buttonText;
-
-    // You can adjust these colors according to your preference
     public Color normalColor = Color.white;
     public Color hoverColor = Color.red;
 
     void Start()
     {
+        // Récupérer les composants Image et TextMeshProUGUI
         buttonImage = GetComponent<Image>();
         buttonText = GetComponentInChildren<TextMeshProUGUI>();
-        buttonImage.enabled = false; // Disable the Image component at the beginning
+        // Désactiver l'image du bouton
+        buttonImage.enabled = false;
     }
-
+    // Fonction pour changer la couleur du texte et activer l'image du bouton lorsqu'on passe la souris dessus
     public void OnPointerEnter(PointerEventData eventData)
     {
-        buttonImage.enabled = true; // Enable the Image component on hover
-        buttonText.color = hoverColor; // Change text color on hover
+        // Activer le composant Image lorsqu'on passe la souris dessus
+        buttonImage.enabled = true;
+        // Changer la couleur du texte lorsqu'on passe la souris dessus
+        buttonText.color = hoverColor;
     }
-
+    // Fonction pour désactiver l'image du bouton et réinitialiser la couleur du texte lorsqu'on ne passe plus la souris dessus
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonImage.enabled = false; // Disable the Image component when not hovering
-        buttonText.color = normalColor; // Revert text color when not hovering
+        buttonImage.enabled = false;
+        buttonText.color = normalColor;
     }
 
-    // Reset button appearance when the GameObject is disabled
+    // Désactiver l'image du bouton lorsqu'on désactive le script
     void OnDisable()
     {
         buttonImage.enabled = false;

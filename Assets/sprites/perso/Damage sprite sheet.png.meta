@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: 7713577ca33f7da43aac26e905e67904
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8930657804358887074
+    second: Damage sprite sheet 1_0
+  - first:
+      213: 7042811952042365956
+    second: Damage sprite sheet 1_1
+  - first:
+      213: -2704328936614399066
+    second: Damage sprite sheet 1_2
+  - first:
+      213: 3165949862163604521
+    second: Damage sprite sheet 1_3
+  - first:
+      213: 7326338006736898579
+    second: Damage sprite sheet 1_4
+  - first:
+      213: 1740358127962487346
+    second: Damage sprite sheet 1_5
+  - first:
+      213: 129289131900952007
+    second: Damage sprite sheet 1_6
+  - first:
+      213: 4699815501392480534
+    second: Damage sprite sheet 1_7
+  - first:
+      213: 4135613563156394972
+    second: Damage sprite sheet 1_8
+  - first:
+      213: 7751122567193046509
+    second: Damage sprite sheet 1_9
+  - first:
+      213: -9191866405643549147
+    second: Damage sprite sheet 1_10
+  - first:
+      213: -5034639327182775528
+    second: Damage sprite sheet 1_11
+  - first:
+      213: -5980566338189101211
+    second: Damage sprite sheet 1_12
+  - first:
+      213: 2071023413876167511
+    second: Damage sprite sheet 1_13
+  - first:
+      213: 5422548321438674108
+    second: Damage sprite sheet 1_14
+  - first:
+      213: -4688686248927605494
+    second: Damage sprite sheet 1_15
+  - first:
+      213: 8859831715884319019
+    second: Damage sprite sheet 1_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 779
+        height: 1162
+      alignment: 9
+      pivot: {x: 0.6245765, y: 0.50659335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6a167d4f110fb70800000000000000
+      internalID: 8930657804358887074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 26
+        width: 779
+        height: 1165
+      alignment: 9
+      pivot: {x: 0.63113314, y: 0.5043842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4045c5de7281db160800000000000000
+      internalID: 7042811952042365956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 26
+        width: 813
+        height: 1163
+      alignment: 9
+      pivot: {x: 0.61622536, y: 0.5153712}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3f949092b487ad0800000000000000
+      internalID: -2704328936614399066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 27
+        width: 891
+        height: 1164
+      alignment: 9
+      pivot: {x: 0.56592345, y: 0.50877595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92465fe20a6bfeb20800000000000000
+      internalID: 3165949862163604521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 26
+        width: 899
+        height: 1163
+      alignment: 9
+      pivot: {x: 0.5545446, y: 0.50602335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23afa2f1f7ef62810800000000000000
+      internalID: 1740358127962487346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 0
+        width: 961
+        height: 1153
+      alignment: 9
+      pivot: {x: 0.57687557, y: 0.5116498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd564cc7c35bc100800000000000000
+      internalID: 129289131900952007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage sprite sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 5955
+        y: 0
+        width: 962
+        height: 1160
+      alignment: 9
+      pivot: {x: 0.5495093, y: 0.5058654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6198f5e3c49193140800000000000000
+      internalID: 4699815501392480534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5836c0479a6052944be46c27283ab7a5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Damage sprite sheet 1_0: 8930657804358887074
+      Damage sprite sheet 1_1: 7042811952042365956
+      Damage sprite sheet 1_10: -9191866405643549147
+      Damage sprite sheet 1_11: -5034639327182775528
+      Damage sprite sheet 1_12: -5980566338189101211
+      Damage sprite sheet 1_13: 2071023413876167511
+      Damage sprite sheet 1_14: 5422548321438674108
+      Damage sprite sheet 1_15: -4688686248927605494
+      Damage sprite sheet 1_16: 8859831715884319019
+      Damage sprite sheet 1_2: -2704328936614399066
+      Damage sprite sheet 1_3: 3165949862163604521
+      Damage sprite sheet 1_4: 7326338006736898579
+      Damage sprite sheet 1_5: 1740358127962487346
+      Damage sprite sheet 1_6: 129289131900952007
+      Damage sprite sheet 1_7: 4699815501392480534
+      Damage sprite sheet 1_8: 4135613563156394972
+      Damage sprite sheet 1_9: 7751122567193046509
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

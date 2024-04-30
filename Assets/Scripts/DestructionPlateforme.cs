@@ -17,16 +17,17 @@ public class DestructionPlateforme : MonoBehaviour
     }
         private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the collided object is on the breakable layer and has the "BreakablePlatform" tag
+        // Si la collision est avec une plateforme avec un layermask "BrisPlateforme et si le joueur entre en collision avec une vitesse supérieure à 10
         if (collision.gameObject.layer == LayerMask.NameToLayer("BrisPlateforme") && collision.relativeVelocity.magnitude > 10f)
         {
+            // On appelle la fonction BreakPlatform
             BreakPlatform();
         }
     }
-
+    // Fonction pour détruire la plateforme
     public void BreakPlatform()
     {
-        // Destroy the platform GameObject
+        // On détruit la plateforme
         Destroy(gameObject);
     }
 }

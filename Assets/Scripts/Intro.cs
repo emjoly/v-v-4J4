@@ -4,13 +4,15 @@ using UnityEngine.EventSystems;
 
 public class Intro : MonoBehaviour
 {
-
+    // Fonction pour jouer au jeu
     public void playGame (){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // On charge la scène suivante (numéro d'index)
+        SceneManager.LoadScene("IntroCine");
     }
-
+    // Fonction pour quitter le jeu
     public void quitGame (){
         Debug.Log("Quit");
+        // On quitte l'application
         Application.Quit();
     }
 }
