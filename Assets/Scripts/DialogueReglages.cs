@@ -27,6 +27,15 @@ public class DialogueReglages : MonoBehaviour
         // Initialisation de la file d'attente de phrases
         phrases = new Queue<string>();
     }
+    void Update()
+{
+    // Press la touche entrer pour aller à la prochaine phrase
+    if (isDialogueOpen && Input.GetKeyDown(KeyCode.Return))
+    {
+        // Display the next sentence
+        AfficherProchainePhrase();
+    }
+}
 
     // Fonction pour commencer le dialogue
     public void CommencerDialogue(Dialogue dialogue)
@@ -52,18 +61,16 @@ public class DialogueReglages : MonoBehaviour
         // On affiche la prochaine phrase
         AfficherProchainePhrase();
 
-        // Change background music
+        // Change la background music
         if (backgroundMusicSource != null && newBackgroundMusic != null)
         {
-            Debug.Log("Changing music");
             backgroundMusicSource.Stop();
             backgroundMusicSource.clip = newBackgroundMusic;
             backgroundMusicSource.Play();
-            Debug.Log("Music should be playing now");
         }
         else
         {
-            Debug.Log("Music source or clip is null");
+            Debug.Log("Aucune musique associée à ce dialogue.");
         }
     }
 
@@ -98,14 +105,36 @@ public class DialogueReglages : MonoBehaviour
         }
     }
 
-    // Fonction pour finir le dialogue
-    void FinDialogue()
+// Fonction pour finir le dialogue
+void FinDialogue()
+{
+    isDialogueOpen = false;
+    // On désactive l'animation
+    animator.SetBool("IsOpen", false);
+    PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    playerMovement.enabled = true; 
+
+    // Find and activate GameObjects with the tag "BossHand"
+    foreach (GameObject bossHand in Resources.FindObjectsOfTypeAll<GameObject>())
     {
-        isDialogueOpen = false;
-        // On désactive l'animation
-        animator.SetBool("IsOpen", false);
-        PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        playerMovement.enabled = true; 
-        
+        if (bossHand.tag == "BossHand")
+        {
+            bossHand.SetActive(true);
+        }
     }
+
+    // Find and activate the BossHealthSlider GameObject
+    GameObject bossHealthSlider = System.Array.Find(Resources.FindObjectsOfTypeAll<GameObject>(), obj => obj.name == "BossHealthSlider");
+    if (bossHealthSlider != null)
+    {
+        bossHealthSlider.SetActive(true);
+    }
+}
+
+
+
+
+
+
+
 }

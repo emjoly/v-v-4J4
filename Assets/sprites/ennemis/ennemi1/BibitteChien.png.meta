@@ -141,11 +141,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 134
-        width: 1488
-        height: 1016
-      alignment: 9
-      pivot: {x: 0.32078576, y: 0.114669695}
+        y: 132
+        width: 1493
+        height: 1018
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,12 +161,12 @@ TextureImporter:
       name: BibitteChien_1
       rect:
         serializedVersion: 2
-        x: 1631
-        y: 96
-        width: 1477
-        height: 974
-      alignment: 9
-      pivot: {x: 0.27335346, y: 0.098053776}
+        x: 1626
+        y: 91
+        width: 1486
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,11 +183,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3210
-        y: 77
-        width: 1489
-        height: 1021
-      alignment: 9
-      pivot: {x: 0.32568622, y: 0.08325479}
+        y: 70
+        width: 1494
+        height: 1031
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: BibitteChien_3
       rect:
         serializedVersion: 2
-        x: 4887
-        y: 57
-        width: 1456
-        height: 1036
-      alignment: 9
-      pivot: {x: 0.31687608, y: 0.07374182}
+        x: 4885
+        y: 49
+        width: 1465
+        height: 1045
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: BibitteChien_4
       rect:
         serializedVersion: 2
-        x: 6438
-        y: 62
-        width: 1405
-        height: 947
-      alignment: 9
-      pivot: {x: 0.29581678, y: 0.07400179}
+        x: 6434
+        y: 56
+        width: 1410
+        height: 955
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: BibitteChien_5
       rect:
         serializedVersion: 2
-        x: 7966
-        y: 46
-        width: 1469
-        height: 944
-      alignment: 9
-      pivot: {x: 0.33577663, y: 0.07209467}
+        x: 7962
+        y: 42
+        width: 1480
+        height: 955
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,12 +266,12 @@ TextureImporter:
       name: BibitteChien_6
       rect:
         serializedVersion: 2
-        x: 9613
-        y: 48
-        width: 1405
-        height: 947
-      alignment: 9
-      pivot: {x: 0.30311248, y: 0.072267346}
+        x: 9609
+        y: 42
+        width: 1417
+        height: 955
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,11 +288,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11180
-        y: 10
-        width: 1456
-        height: 1036
-      alignment: 9
-      pivot: {x: 0.32289678, y: 0.08516413}
+        y: 7
+        width: 1458
+        height: 1045
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,12 +308,12 @@ TextureImporter:
       name: BibitteChien_8
       rect:
         serializedVersion: 2
-        x: 12804
+        x: 12799
         y: 0
-        width: 1488
-        height: 1020
-      alignment: 9
-      pivot: {x: 0.32049102, y: 0.09846228}
+        width: 1493
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

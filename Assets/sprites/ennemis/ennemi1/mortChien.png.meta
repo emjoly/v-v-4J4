@@ -141,11 +141,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 54
-        width: 1488
-        height: 1038
-      alignment: 9
-      pivot: {x: 0.30762288, y: 0.10701697}
+        y: 57
+        width: 1492
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,12 +161,12 @@ TextureImporter:
       name: mortChien_2
       rect:
         serializedVersion: 2
-        x: 3364
-        y: 32
-        width: 1520
-        height: 1116
-      alignment: 9
-      pivot: {x: 0.39171192, y: 0.083182976}
+        x: 2714
+        y: 1067
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,12 +182,12 @@ TextureImporter:
       name: mortChien_4
       rect:
         serializedVersion: 2
-        x: 5019
-        y: 44
-        width: 1542
-        height: 1090
-      alignment: 9
-      pivot: {x: 0.32363895, y: 0.08637177}
+        x: 5018
+        y: 47
+        width: 1549
+        height: 1089
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: mortChien_5
       rect:
         serializedVersion: 2
-        x: 6711
-        y: 24
-        width: 1565
-        height: 1140
-      alignment: 9
-      pivot: {x: 0.44512624, y: 0.09195783}
+        x: 6706
+        y: 32
+        width: 1574
+        height: 1094
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: mortChien_7
       rect:
         serializedVersion: 2
-        x: 1745
+        x: 8613
         y: 0
-        width: 1490
-        height: 1165
-      alignment: 9
-      pivot: {x: 0.3607137, y: 0.07614274}
+        width: 1557
+        height: 803
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,22 +242,64 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mortChien_8
+      name: mortChien_1
       rect:
         serializedVersion: 2
-        x: 8618
-        y: 65
-        width: 1552
-        height: 1168
-      alignment: 9
-      pivot: {x: 0.37088862, y: 0.08335858}
+        x: 1741
+        y: 0
+        width: 1499
+        height: 1233
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6967d069e959c6a20800000000000000
-      internalID: 3056982755432560278
+      spriteID: 6eecd08d21734934fbf4f30861dfa09b
+      internalID: 1221896961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChien_3
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 32
+        width: 1530
+        height: 1114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9c7b749c1c18e43b6d698b92f2de16
+      internalID: -458730886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChien_6
+      rect:
+        serializedVersion: 2
+        x: 9418
+        y: 699
+        width: 541
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6d71f86e9ca3b48bfd4273b5c14b47
+      internalID: 546401512
       vertices: []
       indices: 
       edges: []
@@ -274,11 +316,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       mortChien_0: -552593415709971006
+      mortChien_1: 1221896961
       mortChien_2: 2254639507060817263
+      mortChien_3: -458730886
       mortChien_4: -2790585562762757828
       mortChien_5: 2434375117635973654
+      mortChien_6: 546401512
       mortChien_7: -7417011187658531937
-      mortChien_8: 3056982755432560278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

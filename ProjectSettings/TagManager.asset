@@ -11,6 +11,11 @@ TagManager:
   - FallingPlatform
   - PicSol
   - BossStart
+  - bobo
+  - Vie
+  - BossHand
+  - BossFist
+  - switch
   layers:
   - Default
   - TransparentFX

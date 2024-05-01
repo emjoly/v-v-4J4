@@ -20,8 +20,10 @@ public class Ennemi : MonoBehaviour
     public GameObject pointB;
     private Transform currentPosition;
     public float speed;
+    private float lastDamageTakenTime;
 
     private bool isDead = false;
+    private bool isBlesse = false;
 
     public AudioClip SonBlesse;
 
@@ -38,7 +40,7 @@ public class Ennemi : MonoBehaviour
     private void Update()
     {
         // si l'ennemi est mort il ne bouge plus
-        if (!isDead)
+        if (!isDead && !isBlesse)
         {
             Vector2 point = currentPosition.position - transform.position;
             if (currentPosition == pointB.transform)
@@ -62,22 +64,31 @@ public class Ennemi : MonoBehaviour
         }
     }
 
-    // Fonction pour infliger des dégâts
     public void TakeDamage(int damage)
     {
-        AudiosSettings.PlaySound("AttackHitTest");
-        // On enlève les dégâts à la vie actuelle
-        currentHealth -= damage;
-        animator.SetTrigger("AMal");
-        GetComponent<AudioSource>().PlayOneShot(SonBlesse);
-
-        // On vérifie si la vie actuelle est inférieure ou égale à 0
-        if (currentHealth <= 0)
+        if (Time.time >= lastDamageTakenTime + damageCooldown && !isDead)
         {
-            // On appelle la fonction Die
-            Die();
+            //AudiosSettings.PlaySound("AttackHitTest");
+            isBlesse = true;
+            currentHealth -= damage;
+            animator.SetTrigger("AMal");
+            GetComponent<AudioSource>().PlayOneShot(SonBlesse);
+            StartCoroutine(BlesseBack2False(1.0f)); // freeze quand il est blessé
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+
+            lastDamageTakenTime = Time.time;
         }
     }
+    private IEnumerator BlesseBack2False(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isBlesse = false;
+    }
+
     // Fonction pour la mort de l'ennemi
     void Die()
     {

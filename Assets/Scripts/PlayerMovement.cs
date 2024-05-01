@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Variables pour les dashs
     private bool canDash = true; // Flag pour vérifier si le joueur peut dash
     private bool isDashing; // Flag pour vérifier si le joueur est en train de dash
-    private float dashSpeed = 150f; // Vitesse de dash
+    private float dashSpeed = 20f; // Vitesse de dash
     private float dashTime = 0.2f; // Durée de dash
     private float dashCooldown = 0.2f; // Cooldown de dash (permet au joueur de faire un dash toutes les 0.2 secondes)
     private bool hasDashedInAir = false; // Flag pour vérifier si le joueur a déjà dashé dans les airs
@@ -40,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
     // Variables pour le apex point du jump (le point le plus haut du saut)
     private float _jumpApexThreshold = 0.7f; // Le apex point du saut 0.7 = 70% de la hauteur du saut
     private float _apexBonus = 13f; // Bonus de vitesse à appliquer au apex point (donne un effet de flottement au joueur)
-
     // Variables pour le slam
     [SerializeField] private float slamForce = 30f;
+    public bool isSlaming = false;
 
     // Variables de vie du joueur
     public int maxHealth = 100;
@@ -65,12 +65,11 @@ public class PlayerMovement : MonoBehaviour
 
     // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
     // chaque quoi? sons? cest juste marche que le son se repete non?
-    // il dash pas vers la gauche
     // il marche pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
 
     // Si le joueur est mort ou blesse
-    bool isDead = false;
-    bool isBlesse = false;
+    public bool isDead = false;
+    public bool isBlesse = false;
 
     void Start()
     {
@@ -80,7 +79,9 @@ public class PlayerMovement : MonoBehaviour
         // Initialiser les variables de vie du joueur
         currentHealth = maxHealth;
         // Initialiser la barre de vie du joueur
-        healthBar.SetMaxHealth(maxHealth);    }
+        healthBar.SetMaxHealth(maxHealth);
+
+    }
 
 
     void Update()
@@ -155,22 +156,29 @@ public class PlayerMovement : MonoBehaviour
                 // Lancer la coroutine SlamThroughPlatforms
                 StartCoroutine(SlamThroughPlatforms());
             }
-            // Si le joueur appuie sur la touche Jump et est au sol
-            if (Input.GetButtonDown("Jump") && IsGrounded())
+            // Si le joueur appuie sur la touche Jump
+            if (Input.GetButtonDown("Jump"))
             {
-                // Initialiser le double jump
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
-                isJumping = true; // Le joueur est en train de sauter
-                hasDashedInAir = false; // Reset le flag de dash dans les airs
-                animator.SetBool("Saute", true);
-                GetComponent<AudioSource>().PlayOneShot(SonSaut);
-
-            }
-            // Si le joueur a ramassé un item et n'est pas au sol
-            else if (hasPickedUpItem && !IsGrounded())
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
+                // Si le joueur est au sol
+                if (IsGrounded())
+                {
+                    // Initialiser le double jump
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
+                    isJumping = true; // Le joueur est en train de sauter
+                    hasDashedInAir = false; // Reset le flag de dash dans les airs
+                    animator.SetBool("Monte", true); // Set "Monte" parameter to true when jumping
+                    GetComponent<AudioSource>().PlayOneShot(SonSaut);
+                }
+                // Si le joueur n'est pas au sol et n'a pas encore commencé le double saut
+                else if (!isJumping && doubleJump > 0)
+                {
+                    // Initialiser le double saut
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    doubleJump--; // Décrémenter le double jump
+                    animator.SetBool("Monte", true); // Set "Monte" parameter to true when jumping
+                    GetComponent<AudioSource>().PlayOneShot(SonSaut);
+                }
             }
 
             // Si le joueur appuie sur la touche Jump et est en train de sauter
@@ -180,20 +188,23 @@ public class PlayerMovement : MonoBehaviour
                 if (jumpTimeCounter > 0)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
+                    animator.SetTrigger("Monte2"); // Jouer l'animation de double saut
                     jumpTimeCounter -= Time.deltaTime; // Décrémenter le compteur de temps de saut
                 }
                 else
                 {
                     // Le joueur a fini de sauter
                     isJumping = false;
+                    animator.SetBool("Monte", false); // Set "Monte" parameter to false once jump finishes
                 }
             }
+
             // Si le joueur relâche la touche Jump
             if (Input.GetButtonUp("Jump"))
             {
                 // Pour ne pas sauter indéfiniment
                 isJumping = false;
-                animator.SetBool("Saute", false);
+                animator.SetBool("Monte", false);
             }
 
             // Si le joueur appuie sur la touche Dash
@@ -216,37 +227,54 @@ public class PlayerMovement : MonoBehaviour
 
             }
 
-            if (rb.velocity.y < 0) // Si le joueur est en train de tomber
-            {
-                // Appliquer une gravité plus forte
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
-                // Limiter la vitesse de chute maximale
-                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-                //animator.SetTrigger("Tombe");  le truc avec ca cest que il tombe non stop cest gossant
+            if(!isSlaming) { 
+                if (rb.velocity.y < 0) // Si le joueur est en train de tomber
+                {
+                    // Appliquer une gravité plus forte
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
+                    // Limiter la vitesse de chute maximale
+                    rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+                }
+
+                if (rb.velocity.y < -2f) // Si le joueur est en train de tomber
+                {
+
+                    animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
+                }
+                else
+                {
+                    animator.SetBool("Tombe", false);
+                }
+
+                ExtraJump();
             }
-            ExtraJump();
         }
+
     }
+
 
     // Fonction pour prendre des dégats
     public void TakeDamage(int damage)
     {
-        if(!isDead) { 
+        if (!isDead)
+        {
             // Réduire la vie du joueur par le montant de dégats
             currentHealth -= damage;
             // Mettre à jour la barre de vie du joueur
             healthBar.SetHealth(currentHealth);
             animator.SetTrigger("Mal");
+            animator.SetBool("Tombe", false);
+            animator.SetBool("Monte", false);
             isBlesse = true;
             GetComponent<AudioSource>().PlayOneShot(SonBlesse);
             StartCoroutine(BlesseBack2False(1.0f)); // freeze quand il est blessé
-        }   
+        }
     }
 
     private IEnumerator BlesseBack2False(float delay)
     {
         yield return new WaitForSeconds(delay);
-        isBlesse = false; 
+        isBlesse = false;
     }
 
     // Fonction pour déterminer si le joueur est au sol
@@ -260,6 +288,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Le joueur est au sol s'il est en collision avec un des layers spécifiés
         bool grounded = groundedOnJumpableGround || groundedOnBreakablePlatform;
+
         // Retourner si le joueur est au sol
         return grounded;
     }
@@ -277,13 +306,19 @@ public class PlayerMovement : MonoBehaviour
         canDash = false; // Le joueur ne peut pas dash (doit mettre au debut de la coroutine (Prévention de spam de dash))
         float originalGravity = rb.gravityScale; // Sauvegarder la gravité originale du joueur
         rb.gravityScale = 0; // Mettre la gravité du joueur à 0
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0); // Appliquer une vélocité de dash
+        animator.SetTrigger("Fonce"); // Jouer l'animation de dash
+        // Determine the direction of the dash
+        float dashDirection = playerSprite.flipX ? 1 : -1;
+
+        rb.velocity = new Vector2(dashDirection * dashSpeed, 0); // Appliquer une vélocité de dash
+
         yield return new WaitForSeconds(dashTime); // Attendre la durée de dash
         rb.gravityScale = originalGravity; // Remettre la gravité originale du joueur
         isDashing = false; // Le joueur n'est plus en train de dash (prévention de spam de dash)
         yield return new WaitForSeconds(dashCooldown); // Attendre le cooldown de dash
         canDash = true; // Le joueur peut dash à nouveau (Doit mettre à la fin d'une coroutine (Prévention de spam de dash))
     }
+
 
     // Fonction pour le double saut
     void ExtraJump()
@@ -305,11 +340,14 @@ public class PlayerMovement : MonoBehaviour
     // Fonction coroutine pour le slam
     private IEnumerator SlamThroughPlatforms()
     {
+        isSlaming = true; // Le joueur est en train de slam
         // Désactiver les collisions avec les plateformes brisables
         Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), true);
 
         // Appliquer une force de slam vers le bas
         rb.velocity = Vector2.down * slamForce;
+
+        animator.SetTrigger("Slam"); // Jouer l'animation de slam
 
         // Attendre 0.2 secondes avant de réactiver les collisions avec les plateformes brisables
         yield return new WaitForSeconds(0.2f);
@@ -330,15 +368,30 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Vie"))
+        {
+            // Restaurer la santé du joueur au maximum
+            currentHealth = maxHealth;
+            // Mettre à jour l'interface utilisateur de la barre de santé
+            healthBar.SetHealth(currentHealth);
+            // Détruire l'objet avec le tag "Vie"
+            Destroy(collision.gameObject);
+            // Ajouter un son !!!
+        }
         // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(5); // Réduit la vie du joueur de 5
+            TakeDamage(10); // Réduit la vie du joueur de 10
             // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
         }
         if (collision.gameObject.CompareTag("PicSol"))
         {
             Die();
+        }
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            // Reset the "Monte" parameter
+            animator.SetBool("Monte", false);
         }
     }
 
@@ -355,6 +408,7 @@ public class PlayerMovement : MonoBehaviour
         isDead = true; // Set isDead to true
         // Jouer l'animation de mort
         GetComponent<Animator>().SetTrigger("Mort");
+        animator.SetBool("Tombe", false);
         StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
         GetComponent<AudioSource>().PlayOneShot(SonMort); // Jouer le son de mort
         // Peut-être screen gameover ?
@@ -371,15 +425,17 @@ public class PlayerMovement : MonoBehaviour
     /* IEnumerator RespawnAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
+ 
         // Reset player state
         boxCollider.enabled = true; // Re-activer le collider
         enabled = true; // Reactiver le script
-
+ 
         transform.position = respawnPoint.position; // Téléporter le joueur au point de respawn
-
+ 
         // Peut-être à implémenter mais pour l'instant on reload la scene
         // animator.SetTrigger("Respawn");
         // if (respawnSound) audioSource.PlayOneShot(respawnSound);
     } */
+
+
 }
