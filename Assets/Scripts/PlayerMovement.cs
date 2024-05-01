@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     private float _apexBonus = 13f; // Bonus de vitesse à appliquer au apex point (donne un effet de flottement au joueur)
     // Variables pour le slam
     [SerializeField] private float slamForce = 30f;
+    public bool isSlaming = false;
 
     // Variables de vie du joueur
     public int maxHealth = 100;
@@ -187,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
                 if (jumpTimeCounter > 0)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Appliquer une force de saut
+                    animator.SetTrigger("Monte2"); // Jouer l'animation de double saut
                     jumpTimeCounter -= Time.deltaTime; // Décrémenter le compteur de temps de saut
                 }
                 else
@@ -196,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("Monte", false); // Set "Monte" parameter to false once jump finishes
                 }
             }
+
             // Si le joueur relâche la touche Jump
             if (Input.GetButtonUp("Jump"))
             {
@@ -224,26 +227,27 @@ public class PlayerMovement : MonoBehaviour
 
             }
 
-            if (rb.velocity.y < 0) // Si le joueur est en train de tomber
-            {
-                // Appliquer une gravité plus forte
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
-                // Limiter la vitesse de chute maximale
-                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-                //animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
-            }
+            if(!isSlaming) { 
+                if (rb.velocity.y < 0) // Si le joueur est en train de tomber
+                {
+                    // Appliquer une gravité plus forte
+                    rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
+                    // Limiter la vitesse de chute maximale
+                    rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+                }
 
-            if (rb.velocity.y < -2f) // Si le joueur est en train de tomber
-            {
+                if (rb.velocity.y < -2f) // Si le joueur est en train de tomber
+                {
 
-                animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
-            }
-            else
-            {
-                animator.SetBool("Tombe", false);
-            }
+                    animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
+                }
+                else
+                {
+                    animator.SetBool("Tombe", false);
+                }
 
-            ExtraJump();
+                ExtraJump();
+            }
         }
 
     }
@@ -302,7 +306,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = false; // Le joueur ne peut pas dash (doit mettre au debut de la coroutine (Prévention de spam de dash))
         float originalGravity = rb.gravityScale; // Sauvegarder la gravité originale du joueur
         rb.gravityScale = 0; // Mettre la gravité du joueur à 0
-
+        animator.SetTrigger("Fonce"); // Jouer l'animation de dash
         // Determine the direction of the dash
         float dashDirection = playerSprite.flipX ? 1 : -1;
 
@@ -336,11 +340,14 @@ public class PlayerMovement : MonoBehaviour
     // Fonction coroutine pour le slam
     private IEnumerator SlamThroughPlatforms()
     {
+        isSlaming = true; // Le joueur est en train de slam
         // Désactiver les collisions avec les plateformes brisables
         Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), true);
 
         // Appliquer une force de slam vers le bas
         rb.velocity = Vector2.down * slamForce;
+
+        animator.SetTrigger("Slam"); // Jouer l'animation de slam
 
         // Attendre 0.2 secondes avant de réactiver les collisions avec les plateformes brisables
         yield return new WaitForSeconds(0.2f);
@@ -401,6 +408,7 @@ public class PlayerMovement : MonoBehaviour
         isDead = true; // Set isDead to true
         // Jouer l'animation de mort
         GetComponent<Animator>().SetTrigger("Mort");
+        animator.SetBool("Tombe", false);
         StartCoroutine(ReloadSceneAfterDelay(3.0f)); // Reload scene after 3 seconds
         GetComponent<AudioSource>().PlayOneShot(SonMort); // Jouer le son de mort
         // Peut-être screen gameover ?

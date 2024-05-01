@@ -40,6 +40,10 @@ public class Boss : MonoBehaviour
             }
 
             lastDamageTime = Time.time;
+            if (healthBar != null)
+            {
+                healthBar.value = currentHealth;
+            }
         }
     }
 
