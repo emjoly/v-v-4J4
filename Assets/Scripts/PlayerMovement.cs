@@ -259,6 +259,8 @@ public class PlayerMovement : MonoBehaviour
             // Mettre à jour la barre de vie du joueur
             healthBar.SetHealth(currentHealth);
             animator.SetTrigger("Mal");
+            animator.SetBool("Tombe", false);
+            animator.SetBool("Monte", false);
             isBlesse = true;
             GetComponent<AudioSource>().PlayOneShot(SonBlesse);
             StartCoroutine(BlesseBack2False(1.0f)); // freeze quand il est blessé
@@ -282,6 +284,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Le joueur est au sol s'il est en collision avec un des layers spécifiés
         bool grounded = groundedOnJumpableGround || groundedOnBreakablePlatform;
+
         // Retourner si le joueur est au sol
         return grounded;
     }
@@ -377,6 +380,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("PicSol"))
         {
             Die();
+        }
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            // Reset the "Monte" parameter
+            animator.SetBool("Monte", false);
         }
     }
 

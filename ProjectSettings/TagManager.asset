@@ -15,6 +15,7 @@ TagManager:
   - Vie
   - BossHand
   - BossFist
+  - switch
   layers:
   - Default
   - TransparentFX

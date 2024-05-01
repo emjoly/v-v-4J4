@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
     public AudioSource backgroundMusicSource; 
-    public AudioClip newBackgroundMusic; 
+    public AudioClip newBackgroundMusic;
+    public GameObject BossHealthSlider;
 
     private int hitCount = 0;
     private bool dialogueTriggered = false;
+
+    public CinemachineVirtualCamera camPerso;
+    public CinemachineVirtualCamera camBoss;
 
     public void TriggerDialogue()
     {
@@ -31,7 +35,10 @@ public class DialogueActivation : MonoBehaviour
         hitCount++;
         if (hitCount >= 3)
         {
+            BossHealthSlider.SetActive(true);
             TriggerDialogue();
+            camPerso.enabled = false;
+            camBoss.enabled = true;
         }
     }
 }
