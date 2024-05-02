@@ -16,6 +16,7 @@ TagManager:
   - BossHand
   - BossFist
   - switch
+  - Boss
   layers:
   - Default
   - TransparentFX

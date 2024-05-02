@@ -38,31 +38,39 @@ public class PlayerCombat : MonoBehaviour
     }
 
 
-public void PerformAttack()
+    public void PerformAttack()
 {
     if (dialogueReglages.isDialogueOpen || hasDealtDamage)
     {
         return;
     }
 
-    // Detect enemies in range
     Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-    // Deal damage if it hasn't been dealt yet
     foreach (Collider2D enemy in hitEnemies)
     {
-        DialogueActivation boss = enemy.GetComponent<DialogueActivation>();
-        if (boss != null)
+        if (enemy.CompareTag("Boss"))
         {
-            boss.TakeHit();
+            Boss boss = enemy.GetComponent<Boss>();
         }
         else
         {
-            enemy.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+            // Check if enemy is not null and has the Ennemi component
+            Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+            if (ennemiComponent != null)
+            {
+                ennemiComponent.TakeDamage(DommageAttaque);
+            }
+            else
+            {
+                Debug.LogWarning("The enemy does not have the Ennemi component.");
+            }
         }
     }
-    hasDealtDamage = true; // Damage has been dealt
+    hasDealtDamage = true;
 }
+
+
 
     IEnumerator AttackCoroutine()
     {
@@ -70,9 +78,7 @@ public void PerformAttack()
         float attackEndTime = Time.time + tempsAttenteAttaque;
         while (Time.time < attackEndTime)
         {
-            // Detect enemies in range
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-            // Deal damage if it hasn't been dealt yet
             if (!hasDealtDamage)
             {
                 foreach (Collider2D enemy in hitEnemies)
@@ -82,17 +88,34 @@ public void PerformAttack()
                     {
                         boss.TakeHit();
                     }
+                    else if (enemy.CompareTag("Boss")) // Check if the enemy is the boss
+                    {
+                        Boss bossComponent = enemy.GetComponent<Boss>();
+                        if (bossComponent != null)
+                        {
+                            bossComponent.TakeDamage(DommageAttaque);
+                        }
+                    }
                     else
                     {
-                        enemy.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+                        // Check if enemy is not null and has the Ennemi component
+                        Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+                        if (ennemiComponent != null)
+                        {
+                            ennemiComponent.TakeDamage(DommageAttaque);
+                        }
+                        else
+                        {
+                            Debug.LogWarning("The enemy does not have the Ennemi component.");
+                        }
                     }
                 }
-                hasDealtDamage = true; // Damage has been dealt
+                hasDealtDamage = true;
             }
-            yield return null; // Wait for the next frame
+            yield return null;
         }
         hasAttacked = false;
-        hasDealtDamage = false; // Reset this at the end of the attack
+        hasDealtDamage = false;
     }
 
     void OnDrawGizmosSelected()
@@ -126,7 +149,7 @@ public void PerformAttack()
     }
 
     public void ResetAttack()
-{
-    hasDealtDamage = false;
-}
+    {
+        hasDealtDamage = false;
+    }
 }

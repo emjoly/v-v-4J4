@@ -117,7 +117,7 @@ void FinDialogue()
     // Find and activate GameObjects with the tag "BossHand"
     foreach (GameObject bossHand in Resources.FindObjectsOfTypeAll<GameObject>())
     {
-        if (bossHand.tag == "BossHand")
+        if (bossHand.tag == "Boss")
         {
             bossHand.SetActive(true);
         }

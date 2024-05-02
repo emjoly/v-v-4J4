@@ -8,7 +8,7 @@ public class Boss : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     public int damage = 20;
-    private float damageCooldown = 1.5f;
+    private float damageCooldown = 1f;
     private float lastDamageTime;
     public Slider healthBar;
     public Animator animator;

@@ -35,10 +35,19 @@ public class DialogueActivation : MonoBehaviour
         hitCount++;
         if (hitCount >= 3)
         {
+            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            if (collider != null)
+            {
+                collider.enabled = false;
+            }
+
             BossHealthSlider.SetActive(true);
             TriggerDialogue();
             camPerso.enabled = false;
             camBoss.enabled = true;
         }
     }
+
+
 }
+
