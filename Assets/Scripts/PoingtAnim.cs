@@ -13,8 +13,7 @@ public class PoingtAnim : MonoBehaviour
 
     void Start()
     {
-        
-        transform.position = new Vector3(player.position.x, player.position.y + 10, transform.position.z);
+        = new Vector3(player.position.x, player.position.y + 10, transform.position.z);
 
         StartCoroutine(FistRoutine());
     }
