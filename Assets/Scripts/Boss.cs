@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class Boss : MonoBehaviour
 {
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
     public int damage = 20;
     private float damageCooldown = 1f;
     private float lastDamageTime;
     public Slider healthBar;
-    public Animator animator;
+/*     public Animator animator; */
     private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
+/* ß */
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class Boss : MonoBehaviour
         if (Time.time >= lastDamageTime + damageCooldown)
         {
             currentHealth -= damage;
-            animator.SetTrigger("AMal");
+/*             animator.SetTrigger("AMal"); */
 
             if (currentHealth <= 0)
             {
@@ -50,7 +50,7 @@ public class Boss : MonoBehaviour
     void Die()
     {
         Debug.Log("Boss mort");
-        animator.SetBool("EstMort", true);
+/*         animator.SetBool("EstMort", true); */
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         isDead = true;

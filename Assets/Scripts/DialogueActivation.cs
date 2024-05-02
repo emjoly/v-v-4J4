@@ -31,23 +31,31 @@ public class DialogueActivation : MonoBehaviour
     }
 
     public void TakeHit()
+{
+    hitCount++;
+    if (hitCount >= 3)
     {
-        hitCount++;
-        if (hitCount >= 3)
+        PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+        if (collider != null)
         {
-            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
-            if (collider != null)
-            {
-                collider.enabled = false;
-            }
-
-            BossHealthSlider.SetActive(true);
-            TriggerDialogue();
-            camPerso.enabled = false;
-            camBoss.enabled = true;
+            collider.enabled = false;
         }
-    }
 
+        // Reduce the opacity by 50%
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>(); // get the SpriteRenderer component
+        if (spriteRenderer != null)
+        {
+            Color color = spriteRenderer.color;
+            color.a *= 0.5f; // reduce the alpha value by 50%
+            spriteRenderer.color = color; // apply the new color
+        }
+
+        BossHealthSlider.SetActive(true);
+        TriggerDialogue();
+        camPerso.enabled = false;
+        camBoss.enabled = true;
+    }
+}
 
 }
 

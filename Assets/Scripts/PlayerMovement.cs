@@ -104,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("Marche", false);
             }
 
+            
             if (currentHealth <= 0)
             {
                 Die();
@@ -222,7 +223,7 @@ public class PlayerMovement : MonoBehaviour
                 else if (IsGrounded() && Time.time >= groundDashCooldown)
                 {
                     StartCoroutine(Dash()); // Lancer la coroutine Dash (pour pouvoir dasher au sol)
-                    groundDashCooldown = Time.time + 2f; // Mettre le cooldown de dash au sol à 2 secondes
+                    groundDashCooldown = Time.time + 1f; // Mettre le cooldown de dash au sol à 2 secondes
                 }
 
             }
@@ -245,8 +246,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     animator.SetBool("Tombe", false);
                 }
-
-                ExtraJump();
             }
         }
 
