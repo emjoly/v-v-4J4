@@ -8,7 +8,6 @@ public class DialogueActivation : MonoBehaviour
     public Dialogue dialogue;
     public AudioSource backgroundMusicSource; 
     public AudioClip newBackgroundMusic;
-    public GameObject BossHealthSlider;
 
     private int hitCount = 0;
     private bool dialogueTriggered = false;
@@ -28,6 +27,9 @@ public class DialogueActivation : MonoBehaviour
         FindObjectOfType<DialogueReglages>().CommencerDialogue(dialogue);
         hitCount = 0;
         dialogueTriggered = true;
+        backgroundMusicSource.clip = newBackgroundMusic;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
     }
 
     public void TakeHit()
@@ -50,7 +52,6 @@ public class DialogueActivation : MonoBehaviour
             spriteRenderer.color = color; // apply the new color
         }
 
-        BossHealthSlider.SetActive(true);
         TriggerDialogue();
         camPerso.enabled = false;
         camBoss.enabled = true;

@@ -18,7 +18,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-/* ß */
+        healthBar.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

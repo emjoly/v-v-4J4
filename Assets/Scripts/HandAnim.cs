@@ -37,7 +37,7 @@ public class HandAnim : MonoBehaviour
             yield return new WaitUntil(() => Time.time - moveStartTime > 15);
 
             isMoving = false;
-            transform.position = initialPosition;
+            // The hand will stop moving but stay at its current position
             yield return new WaitForSeconds(5);
         }
     }
