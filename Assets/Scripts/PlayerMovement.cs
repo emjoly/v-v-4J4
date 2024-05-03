@@ -83,10 +83,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    void FixedUpdate()
+    {
+    }
     void Update()
     {
-        if (!isDead && !isBlesse) // Vérifie si le personnage n'est pas mort
+        if (!isDead && !isBlesse) // Vérifie si le personnage n'est pas mort ou blessé
         {
             // Déplacer le joueur avec le clavier(getAxisRaw pour éviter l'accélération du joueur)
             float directionX = Input.GetAxisRaw("Horizontal");
@@ -151,19 +153,13 @@ public class PlayerMovement : MonoBehaviour
                 playerCombat.FlipPlayer();
             }
 
-            // Si le joueur appuie sur la touche Slam et n'est pas au sol
-            if (Input.GetButtonDown("Slam") && !IsGrounded())
-            {
-                // Lancer la coroutine SlamThroughPlatforms
-                StartCoroutine(SlamThroughPlatforms());
-            }
+
             // Si le joueur appuie sur la touche Jump
             if (Input.GetButtonDown("Jump"))
             {
                 // Si le joueur est au sol
                 if (IsGrounded())
                 {
-                    // Initialiser le double jump
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                     jumpTimeCounter = jumpTime; // Initialiser le compteur de temps de saut
                     isJumping = true; // Le joueur est en train de sauter
@@ -207,7 +203,12 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = false;
                 animator.SetBool("Monte", false);
             }
-
+            // Si le joueur appuie sur la touche Slam et n'est pas au sol
+            if (Input.GetButtonDown("Slam") && !IsGrounded())
+            {
+                // Lancer la coroutine SlamThroughPlatforms
+                StartCoroutine(SlamThroughPlatforms());
+            }
             // Si le joueur appuie sur la touche Dash
             if (Input.GetButtonDown("Dash"))
             {
@@ -367,6 +368,21 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+
+        // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(10); // Réduit la vie du joueur de 10
+            // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
+        }
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            // Reset the "Monte" parameter
+            animator.SetBool("Monte", false);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("Vie"))
         {
             // Restaurer la santé du joueur au maximum
@@ -377,20 +393,9 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             // Ajouter un son !!!
         }
-        // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamage(10); // Réduit la vie du joueur de 10
-            // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
-        }
         if (collision.gameObject.CompareTag("PicSol"))
         {
             Die();
-        }
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            // Reset the "Monte" parameter
-            animator.SetBool("Monte", false);
         }
     }
 

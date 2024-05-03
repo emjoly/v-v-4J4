@@ -88,7 +88,7 @@ public class PlayerCombat : MonoBehaviour
                     {
                         boss.TakeHit();
                     }
-                    else if (enemy.CompareTag("Boss")) // Check if the enemy is the boss
+                    else if (enemy.CompareTag("Boss")|| enemy.CompareTag("BossHand")) // Check if the enemy is the boss
                     {
                         Boss bossComponent = enemy.GetComponent<Boss>();
                         if (bossComponent != null)
