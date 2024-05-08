@@ -191,7 +191,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      decoCave_0: -5832870147423955275
+      decoCave_1: -2528076877730661980
+      decoCave_2: 70824271438444358
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

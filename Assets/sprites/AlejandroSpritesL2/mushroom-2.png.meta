@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mushroom-2_0: -3372020683536193882
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

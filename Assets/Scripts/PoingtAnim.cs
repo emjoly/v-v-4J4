@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 public class PoingtAnim : MonoBehaviour
 {
     public float speed = 10.0f;
@@ -13,11 +13,13 @@ public class PoingtAnim : MonoBehaviour
     public GameObject LumiereVie;
     public GameObject LumiereVie2;
     public GameObject ActivationMains;
+    private Coroutine fistRoutine;
+    public bool bossIsDead = false;  // Add this flag
 
     void Start()
     {
         transform.position = new Vector3(player.position.x, player.position.y + 10, transform.position.z);
-        StartCoroutine(FistRoutine());
+        fistRoutine = StartCoroutine(FistRoutine());
     }
 
     void Update()
@@ -33,9 +35,18 @@ public class PoingtAnim : MonoBehaviour
         }
     }
 
+    public void StopFistRoutine()
+    {
+        if (fistRoutine != null)
+        {
+            StopCoroutine(fistRoutine);
+            isMoving = false;
+        }
+    }
+
     IEnumerator FistRoutine()
     {
-        while (boss.currentHealth > 0)
+        while (!bossIsDead)  // Check the flag here
         {
             if (isFirstTime)
             {
@@ -52,7 +63,7 @@ public class PoingtAnim : MonoBehaviour
             isMoving = true;
         }
 
-        if (boss.currentHealth <= 0)
+        if (bossIsDead)  // Check the flag here
         {
             this.gameObject.SetActive(false);
 
@@ -65,5 +76,4 @@ public class PoingtAnim : MonoBehaviour
             }
         }
     }
-
 }

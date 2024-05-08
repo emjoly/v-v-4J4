@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
- 
+
 public class Boss : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -50,6 +50,12 @@ public class Boss : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         isDead = true;
+
+        PoingtAnim fist = GetComponent<PoingtAnim>();
+        if (fist != null)
+        {
+            fist.bossIsDead = true;  // Set the flag here
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -72,5 +78,4 @@ public class Boss : MonoBehaviour
             }
         }
     }
-
 }
