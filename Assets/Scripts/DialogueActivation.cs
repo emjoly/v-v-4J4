@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+ 
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
-    public AudioSource backgroundMusicSource; 
+    public AudioSource backgroundMusicSource;
     public AudioClip newBackgroundMusic;
 
     private int hitCount = 0;
@@ -33,30 +33,29 @@ public class DialogueActivation : MonoBehaviour
     }
 
     public void TakeHit()
-{
-    hitCount++;
-    if (hitCount >= 3)
     {
-        PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
-        if (collider != null)
+        hitCount++;
+        if (hitCount >= 3)
         {
-            collider.enabled = false;
-        }
+            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            if (collider != null)
+            {
+                collider.enabled = false;
+            }
 
-        // Reduce the opacity by 50%
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>(); // get the SpriteRenderer component
-        if (spriteRenderer != null)
-        {
-            Color color = spriteRenderer.color;
-            color.a *= 0.5f; // reduce the alpha value by 50%
-            spriteRenderer.color = color; // apply the new color
-        }
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                Color color = spriteRenderer.color;
+                color.a *= 0.25f;
+                spriteRenderer.color = color;
+            }
 
-        TriggerDialogue();
-        camPerso.enabled = false;
-        camBoss.enabled = true;
+            TriggerDialogue();
+            camPerso.enabled = false;
+            camBoss.enabled = true;
+        }
     }
-}
 
 }
 

@@ -1,20 +1,39 @@
 using System.Collections;
 using UnityEngine;
-
+ 
 public class VieScript : MonoBehaviour
 {
-    public GameObject sideHand;
-    public GameObject sideHand2;
+    public GameObject Main1;
+    public GameObject Main2;
+    public float delai = 1f;
 
-    void OnEnable()
+    void Start()
     {
-        ActiverSideHands();
+        Main1.SetActive(false);
+        Main2.SetActive(false);
     }
 
-    public void ActiverSideHands()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        sideHand.SetActive(true);
-        sideHand2.SetActive(true);
+        if (other.gameObject.name == "ActivationMains")
+        {
+            StartCoroutine(ActiverMains());
+        }
     }
+
+    IEnumerator ActiverMains()
+    {
+        yield return new WaitForSeconds(delai);
+        Main1.SetActive(true);
+        Main2.SetActive(true);
+
+        GameObject activationMains = GameObject.Find("ActivationMains");
+
+        if (activationMains != null)
+        {
+            Destroy(activationMains);
+        }
+    }
+
 }
 

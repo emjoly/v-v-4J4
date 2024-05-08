@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class PlayerCombat : MonoBehaviour
 {
     // Variables pour l'attaque
@@ -13,9 +13,9 @@ public class PlayerCombat : MonoBehaviour
     public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
-    bool faitFaceADroite = false;
-    bool hasAttacked = false;
+    public bool hasAttacked = false;
     bool hasDealtDamage = false;
+    bool faitFaceADroite = false;
 
     public AudioClip SonAttaque;
 
@@ -27,50 +27,46 @@ public class PlayerCombat : MonoBehaviour
         if (!GetComponent<PlayerMovement>().isDead && Time.time >= prochaineAttaqueTemps)
         {
             if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
-            {                
+            {
                 animator.SetTrigger("Attack");
                 // On active l'animation d'attaque
                 prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
                 GetComponent<AudioSource>().PlayOneShot(SonAttaque);
-                StartCoroutine(AttackCoroutine()); // Start the attack coroutine
+                StartCoroutine(AttackCoroutine());
             }
         }
     }
 
-
     public void PerformAttack()
-{
-    if (dialogueReglages.isDialogueOpen || hasDealtDamage)
     {
-        return;
-    }
-
-    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-    foreach (Collider2D enemy in hitEnemies)
-    {
-        if (enemy.CompareTag("Boss"))
+        if (dialogueReglages.isDialogueOpen || hasDealtDamage)
         {
-            Boss boss = enemy.GetComponent<Boss>();
+            return;
         }
-        else
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
         {
-            // Check if enemy is not null and has the Ennemi component
-            Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
-            if (ennemiComponent != null)
+            if (enemy.CompareTag("Boss"))
             {
-                ennemiComponent.TakeDamage(DommageAttaque);
+                Boss boss = enemy.GetComponent<Boss>();
             }
             else
             {
-                Debug.LogWarning("The enemy does not have the Ennemi component.");
+                Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+                if (ennemiComponent != null)
+                {
+                    ennemiComponent.TakeDamage(DommageAttaque);
+                }
+                else
+                {
+                    Debug.LogWarning("Meow");
+                }
             }
         }
+        hasDealtDamage = true;
     }
-    hasDealtDamage = true;
-}
-
-
 
     IEnumerator AttackCoroutine()
     {
@@ -88,7 +84,7 @@ public class PlayerCombat : MonoBehaviour
                     {
                         boss.TakeHit();
                     }
-                    else if (enemy.CompareTag("Boss")|| enemy.CompareTag("BossHand")) // Check if the enemy is the boss
+                    else if (enemy.CompareTag("Boss") || enemy.CompareTag("BossHand"))
                     {
                         Boss bossComponent = enemy.GetComponent<Boss>();
                         if (bossComponent != null)
@@ -98,7 +94,6 @@ public class PlayerCombat : MonoBehaviour
                     }
                     else
                     {
-                        // Check if enemy is not null and has the Ennemi component
                         Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
                         if (ennemiComponent != null)
                         {
@@ -106,7 +101,7 @@ public class PlayerCombat : MonoBehaviour
                         }
                         else
                         {
-                            Debug.LogWarning("The enemy does not have the Ennemi component.");
+                            Debug.LogWarning("Meow");
                         }
                     }
                 }
@@ -120,24 +115,19 @@ public class PlayerCombat : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        // Si c'est nul, sortir de la fonction
         if (attackPoint == null)
         {
             return;
         }
-        // Dessiner un cercle pour la range d'attaque
         if (attackPoint != null)
         {
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
     }
-    // Function to flip the player
     public void FlipPlayer()
     {
-        // Flip the player's direction
         faitFaceADroite = !faitFaceADroite;
 
-        // Flip le attackPoint
         if (!faitFaceADroite)
         {
             attackPoint.localPosition = new Vector3(-Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);

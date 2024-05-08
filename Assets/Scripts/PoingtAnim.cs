@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class PoingtAnim : MonoBehaviour
 {
     public float speed = 10.0f;
     public Transform player;
-    public Boss boss; 
-    private bool isMoving = false;
+    public Boss boss;
+    public bool isMoving = false;
     private bool isFirstTime = true;
     public GameObject vieObject;
     public GameObject LumiereVie;
     public GameObject LumiereVie2;
+    public GameObject ActivationMains;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class PoingtAnim : MonoBehaviour
 
     IEnumerator FistRoutine()
     {
-        while (boss.currentHealth > 0) 
+        while (boss.currentHealth > 0)
         {
             if (isFirstTime)
             {
@@ -60,15 +61,9 @@ public class PoingtAnim : MonoBehaviour
                 vieObject.SetActive(true);
                 LumiereVie.SetActive(true);
                 LumiereVie2.SetActive(true);
+                ActivationMains.SetActive(true);
             }
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isMoving = false;
-        }
-    }
 }

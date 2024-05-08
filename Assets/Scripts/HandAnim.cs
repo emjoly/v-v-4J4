@@ -1,26 +1,42 @@
 using System.Collections;
 using UnityEngine;
-
+ 
 public class HandAnim : MonoBehaviour
 {
     public float speed = 10.0f;
-    private bool isMoving = false;
+    public bool isMoving = false;
     private Vector3 initialPosition;
     private float moveStartTime;
+    public Boss boss;
 
     void Start()
     {
         initialPosition = transform.position;
+        boss = GetComponent<Boss>();
+    }
+    void OnEnable()
+    {
         StartCoroutine(StartHandRoutine());
     }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+
     void Update()
     {
-        if (isMoving)
+        if (isMoving && boss.currentHealth > 0)
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
+        else if (boss.currentHealth <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
+
 
     IEnumerator StartHandRoutine()
     {
@@ -30,14 +46,14 @@ public class HandAnim : MonoBehaviour
 
     IEnumerator HandRoutine()
     {
-        while (true) 
+        while (true)
         {
             isMoving = true;
             moveStartTime = Time.time;
             yield return new WaitUntil(() => Time.time - moveStartTime > 15);
 
             isMoving = false;
-            // The hand will stop moving but stay at its current position
+
             yield return new WaitForSeconds(5);
         }
     }
