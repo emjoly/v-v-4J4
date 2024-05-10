@@ -9,7 +9,15 @@ TagManager:
   - Boite
   - Spike
   - FallingPlatform
-  - Pic
+  - PicSol
+  - BossStart
+  - bobo
+  - Vie
+  - BossHand
+  - BossFist
+  - switch
+  - Boss
+  - Wall
   layers:
   - Default
   - TransparentFX

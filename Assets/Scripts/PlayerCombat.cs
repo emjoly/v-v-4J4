@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class PlayerCombat : MonoBehaviour
 {
     // Variables pour l'attaque
@@ -10,60 +10,125 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int DommageAttaque = 20;
-    public float debisAttaque = 2f;
     public float tempsAttenteAttaque;
     float prochaineAttaqueTemps = 0f;
 
-    // Add a bool variable to keep track of the player's direction
-    bool isFacingRight = true;
+    public bool hasAttacked = false;
+    bool hasDealtDamage = false;
+    bool faitFaceADroite = false;
+
+    public AudioClip SonAttaque;
+
+    public DialogueReglages dialogueReglages;
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= prochaineAttaqueTemps)
+        if (!GetComponent<PlayerMovement>().isDead && Time.time >= prochaineAttaqueTemps)
         {
-            if (Input.GetButtonDown("Attack"))
+            if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
             {
-                Attack();
+                animator.SetTrigger("Attack");
+                // On active l'animation d'attaque
                 prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
+                GetComponent<AudioSource>().PlayOneShot(SonAttaque);
+                StartCoroutine(AttackCoroutine());
             }
         }
     }
 
-    // Fonction pour attaquer
-    void Attack()
+    public void PerformAttack()
     {
-        // On active l'animation d'attaque
-        animator.SetTrigger("Attack");
-        // Detecter les ennemis dans la range d'attaque
-        Collider2D[] EnnemieTouche = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        // Appliquer des degats
-        foreach (Collider2D ennemi in EnnemieTouche)
+        if (dialogueReglages.isDialogueOpen || hasDealtDamage)
         {
-            ennemi.GetComponent<Ennemi>().TakeDamage(DommageAttaque);
+            return;
         }
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            if (enemy.CompareTag("Boss"))
+            {
+                Boss boss = enemy.GetComponent<Boss>();
+            }
+            else
+            {
+                Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+                if (ennemiComponent != null)
+                {
+                    ennemiComponent.TakeDamage(DommageAttaque);
+                }
+                else
+                {
+                    Debug.LogWarning("Meow");
+                }
+            }
+        }
+        hasDealtDamage = true;
     }
 
-    // Fonction pour faire apparaitre un cercle dans l'editeur
+    IEnumerator AttackCoroutine()
+    {
+        hasAttacked = true;
+        float attackEndTime = Time.time + tempsAttenteAttaque;
+        while (Time.time < attackEndTime)
+        {
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            if (!hasDealtDamage)
+            {
+                foreach (Collider2D enemy in hitEnemies)
+                {
+                    DialogueActivation boss = enemy.GetComponent<DialogueActivation>();
+                    if (boss != null)
+                    {
+                        boss.TakeHit();
+                    }
+                    else if (enemy.CompareTag("Boss") || enemy.CompareTag("BossHand"))
+                    {
+                        Boss bossComponent = enemy.GetComponent<Boss>();
+                        if (bossComponent != null)
+                        {
+                            bossComponent.TakeDamage(DommageAttaque);
+                        }
+                    }
+                    else
+                    {
+                        Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+                        if (ennemiComponent != null)
+                        {
+                            ennemiComponent.TakeDamage(DommageAttaque);
+                        }
+                        else
+                        {
+                            Debug.LogWarning("Meow");
+                        }
+                    }
+                }
+                hasDealtDamage = true;
+            }
+            yield return null;
+        }
+        hasAttacked = false;
+        hasDealtDamage = false;
+    }
+
     void OnDrawGizmosSelected()
     {
-        // Si c'est nul, sortir de la fonction
         if (attackPoint == null)
         {
             return;
         }
-        // Dessiner un cercle pour la range d'attaque
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        if (attackPoint != null)
+        {
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        }
     }
-
-    // Function to flip the player
     public void FlipPlayer()
     {
-        // Flip the player's direction
-        isFacingRight = !isFacingRight;
+        faitFaceADroite = !faitFaceADroite;
 
-        // Flip the attackPoint
-        if (!isFacingRight)
+        if (!faitFaceADroite)
         {
             attackPoint.localPosition = new Vector3(-Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
         }
@@ -71,5 +136,10 @@ public class PlayerCombat : MonoBehaviour
         {
             attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x), attackPoint.localPosition.y, attackPoint.localPosition.z);
         }
+    }
+
+    public void ResetAttack()
+    {
+        hasDealtDamage = false;
     }
 }

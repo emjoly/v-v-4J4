@@ -14,15 +14,39 @@ public class DialogueReglages : MonoBehaviour
     // File d'attente de phrases
     private Queue<string> phrases;
 
+    public bool isDialogueOpen = false;
+    public bool hasDialogueActivated = false;
+
+    public DialogueActivation dialogueActivation;
+    public AudioSource backgroundMusicSource;
+    public AudioClip newBackgroundMusic; 
+
     // Start is called before the first frame update
     void Start()
     {
         // Initialisation de la file d'attente de phrases
         phrases = new Queue<string>();
     }
+    void Update()
+{
+    // Press la touche entrer pour aller à la prochaine phrase
+    if (isDialogueOpen && Input.GetKeyDown(KeyCode.Return))
+    {
+        // Display the next sentence
+        AfficherProchainePhrase();
+    }
+}
+
     // Fonction pour commencer le dialogue
     public void CommencerDialogue(Dialogue dialogue)
     {
+        if (hasDialogueActivated)
+        {
+            return;
+        }
+        hasDialogueActivated = true;
+
+        isDialogueOpen = true;
         // On active l'animation
         animator.SetBool("IsOpen", true);
         // On affiche le nom du la personne ou la chose qui parle
@@ -36,7 +60,20 @@ public class DialogueReglages : MonoBehaviour
         }
         // On affiche la prochaine phrase
         AfficherProchainePhrase();
+
+        // Change la background music
+        if (backgroundMusicSource != null && newBackgroundMusic != null)
+        {
+            backgroundMusicSource.Stop();
+            backgroundMusicSource.clip = newBackgroundMusic;
+            backgroundMusicSource.Play();
+        }
+        else
+        {
+            Debug.Log("Aucune musique associée à ce dialogue.");
+        }
     }
+
     // Fonction pour afficher la prochaine phrase
     public void AfficherProchainePhrase()
     {
@@ -52,9 +89,8 @@ public class DialogueReglages : MonoBehaviour
         StopAllCoroutines();
         // On lance la coroutine TouchePhrase
         StartCoroutine(TouchePhrase(phrase));
-
-        
     }
+
     // Fonction pour taper les phrases
     IEnumerator TouchePhrase(string phrase)
     {
@@ -68,11 +104,37 @@ public class DialogueReglages : MonoBehaviour
             yield return null;
         }
     }
-    // Fonction pour finir le dialogue
-    void FinDialogue()
+
+// Fonction pour finir le dialogue
+void FinDialogue()
+{
+    isDialogueOpen = false;
+    // On désactive l'animation
+    animator.SetBool("IsOpen", false);
+    PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    playerMovement.enabled = true; 
+
+    // Find and activate GameObjects with the tag "BossHand"
+    foreach (GameObject bossHand in Resources.FindObjectsOfTypeAll<GameObject>())
     {
-        // On désactive l'animation
-        animator.SetBool("IsOpen", false);
+        if (bossHand.tag == "Boss")
+        {
+            bossHand.SetActive(true);
+        }
     }
+
+    // Find and activate the BossHealthSlider GameObject
+    GameObject bossHealthSlider = System.Array.Find(Resources.FindObjectsOfTypeAll<GameObject>(), obj => obj.name == "BossHealthSlider");
+    if (bossHealthSlider != null)
+    {
+        bossHealthSlider.SetActive(true);
+    }
+}
+
+
+
+
+
+
 
 }

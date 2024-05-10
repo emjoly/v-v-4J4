@@ -32,7 +32,7 @@ public class PicTombe : MonoBehaviour
             if(hit.transform != null){
                 if(hit.collider.tag == "Player"){
                     // On active la gravité du pic
-                    rb.gravityScale = 5;
+                    rb.gravityScale = 3;
                     entrainTomber = true;
                 }
             }
