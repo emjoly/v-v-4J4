@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -66,10 +65,6 @@ public class PlayerMovement : MonoBehaviour
 
     private string SceneCourante;
 
-    // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
-    // chaque quoi? sons? cest juste marche que le son se repete non?
-    // il marche pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
-
     // Si le joueur est mort ou blesse
     public bool isDead = false;
     public bool isBlesse = false;
@@ -85,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         SceneCourante = SceneManager.GetActiveScene().name;
-
     }
 
     void FixedUpdate()
@@ -93,8 +87,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-
-
         if (!isDead && !isBlesse)
         {
             if (SceneCourante == "Lvl2")
@@ -243,10 +235,9 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(Dash()); // Lancer la coroutine Dash (pour pouvoir dasher au sol)
                     groundDashCooldown = Time.time + 1f; // Mettre le cooldown de dash au sol à 2 secondes
                 }
-
             }
-
-            if (!isSlaming)
+            // && !isAttacking pour quil attaque a la place de tomber mais lanim est dans lautre script
+            if (!isSlaming )
             {
                 if (rb.velocity.y < 0) // Si le joueur est en train de tomber
                 {
@@ -258,7 +249,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if (rb.velocity.y < -2f) // Si le joueur est en train de tomber
                 {
-
                     animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
                 }
                 else
@@ -267,7 +257,6 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-
     }
 
 
@@ -443,7 +432,6 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
     }
 
-
     /* IEnumerator RespawnAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -458,6 +446,4 @@ public class PlayerMovement : MonoBehaviour
         // animator.SetTrigger("Respawn");
         // if (respawnSound) audioSource.PlayOneShot(respawnSound);
     } */
-
-
 }
