@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -63,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip SonSaut;
     public AudioClip SonMort;
 
+    private string SceneCourante;
+
     // POSSIBILITÉ Créer des audio source pour chaque pour pouvoir les arrêter lorsque le joueur release la touche (genre marche)
     // chaque quoi? sons? cest juste marche que le son se repete non?
     // il marche pour lanim de marche, si je marche et saute il va continuer a marcher meme si jai mis isGrounded :(
@@ -81,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
         // Initialiser la barre de vie du joueur
         healthBar.SetMaxHealth(maxHealth);
 
+        SceneCourante = SceneManager.GetActiveScene().name;
+
     }
 
     void FixedUpdate()
@@ -88,8 +93,20 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (!isDead && !isBlesse) // Vérifie si le personnage n'est pas mort ou blessé
+
+
+        if (!isDead && !isBlesse)
         {
+            if (SceneCourante == "Lvl2")
+            {
+                if (!isSlaming)
+                {
+                    if (Input.GetButtonDown("Slam") && !IsGrounded())
+                    {
+                        StartCoroutine(SlamThroughPlatforms());
+                    }
+                }
+            }
             // Déplacer le joueur avec le clavier(getAxisRaw pour éviter l'accélération du joueur)
             float directionX = Input.GetAxisRaw("Horizontal");
             float directionY = Input.GetAxisRaw("Vertical");
@@ -106,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("Marche", false);
             }
 
-            
+
             if (currentHealth <= 0)
             {
                 Die();
@@ -203,12 +220,12 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = false;
                 animator.SetBool("Monte", false);
             }
-            // Si le joueur appuie sur la touche Slam et n'est pas au sol
-            if (Input.GetButtonDown("Slam") && !IsGrounded())
-            {
-                // Lancer la coroutine SlamThroughPlatforms
-                StartCoroutine(SlamThroughPlatforms());
-            }
+            /*             // Si le joueur appuie sur la touche Slam et n'est pas au sol
+                        if (Input.GetButtonDown("Slam") && !IsGrounded())
+                        {
+                            // Lancer la coroutine SlamThroughPlatforms
+                            StartCoroutine(SlamThroughPlatforms());
+                        } */
             // Si le joueur appuie sur la touche Dash
             if (Input.GetButtonDown("Dash"))
             {
@@ -229,7 +246,8 @@ public class PlayerMovement : MonoBehaviour
 
             }
 
-            if(!isSlaming) { 
+            if (!isSlaming)
+            {
                 if (rb.velocity.y < 0) // Si le joueur est en train de tomber
                 {
                     // Appliquer une gravité plus forte
