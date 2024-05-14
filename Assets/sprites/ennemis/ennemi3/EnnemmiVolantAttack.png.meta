@@ -200,330 +200,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnnemmiVolantAttack_0
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 1276
-        width: 491
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab252cc8a7ad9aa50800000000000000
-      internalID: 6532992954360025786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_1
-      rect:
-        serializedVersion: 2
-        x: 1381
-        y: 1272
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d22d58f9fcf5be30800000000000000
-      internalID: 4518795951680070355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_2
-      rect:
-        serializedVersion: 2
-        x: 2413
-        y: 1289
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48e0000363785ba20800000000000000
-      internalID: 3077514587180895876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_3
-      rect:
-        serializedVersion: 2
-        x: 3528
-        y: 1262
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cdea052fb25521dc0800000000000000
-      internalID: -3669777099116204324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_4
-      rect:
-        serializedVersion: 2
-        x: 4740
-        y: 1283
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9015d2753baef07c0800000000000000
-      internalID: -4102802679528599287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_5
-      rect:
-        serializedVersion: 2
-        x: 5935
-        y: 1306
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f39d4f0413779fad0800000000000000
-      internalID: -2667970250813417153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_6
-      rect:
-        serializedVersion: 2
-        x: 7070
-        y: 1320
-        width: 490
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1aa43824123a8fa30800000000000000
-      internalID: 4249325611669211809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_7
-      rect:
-        serializedVersion: 2
-        x: 8274
-        y: 1306
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 915a672fb33c9d670800000000000000
-      internalID: 8564090828660057369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_8
-      rect:
-        serializedVersion: 2
-        x: 9514
-        y: 1252
-        width: 491
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9faf383c88c910320800000000000000
-      internalID: 2522469377513880313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_9
-      rect:
-        serializedVersion: 2
-        x: 10709
-        y: 1276
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5edad45f5ea76c80800000000000000
-      internalID: -8329497261329686950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_10
-      rect:
-        serializedVersion: 2
-        x: 11844
-        y: 1290
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48fa085521067d050800000000000000
-      internalID: 5825230274887200644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_11
-      rect:
-        serializedVersion: 2
-        x: 13049
-        y: 1276
-        width: 490
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b7477eeca8984410800000000000000
-      internalID: 1461585947584317362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_12
-      rect:
-        serializedVersion: 2
-        x: 14212
-        y: 1256
-        width: 490
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d2be01fa941e4c20800000000000000
-      internalID: 3192511841554051801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_13
-      rect:
-        serializedVersion: 2
-        x: 15393
-        y: 1231
-        width: 490
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c86c4af6275dfb7e0800000000000000
-      internalID: -1747443442920405364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantAttack_14
-      rect:
-        serializedVersion: 2
-        x: 16547
-        y: 1231
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5449b5f81193494c0800000000000000
-      internalID: -4281734598140128187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: EnnemmiVolantAttack_15
       rect:
         serializedVersion: 2
         x: 0
         y: 45
         width: 1019
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -542,9 +227,9 @@ TextureImporter:
         x: 1119
         y: 40
         width: 1021
-        height: 1190
+        height: 1396
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -563,9 +248,9 @@ TextureImporter:
         x: 2151
         y: 58
         width: 1021
-        height: 1190
+        height: 1394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -584,9 +269,9 @@ TextureImporter:
         x: 3266
         y: 30
         width: 1021
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -605,9 +290,9 @@ TextureImporter:
         x: 4478
         y: 51
         width: 1020
-        height: 1190
+        height: 1395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -626,9 +311,9 @@ TextureImporter:
         x: 5673
         y: 75
         width: 1021
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -647,9 +332,9 @@ TextureImporter:
         x: 6808
         y: 89
         width: 1020
-        height: 1190
+        height: 1393
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -668,9 +353,9 @@ TextureImporter:
         x: 8012
         y: 75
         width: 1021
-        height: 1190
+        height: 1395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -689,9 +374,9 @@ TextureImporter:
         x: 9252
         y: 21
         width: 1020
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -710,9 +395,9 @@ TextureImporter:
         x: 10447
         y: 44
         width: 1021
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -731,9 +416,9 @@ TextureImporter:
         x: 11582
         y: 58
         width: 1020
-        height: 1190
+        height: 1395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -752,9 +437,9 @@ TextureImporter:
         x: 12786
         y: 44
         width: 1021
-        height: 1190
+        height: 1399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -773,9 +458,9 @@ TextureImporter:
         x: 13950
         y: 25
         width: 1020
-        height: 1190
+        height: 1394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -794,9 +479,9 @@ TextureImporter:
         x: 15131
         y: 0
         width: 1020
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -815,9 +500,9 @@ TextureImporter:
         x: 16285
         y: 0
         width: 1020
-        height: 1189
+        height: 1394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,14 +517,44 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9afe33471be37be45b3c7a83d055d3b5
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnnemmiVolantAttack_0: 6532992954360025786
+      EnnemmiVolantAttack_1: 4518795951680070355
+      EnnemmiVolantAttack_10: 5825230274887200644
+      EnnemmiVolantAttack_11: 1461585947584317362
+      EnnemmiVolantAttack_12: 3192511841554051801
+      EnnemmiVolantAttack_13: -1747443442920405364
+      EnnemmiVolantAttack_14: -4281734598140128187
+      EnnemmiVolantAttack_15: -5077492866576192280
+      EnnemmiVolantAttack_16: -1090931241789144692
+      EnnemmiVolantAttack_17: -6620720248025179092
+      EnnemmiVolantAttack_18: 4122653460684966950
+      EnnemmiVolantAttack_19: 4556537470767160064
+      EnnemmiVolantAttack_2: 3077514587180895876
+      EnnemmiVolantAttack_20: 3061930267748625236
+      EnnemmiVolantAttack_21: 5046678327206498811
+      EnnemmiVolantAttack_22: 1823460438214508923
+      EnnemmiVolantAttack_23: -7875177992357192447
+      EnnemmiVolantAttack_24: -7142547555947926561
+      EnnemmiVolantAttack_25: 8863229587843744717
+      EnnemmiVolantAttack_26: -4341902021817643231
+      EnnemmiVolantAttack_27: -6987903690303175559
+      EnnemmiVolantAttack_28: 1417556619899622337
+      EnnemmiVolantAttack_29: 8259878093887575568
+      EnnemmiVolantAttack_3: -3669777099116204324
+      EnnemmiVolantAttack_4: -4102802679528599287
+      EnnemmiVolantAttack_5: -2667970250813417153
+      EnnemmiVolantAttack_6: 4249325611669211809
+      EnnemmiVolantAttack_7: 8564090828660057369
+      EnnemmiVolantAttack_8: 2522469377513880313
+      EnnemmiVolantAttack_9: -8329497261329686950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

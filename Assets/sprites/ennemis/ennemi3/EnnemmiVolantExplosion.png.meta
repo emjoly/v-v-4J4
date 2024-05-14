@@ -200,90 +200,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnnemmiVolantExplosion_0
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 1246
-        width: 491
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 864e2bbb2ef5257c0800000000000000
-      internalID: -4084096484655307672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_1
-      rect:
-        serializedVersion: 2
-        x: 1381
-        y: 1242
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89b58cfbf89987b30800000000000000
-      internalID: 4285343888119978904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_2
-      rect:
-        serializedVersion: 2
-        x: 2413
-        y: 1259
-        width: 491
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b519736e6ef0cad0800000000000000
-      internalID: -2683865627844078159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_3
-      rect:
-        serializedVersion: 2
-        x: 3528
-        y: 1232
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ff6f358160f54d90800000000000000
-      internalID: -7114015734723809293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: EnnemmiVolantExplosion_4
       rect:
         serializedVersion: 2
@@ -292,7 +208,7 @@ TextureImporter:
         width: 1021
         height: 1337
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,7 +229,7 @@ TextureImporter:
         width: 1021
         height: 1283
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -332,9 +248,9 @@ TextureImporter:
         x: 0
         y: 15
         width: 1019
-        height: 1190
+        height: 1406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -353,9 +269,9 @@ TextureImporter:
         x: 1119
         y: 10
         width: 1021
-        height: 1190
+        height: 1399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -374,9 +290,9 @@ TextureImporter:
         x: 2151
         y: 28
         width: 1021
-        height: 1190
+        height: 1393
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -395,9 +311,9 @@ TextureImporter:
         x: 3266
         y: 0
         width: 1021
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -418,7 +334,7 @@ TextureImporter:
         width: 592
         height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -439,7 +355,7 @@ TextureImporter:
         width: 861
         height: 867
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -460,7 +376,7 @@ TextureImporter:
         width: 1183
         height: 1067
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,7 +397,7 @@ TextureImporter:
         width: 1215
         height: 1043
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -494,78 +410,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnnemmiVolantExplosion_14
-      rect:
-        serializedVersion: 2
-        x: 11778
-        y: 728
-        width: 582
-        height: 440
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4d988fd0519dfca0800000000000000
-      internalID: -5981464953544467123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_15
-      rect:
-        serializedVersion: 2
-        x: 12415
-        y: 893
-        width: 186
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46f6f864aeb162710800000000000000
-      internalID: 1668051405007449956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_16
-      rect:
-        serializedVersion: 2
-        x: 13073
-        y: 815
-        width: 304
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79dccb8e8c62018f0800000000000000
-      internalID: -571914508336050793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: EnnemmiVolantExplosion_17
       rect:
         serializedVersion: 2
-        x: 13521
-        y: 588
-        width: 320
-        height: 380
+        x: 12980
+        y: 199
+        width: 861
+        height: 902
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -582,11 +435,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 14142
-        y: 683
-        width: 245
-        height: 278
+        y: 332
+        width: 496
+        height: 629
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -599,36 +452,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnnemmiVolantExplosion_19
-      rect:
-        serializedVersion: 2
-        x: 11623
-        y: 287
-        width: 387
-        height: 404
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2c698dd461555320800000000000000
-      internalID: 2546030658003233836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: EnnemmiVolantExplosion_20
       rect:
         serializedVersion: 2
-        x: 11979
-        y: 294
-        width: 722
-        height: 534
+        x: 11616
+        y: 134
+        width: 1085
+        height: 1034
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -640,206 +472,47 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_21
-      rect:
-        serializedVersion: 2
-        x: 12983
-        y: 590
-        width: 126
-        height: 175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 225d6e5350b9acb40800000000000000
-      internalID: 5461347944821609762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_22
-      rect:
-        serializedVersion: 2
-        x: 13176
-        y: 550
-        width: 185
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ee721de5e4251e00800000000000000
-      internalID: 1014757860985437929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_23
-      rect:
-        serializedVersion: 2
-        x: 14399
-        y: 691
-        width: 70
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3c428e5d904ffb1d0800000000000000
-      internalID: -3332676876150233917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_24
-      rect:
-        serializedVersion: 2
-        x: 14153
-        y: 455
-        width: 134
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a0135a5d03882a40800000000000000
-      internalID: 5343665051248300192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_25
-      rect:
-        serializedVersion: 2
-        x: 14491
-        y: 531
-        width: 147
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 980d7fb5946e5cfd0800000000000000
-      internalID: -2322196830089654135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_26
-      rect:
-        serializedVersion: 2
-        x: 11990
-        y: 138
-        width: 326
-        height: 203
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 136132a5a63a7a510800000000000000
-      internalID: 1560395473081275953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_27
-      rect:
-        serializedVersion: 2
-        x: 13150
-        y: 200
-        width: 439
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f2bc388136dbf8e0800000000000000
-      internalID: -1658496529528474896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_28
-      rect:
-        serializedVersion: 2
-        x: 13687
-        y: 287
-        width: 88
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1d79e5156eb294c0800000000000000
-      internalID: -4282150954307322593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemmiVolantExplosion_29
-      rect:
-        serializedVersion: 2
-        x: 14371
-        y: 335
-        width: 91
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a16ea459a80dfee40800000000000000
-      internalID: 5687994148021003802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e368597515859894ab9315912076654e
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnnemmiVolantExplosion_0: -4084096484655307672
+      EnnemmiVolantExplosion_1: 4285343888119978904
+      EnnemmiVolantExplosion_10: 8287370028653187640
+      EnnemmiVolantExplosion_11: -8043607485318793284
+      EnnemmiVolantExplosion_12: 3483530709711537683
+      EnnemmiVolantExplosion_13: -5848340665954483773
+      EnnemmiVolantExplosion_14: -5981464953544467123
+      EnnemmiVolantExplosion_15: 1668051405007449956
+      EnnemmiVolantExplosion_16: -571914508336050793
+      EnnemmiVolantExplosion_17: 3575147923363043783
+      EnnemmiVolantExplosion_18: -6112473468693367005
+      EnnemmiVolantExplosion_19: 2546030658003233836
+      EnnemmiVolantExplosion_2: -2683865627844078159
+      EnnemmiVolantExplosion_20: 3841027591791366298
+      EnnemmiVolantExplosion_21: 5461347944821609762
+      EnnemmiVolantExplosion_22: 1014757860985437929
+      EnnemmiVolantExplosion_23: -3332676876150233917
+      EnnemmiVolantExplosion_24: 5343665051248300192
+      EnnemmiVolantExplosion_25: -2322196830089654135
+      EnnemmiVolantExplosion_26: 1560395473081275953
+      EnnemmiVolantExplosion_27: -1658496529528474896
+      EnnemmiVolantExplosion_28: -4282150954307322593
+      EnnemmiVolantExplosion_29: 5687994148021003802
+      EnnemmiVolantExplosion_3: -7114015734723809293
+      EnnemmiVolantExplosion_4: -657952472723366842
+      EnnemmiVolantExplosion_5: 5600958842864679977
+      EnnemmiVolantExplosion_6: 1134122826869639778
+      EnnemmiVolantExplosion_7: -6952867033193114584
+      EnnemmiVolantExplosion_8: -1871000005574229838
+      EnnemmiVolantExplosion_9: -7858659141166788345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

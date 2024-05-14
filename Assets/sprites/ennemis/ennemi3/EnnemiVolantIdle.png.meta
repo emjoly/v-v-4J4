@@ -200,330 +200,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnnemiVolantIdle_0
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 1331
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f4728dd06bbe2170800000000000000
-      internalID: 8155661999922115827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_1
-      rect:
-        serializedVersion: 2
-        x: 1473
-        y: 1274
-        width: 491
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b4e9d7bfbe995060800000000000000
-      internalID: 6942754846828782772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_2
-      rect:
-        serializedVersion: 2
-        x: 2728
-        y: 1298
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2679329fefcffa00800000000000000
-      internalID: 792580687297869354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_3
-      rect:
-        serializedVersion: 2
-        x: 4020
-        y: 1329
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fdee4af8171684590800000000000000
-      internalID: -7689789223365972257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_4
-      rect:
-        serializedVersion: 2
-        x: 5290
-        y: 1283
-        width: 490
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad072f77a1caa9080800000000000000
-      internalID: -9179835660759830310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_5
-      rect:
-        serializedVersion: 2
-        x: 6592
-        y: 1286
-        width: 490
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 518d2a14d3ad39c40800000000000000
-      internalID: 5517993925088040981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_6
-      rect:
-        serializedVersion: 2
-        x: 7959
-        y: 1231
-        width: 491
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52bc1238ecb04ee80800000000000000
-      internalID: -8150376444042556635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_7
-      rect:
-        serializedVersion: 2
-        x: 9220
-        y: 1269
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dddd8175e77460ed0800000000000000
-      internalID: -2448190739476587043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_8
-      rect:
-        serializedVersion: 2
-        x: 10537
-        y: 1241
-        width: 490
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c277e968b35d12b90800000000000000
-      internalID: -7268293871960950996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_9
-      rect:
-        serializedVersion: 2
-        x: 11779
-        y: 1245
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5af7c1dadeebc29a0800000000000000
-      internalID: -6256415854303608923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_10
-      rect:
-        serializedVersion: 2
-        x: 13138
-        y: 1231
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1fe0739390fff250800000000000000
-      internalID: 5980763346795818781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_11
-      rect:
-        serializedVersion: 2
-        x: 14424
-        y: 1242
-        width: 490
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 428cdedd1a3a9ac50800000000000000
-      internalID: 6677047838161881124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_12
-      rect:
-        serializedVersion: 2
-        x: 15801
-        y: 1235
-        width: 491
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b87c239c450537b30800000000000000
-      internalID: 4283855995642496907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_13
-      rect:
-        serializedVersion: 2
-        x: 17183
-        y: 1245
-        width: 491
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a2437de3928ddf30800000000000000
-      internalID: 4601977966098072229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnnemiVolantIdle_14
-      rect:
-        serializedVersion: 2
-        x: 18465
-        y: 1231
-        width: 490
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8febbfab7dd73df70800000000000000
-      internalID: 9210844028411297528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: EnnemiVolantIdle_15
       rect:
         serializedVersion: 2
         x: 0
         y: 100
         width: 1020
-        height: 1190
+        height: 1394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -539,12 +224,12 @@ TextureImporter:
       name: EnnemiVolantIdle_16
       rect:
         serializedVersion: 2
-        x: 1211
+        x: 1208
         y: 43
         width: 1020
-        height: 1190
+        height: 1394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -563,9 +248,9 @@ TextureImporter:
         x: 2466
         y: 67
         width: 1021
-        height: 1190
+        height: 1395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -584,9 +269,9 @@ TextureImporter:
         x: 3758
         y: 98
         width: 1020
-        height: 1190
+        height: 1396
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -605,9 +290,9 @@ TextureImporter:
         x: 5028
         y: 52
         width: 1020
-        height: 1190
+        height: 1398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -626,9 +311,9 @@ TextureImporter:
         x: 6329
         y: 55
         width: 1021
-        height: 1190
+        height: 1400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -647,9 +332,9 @@ TextureImporter:
         x: 7697
         y: 0
         width: 1021
-        height: 1190
+        height: 1399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -668,9 +353,9 @@ TextureImporter:
         x: 8958
         y: 37
         width: 1020
-        height: 1190
+        height: 1396
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -689,9 +374,9 @@ TextureImporter:
         x: 10274
         y: 9
         width: 1021
-        height: 1190
+        height: 1399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -707,12 +392,12 @@ TextureImporter:
       name: EnnemiVolantIdle_24
       rect:
         serializedVersion: 2
-        x: 11517
-        y: 13
+        x: 11515
+        y: 11
         width: 1021
-        height: 1190
+        height: 1399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -731,9 +416,9 @@ TextureImporter:
         x: 12876
         y: 0
         width: 1020
-        height: 1189
+        height: 1401
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -752,9 +437,9 @@ TextureImporter:
         x: 14161
         y: 11
         width: 1021
-        height: 1190
+        height: 1395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -773,9 +458,9 @@ TextureImporter:
         x: 15539
         y: 4
         width: 1020
-        height: 1190
+        height: 1401
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -794,9 +479,9 @@ TextureImporter:
         x: 16921
         y: 13
         width: 1020
-        height: 1190
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -815,9 +500,9 @@ TextureImporter:
         x: 18203
         y: 0
         width: 1019
-        height: 1189
+        height: 1397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,14 +517,44 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 305b945f66b8a304eb69a229334d9766
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnnemiVolantIdle_0: 8155661999922115827
+      EnnemiVolantIdle_1: 6942754846828782772
+      EnnemiVolantIdle_10: 5980763346795818781
+      EnnemiVolantIdle_11: 6677047838161881124
+      EnnemiVolantIdle_12: 4283855995642496907
+      EnnemiVolantIdle_13: 4601977966098072229
+      EnnemiVolantIdle_14: 9210844028411297528
+      EnnemiVolantIdle_15: -4021420074674651476
+      EnnemiVolantIdle_16: 489142223318840890
+      EnnemiVolantIdle_17: 7496409550344181985
+      EnnemiVolantIdle_18: 2156778644606361341
+      EnnemiVolantIdle_19: -817432906073461134
+      EnnemiVolantIdle_2: 792580687297869354
+      EnnemiVolantIdle_20: 7746922465097629364
+      EnnemiVolantIdle_21: 3050798190485390964
+      EnnemiVolantIdle_22: -615830697535684400
+      EnnemiVolantIdle_23: 3226536384206021073
+      EnnemiVolantIdle_24: -2894014552512501337
+      EnnemiVolantIdle_25: -6899383121090594474
+      EnnemiVolantIdle_26: -4398568046663385690
+      EnnemiVolantIdle_27: -5583946194554053318
+      EnnemiVolantIdle_28: -8306732115943224442
+      EnnemiVolantIdle_29: -3591877725132652120
+      EnnemiVolantIdle_3: -7689789223365972257
+      EnnemiVolantIdle_4: -9179835660759830310
+      EnnemiVolantIdle_5: 5517993925088040981
+      EnnemiVolantIdle_6: -8150376444042556635
+      EnnemiVolantIdle_7: -2448190739476587043
+      EnnemiVolantIdle_8: -7268293871960950996
+      EnnemiVolantIdle_9: -6256415854303608923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
