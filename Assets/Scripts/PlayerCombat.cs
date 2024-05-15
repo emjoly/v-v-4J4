@@ -20,22 +20,30 @@ public class PlayerCombat : MonoBehaviour
     public AudioClip SonAttaque;
 
     public DialogueReglages dialogueReglages;
+    
 
     // Update is called once per frame
-    void Update()
+void Update()
+{
+    if (!GetComponent<PlayerMovement>().isDead && Time.time >= prochaineAttaqueTemps)
     {
-        if (!GetComponent<PlayerMovement>().isDead && Time.time >= prochaineAttaqueTemps)
+        if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
         {
-            if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
-            {
-                animator.SetTrigger("Attack");
-                // On active l'animation d'attaque
-                prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
-                GetComponent<AudioSource>().PlayOneShot(SonAttaque);
-                StartCoroutine(AttackCoroutine());
-            }
+            animator.SetBool("IsAttacking", true); // Start the attack animation
+            animator.SetLayerWeight(1, 2);
+            prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
+            GetComponent<AudioSource>().PlayOneShot(SonAttaque);
+            StartCoroutine(AttackCoroutine());
+        }
+        else
+        {
+            animator.SetBool("IsAttacking", false);
+            animator.SetLayerWeight(1, 0);  // End the attack animation
         }
     }
+}
+
+
 
     public void PerformAttack()
     {
@@ -71,7 +79,7 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator AttackCoroutine()
     {
         hasAttacked = true;
-        float attackEndTime = Time.time + tempsAttenteAttaque;
+        float attackEndTime = Time.time + tempsAttenteAttaque; // NEED TO CHANGE THIS 
         while (Time.time < attackEndTime)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -111,6 +119,7 @@ public class PlayerCombat : MonoBehaviour
         }
         hasAttacked = false;
         hasDealtDamage = false;
+        animator.SetLayerWeight(1, 0); 
     }
 
     void OnDrawGizmosSelected()
