@@ -27,14 +27,15 @@ void Update()
 {
     if (!GetComponent<PlayerMovement>().isDead && Time.time >= prochaineAttaqueTemps)
     {
-        if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
-        {
-            animator.SetBool("IsAttacking", true); // Start the attack animation
-            animator.SetLayerWeight(1, 2);
-            prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
-            GetComponent<AudioSource>().PlayOneShot(SonAttaque);
-            StartCoroutine(AttackCoroutine());
-        }
+    if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
+    {
+        animator.SetBool("IsAttacking", true); // Start the attack animation
+        animator.SetLayerWeight(1, 2);
+        prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
+        GetComponent<AudioSource>().PlayOneShot(SonAttaque);
+        StartCoroutine(AttackCoroutine());
+    }
+
         else
         {
             animator.SetBool("IsAttacking", false);
@@ -79,7 +80,7 @@ void Update()
     IEnumerator AttackCoroutine()
     {
         hasAttacked = true;
-        float attackEndTime = Time.time + tempsAttenteAttaque; // NEED TO CHANGE THIS 
+        float attackEndTime = Time.time + 0.5f; // NEED TO CHANGE THIS 
         while (Time.time < attackEndTime)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
