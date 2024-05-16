@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
     public HealtBar healthBar;
 
     // Autres variables
-    public GameObject Ennemy;
     //À implémenter plus tard (pour activer le double jump)
     private bool hasPickedUpItem = false;
 

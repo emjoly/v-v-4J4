@@ -21,6 +21,7 @@ public class PlayerCombat : MonoBehaviour
 
     public DialogueReglages dialogueReglages;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -28,14 +29,22 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetButtonDown("Attack") && !dialogueReglages.isDialogueOpen)
             {
-                animator.SetTrigger("Attack");
-                // On active l'animation d'attaque
+                animator.SetBool("IsAttacking", true); // Start the attack animation
+                animator.SetLayerWeight(1, 2);
                 prochaineAttaqueTemps = Time.time + tempsAttenteAttaque;
                 GetComponent<AudioSource>().PlayOneShot(SonAttaque);
                 StartCoroutine(AttackCoroutine());
             }
+
+            else
+            {
+                animator.SetBool("IsAttacking", false);
+                animator.SetLayerWeight(1, 0);  // End the attack animation
+            }
         }
     }
+
+
 
     public void PerformAttack()
     {
@@ -71,7 +80,7 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator AttackCoroutine()
     {
         hasAttacked = true;
-        float attackEndTime = Time.time + tempsAttenteAttaque;
+        float attackEndTime = Time.time + 0.5f; // NEED TO CHANGE THIS
         while (Time.time < attackEndTime)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -111,6 +120,7 @@ public class PlayerCombat : MonoBehaviour
         }
         hasAttacked = false;
         hasDealtDamage = false;
+        animator.SetLayerWeight(1, 0);
     }
 
     void OnDrawGizmosSelected()

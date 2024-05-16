@@ -36,20 +36,19 @@ public class Ennemi : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentPosition = pointB.transform;
     }
-
     private void Update()
     {
         // si l'ennemi est mort il ne bouge plus
-        if (!isDead && !isBlesse)
+        if (!isDead)
         {
             Vector2 point = currentPosition.position - transform.position;
             if (currentPosition == pointB.transform)
             {
-                rb.velocity = new Vector2(speed, 0);
+                rb.velocity = isBlesse ? Vector2.zero : new Vector2(speed, 0);
             }
             else
             {
-                rb.velocity = new Vector2(-speed, 0);
+                rb.velocity = isBlesse ? Vector2.zero : new Vector2(-speed, 0);
             }
             if (Vector2.Distance(transform.position, currentPosition.position) < 0.5f && currentPosition == pointB.transform)
             {
@@ -63,6 +62,7 @@ public class Ennemi : MonoBehaviour
             }
         }
     }
+
 
     public void TakeDamage(int damage)
     {
