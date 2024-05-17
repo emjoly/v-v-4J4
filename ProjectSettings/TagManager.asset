@@ -18,6 +18,7 @@ TagManager:
   - switch
   - Boss
   - Wall
+  - BrisPlateforme
   layers:
   - Default
   - TransparentFX

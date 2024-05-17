@@ -63,15 +63,17 @@ public class PlayerCombat : MonoBehaviour
             }
             else
             {
-                Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
-                if (ennemiComponent != null)
-                {
-                    ennemiComponent.TakeDamage(DommageAttaque);
-                }
-                else
-                {
-                    Debug.LogWarning("Meow");
-                }
+            EnnemyFollowDamage EnnemiVolant = enemy.GetComponent<EnnemyFollowDamage>();
+            Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+            if (ennemiComponent != null)
+            {
+                ennemiComponent.TakeDamage(DommageAttaque);
+            }
+            if (EnnemiVolant != null)
+            {
+                EnnemiVolant.TakeDamage(DommageAttaque);
+            }
+
             }
         }
         hasDealtDamage = true;
@@ -104,9 +106,18 @@ public class PlayerCombat : MonoBehaviour
                     else
                     {
                         Ennemi ennemiComponent = enemy.GetComponent<Ennemi>();
+                        EnnemyFollowDamage EnnemiVolant = enemy.GetComponent<EnnemyFollowDamage>();
                         if (ennemiComponent != null)
                         {
                             ennemiComponent.TakeDamage(DommageAttaque);
+                        }
+                        else
+                        {
+                            Debug.LogWarning("Meow");
+                        }
+                        if (EnnemiVolant != null)
+                        {
+                            EnnemiVolant.TakeDamage(DommageAttaque);
                         }
                         else
                         {

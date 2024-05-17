@@ -8,6 +8,9 @@ public class Projectile : MonoBehaviour
     private Vector2 target;
     Rigidbody2D bulletRB;
 
+    private float damageCooldown = 1.5f; // 2 seconds cooldown
+    private float lastDamageTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,18 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         
+    }
+        void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerMovement player = collision.GetComponent<PlayerMovement>();
+        if (player != null)
+        {
+            if (Time.time >= lastDamageTime + damageCooldown)
+            {
+                player.TakeDamage(10);
+                lastDamageTime = Time.time;
+            }
+        }
     }
 }
 

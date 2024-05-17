@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Variables pour le slam
     [SerializeField] private float slamForce = 30f;
     public bool isSlaming = false;
+    bool isFalling = false;
 
     // Variables de vie du joueur
     public int maxHealth = 100;
@@ -68,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     public bool isBlesse = false;
 
+    
+
     void Start()
     {
         // Acquérir le Rigidbody2D et le BoxCollider2D du joueur
@@ -78,16 +81,20 @@ public class PlayerMovement : MonoBehaviour
         // Initialiser la barre de vie du joueur
         healthBar.SetMaxHealth(maxHealth);
 
-        SceneCourante = SceneManager.GetActiveScene().name;
+        DontDestroyOnLoad(this.gameObject); // Ne pas détruire le joueur lors du changement de scène
     }
 
     void FixedUpdate()
     {
     }
     void Update()
+    
     {
+
+        SceneCourante = SceneManager.GetActiveScene().name;
         if (!isDead && !isBlesse)
         {
+            
             if (SceneCourante == "Lvl2")
             {
                 if (!isSlaming)
@@ -95,12 +102,15 @@ public class PlayerMovement : MonoBehaviour
                     if (Input.GetButtonDown("Slam") && !IsGrounded())
                     {
                         StartCoroutine(SlamThroughPlatforms());
+                        return;
                     }
                 }
             }
+
             // Déplacer le joueur avec le clavier(getAxisRaw pour éviter l'accélération du joueur)
             float directionX = Input.GetAxisRaw("Horizontal");
             float directionY = Input.GetAxisRaw("Vertical");
+
             if (IsGrounded() && directionX != 0)
             {
                 animator.SetBool("Marche", true);
@@ -211,12 +221,6 @@ public class PlayerMovement : MonoBehaviour
                 isJumping = false;
                 animator.SetBool("Monte", false);
             }
-            /*             // Si le joueur appuie sur la touche Slam et n'est pas au sol
-                        if (Input.GetButtonDown("Slam") && !IsGrounded())
-                        {
-                            // Lancer la coroutine SlamThroughPlatforms
-                            StartCoroutine(SlamThroughPlatforms());
-                        } */
             // Si le joueur appuie sur la touche Dash
             if (Input.GetButtonDown("Dash"))
             {
@@ -236,25 +240,35 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             // && !isAttacking pour quil attaque a la place de tomber mais lanim est dans lautre script
-            if (!isSlaming )
-            {
-                if (rb.velocity.y < 0) // Si le joueur est en train de tomber
-                {
-                    // Appliquer une gravité plus forte
+
+        // Check if the player is falling
+        if (rb.velocity.y < 0)
+        {
+            // Set the "Tombe" parameter to true and perform falling actions
+            animator.SetBool("Tombe", true);
+            isFalling = true;
+                                // Appliquer une gravité plus forte
                     rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.deltaTime;
                     // Limiter la vitesse de chute maximale
                     rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-                }
 
-                if (rb.velocity.y < -2f) // Si le joueur est en train de tomber
-                {
-                    animator.SetBool("Tombe", true);  //le truc avec ca cest que il tombe non stop cest gossant
-                }
-                else
-                {
-                    animator.SetBool("Tombe", false);
-                }
+            // Check if the player initiated a slam while falling
+            if (Input.GetButtonDown("Slam") && !IsGrounded() && !isSlaming)
+            {
+                // Override the "Tombe" animation and play the slam animation immediately
+                animator.SetBool("Tombe", false); // Disable the falling animation
+                StartCoroutine(SlamThroughPlatforms()); // Play the slam animation
+                return; // Return to avoid executing further movement logic
             }
+        }
+        else if (rb.velocity.y >= 0)
+        {
+            // Reset the "Tombe" parameter and falling flag when player is not falling
+            animator.SetBool("Tombe", false);
+            isFalling = false;
+        }
+
+            
         }
     }
 
@@ -343,34 +357,28 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Fonction coroutine pour le slam
-    private IEnumerator SlamThroughPlatforms()
-    {
-        isSlaming = true; // Le joueur est en train de slam
-        // Désactiver les collisions avec les plateformes brisables
-        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), true);
+private IEnumerator SlamThroughPlatforms()
+{
+    isSlaming = true; // Set slam flag to true
+    // Disable collisions with breakable platforms
+    Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), true);
 
-        // Appliquer une force de slam vers le bas
-        rb.velocity = Vector2.down * slamForce;
+    // Apply slam force downwards
+    rb.velocity = Vector2.down * slamForce;
+    animator.SetTrigger("Slam"); // Trigger the slam animation
 
-        animator.SetTrigger("Slam"); // Jouer l'animation de slam
+    // Wait for the duration of the slam
+    yield return new WaitForSeconds(0.2f);
 
-        // Attendre 0.2 secondes avant de réactiver les collisions avec les plateformes brisables
-        yield return new WaitForSeconds(0.2f);
+    // Re-enable collisions with breakable platforms
+    Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), false);
 
-        // Réactiver les collisions avec les plateformes brisables
-        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BrisPlateforme"), false);
+    isSlaming = false; // Reset slam flag
+}
 
-        // Créer un box collider pour détecter les plateformes brisables et les mettre dans un tableau
-        // Récupérer les plateformes brisables touchées par le box collider
-        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(boxCollider.bounds.center, boxCollider.bounds.size, 0f, LayerMask.GetMask("BrisPlateforme"));
-        // Pour chaque plateforme touchée
-        foreach (Collider2D collider in hitColliders)
-        {
-            // Appeler la fonction BreakPlatform du script DestructionPlateforme
-            collider.GetComponent<DestructionPlateforme>()?.BreakPlatform();
-        }
-    }
+
+
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -385,6 +393,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Reset the "Monte" parameter
             animator.SetBool("Monte", false);
+            isJumping = false;
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
