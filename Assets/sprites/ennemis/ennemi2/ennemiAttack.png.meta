@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 1e7255fea575c54419564f3e770767f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6877863183240305049
+    second: ennemiAttack_0
+  - first:
+      213: -2150710757104020974
+    second: ennemiAttack_1
+  - first:
+      213: -8167885118158216434
+    second: ennemiAttack_2
+  - first:
+      213: -3503002251741241619
+    second: ennemiAttack_3
+  - first:
+      213: -2733698870534645896
+    second: ennemiAttack_4
+  - first:
+      213: -3907458728876872559
+    second: ennemiAttack_5
+  - first:
+      213: -1527565730472604445
+    second: ennemiAttack_6
+  - first:
+      213: 1775344267600454435
+    second: ennemiAttack_7
+  - first:
+      213: 1579041580436941311
+    second: ennemiAttack_8
+  - first:
+      213: 5947399564767779928
+    second: ennemiAttack_9
+  - first:
+      213: 4664936887986429299
+    second: ennemiAttack_10
+  - first:
+      213: 4056107686289578249
+    second: ennemiAttack_11
+  - first:
+      213: 3161826858581036650
+    second: ennemiAttack_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ennemiAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 909
+        height: 1503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766693510ebec80a0800000000000000
+      internalID: -6877863183240305049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_1
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 9
+        width: 904
+        height: 1484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212143c16f32722e0800000000000000
+      internalID: -2150710757104020974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_2
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 11
+        width: 919
+        height: 1487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03eaf5a2c7d5ae80800000000000000
+      internalID: -8167885118158216434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_3
+      rect:
+        serializedVersion: 2
+        x: 3332
+        y: 12
+        width: 879
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deed1910306d26fc0800000000000000
+      internalID: -3503002251741241619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_4
+      rect:
+        serializedVersion: 2
+        x: 4370
+        y: 12
+        width: 866
+        height: 1481
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87755ea6c53ff0ad0800000000000000
+      internalID: -2733698870534645896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_5
+      rect:
+        serializedVersion: 2
+        x: 5401
+        y: 16
+        width: 928
+        height: 1505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c6bca1dfae5c9c0800000000000000
+      internalID: -3907458728876872559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_6
+      rect:
+        serializedVersion: 2
+        x: 6515
+        y: 16
+        width: 1077
+        height: 1504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecce10cf0ffccae0800000000000000
+      internalID: -1527565730472604445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_7
+      rect:
+        serializedVersion: 2
+        x: 7656
+        y: 37
+        width: 1472
+        height: 1482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323e958843a43a810800000000000000
+      internalID: 1775344267600454435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_10
+      rect:
+        serializedVersion: 2
+        x: 9234
+        y: 18
+        width: 879
+        height: 1472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d1c0c326f2db040800000000000000
+      internalID: 4664936887986429299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemiAttack_11
+      rect:
+        serializedVersion: 2
+        x: 10463
+        y: 20
+        width: 902
+        height: 1510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909950453703a4830800000000000000
+      internalID: 4056107686289578249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1f7071b9b2f5b2b43be56f097bd0c7d9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ennemiAttack_0: -6877863183240305049
+      ennemiAttack_1: -2150710757104020974
+      ennemiAttack_10: 4664936887986429299
+      ennemiAttack_11: 4056107686289578249
+      ennemiAttack_12: 3161826858581036650
+      ennemiAttack_2: -8167885118158216434
+      ennemiAttack_3: -3503002251741241619
+      ennemiAttack_4: -2733698870534645896
+      ennemiAttack_5: -3907458728876872559
+      ennemiAttack_6: -1527565730472604445
+      ennemiAttack_7: 1775344267600454435
+      ennemiAttack_8: 1579041580436941311
+      ennemiAttack_9: 5947399564767779928
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

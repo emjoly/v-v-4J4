@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: ce0ab5123243285458237251a0fa6dd0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6893321485494330763
+    second: mortChienAvecExplosion_0
+  - first:
+      213: -3589364244817058505
+    second: mortChienAvecExplosion_1
+  - first:
+      213: 2071116685628784781
+    second: mortChienAvecExplosion_2
+  - first:
+      213: 1720280426823377127
+    second: mortChienAvecExplosion_3
+  - first:
+      213: 5220137897339830556
+    second: mortChienAvecExplosion_4
+  - first:
+      213: 3195767206302073709
+    second: mortChienAvecExplosion_5
+  - first:
+      213: -8580193135008141644
+    second: mortChienAvecExplosion_6
+  - first:
+      213: -7560811999233095719
+    second: mortChienAvecExplosion_7
+  - first:
+      213: -5547677228370300051
+    second: mortChienAvecExplosion_8
+  - first:
+      213: 5164429917615328459
+    second: mortChienAvecExplosion_9
+  - first:
+      213: 533831708622637298
+    second: mortChienAvecExplosion_10
+  - first:
+      213: -625792991151584771
+    second: mortChienAvecExplosion_11
+  - first:
+      213: 7260126376549019987
+    second: mortChienAvecExplosion_12
+  - first:
+      213: 816122186225985471
+    second: mortChienAvecExplosion_13
+  - first:
+      213: -3773864277476287985
+    second: mortChienAvecExplosion_14
+  - first:
+      213: -2237674354910346396
+    second: mortChienAvecExplosion_15
+  - first:
+      213: -9138221020139511387
+    second: mortChienAvecExplosion_16
+  - first:
+      213: -6401673891314560372
+    second: mortChienAvecExplosion_17
+  - first:
+      213: 7466389150369576364
+    second: mortChienAvecExplosion_18
+  - first:
+      213: 2873651174710074140
+    second: mortChienAvecExplosion_19
+  - first:
+      213: 8133652071204185734
+    second: mortChienAvecExplosion_20
+  - first:
+      213: -212689855278438266
+    second: mortChienAvecExplosion_21
+  - first:
+      213: 7516772683667392547
+    second: mortChienAvecExplosion_22
+  - first:
+      213: -1404152152077044160
+    second: mortChienAvecExplosion_23
+  - first:
+      213: -6054334157266410082
+    second: mortChienAvecExplosion_24
+  - first:
+      213: 8990718165859383548
+    second: mortChienAvecExplosion_25
+  - first:
+      213: 6316797125224651626
+    second: mortChienAvecExplosion_26
+  - first:
+      213: -7386222297867875951
+    second: mortChienAvecExplosion_27
+  - first:
+      213: -8070409297682030712
+    second: mortChienAvecExplosion_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 1488
+        height: 1017
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8525716e5ff9af50800000000000000
+      internalID: 6893321485494330763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_2
+      rect:
+        serializedVersion: 2
+        x: 3364
+        y: 38
+        width: 1520
+        height: 1105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80c94ff6a51ebc10800000000000000
+      internalID: 2071116685628784781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_4
+      rect:
+        serializedVersion: 2
+        x: 5019
+        y: 51
+        width: 1542
+        height: 1081
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11ce7992c7a17840800000000000000
+      internalID: 5220137897339830556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_5
+      rect:
+        serializedVersion: 2
+        x: 6711
+        y: 37
+        width: 1565
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d634a7c9755a95c20800000000000000
+      internalID: 3195767206302073709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_7
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 0
+        width: 1490
+        height: 1160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7433cab89921790800000000000000
+      internalID: -7560811999233095719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_8
+      rect:
+        serializedVersion: 2
+        x: 8618
+        y: 65
+        width: 1553
+        height: 1168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63f67224f0b203b0800000000000000
+      internalID: -5547677228370300051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_9
+      rect:
+        serializedVersion: 2
+        x: 10668
+        y: 315
+        width: 486
+        height: 492
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc8cd2d5adbba740800000000000000
+      internalID: 5164429917615328459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_10
+      rect:
+        serializedVersion: 2
+        x: 11270
+        y: 204
+        width: 706
+        height: 711
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8ca425c1d886700800000000000000
+      internalID: 533831708622637298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_11
+      rect:
+        serializedVersion: 2
+        x: 12054
+        y: 122
+        width: 970
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df90b73179cb057f0800000000000000
+      internalID: -625792991151584771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_12
+      rect:
+        serializedVersion: 2
+        x: 13141
+        y: 128
+        width: 996
+        height: 855
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351f5a2497621c460800000000000000
+      internalID: 7260126376549019987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_17
+      rect:
+        serializedVersion: 2
+        x: 16415
+        y: 293
+        width: 407
+        height: 514
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c829d4c638fa827a0800000000000000
+      internalID: -6401673891314560372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_19
+      rect:
+        serializedVersion: 2
+        x: 14345
+        y: 125
+        width: 889
+        height: 853
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b5af4a48241e720800000000000000
+      internalID: 2873651174710074140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mortChienAvecExplosion_26
+      rect:
+        serializedVersion: 2
+        x: 15457
+        y: 183
+        width: 715
+        height: 734
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b593f7485c9a750800000000000000
+      internalID: 6316797125224651626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fd9a0893616775c459d74daedb958f27
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mortChienAvecExplosion_0: 6893321485494330763
+      mortChienAvecExplosion_1: -3589364244817058505
+      mortChienAvecExplosion_10: 533831708622637298
+      mortChienAvecExplosion_11: -625792991151584771
+      mortChienAvecExplosion_12: 7260126376549019987
+      mortChienAvecExplosion_13: 816122186225985471
+      mortChienAvecExplosion_14: -3773864277476287985
+      mortChienAvecExplosion_15: -2237674354910346396
+      mortChienAvecExplosion_16: -9138221020139511387
+      mortChienAvecExplosion_17: -6401673891314560372
+      mortChienAvecExplosion_18: 7466389150369576364
+      mortChienAvecExplosion_19: 2873651174710074140
+      mortChienAvecExplosion_2: 2071116685628784781
+      mortChienAvecExplosion_20: 8133652071204185734
+      mortChienAvecExplosion_21: -212689855278438266
+      mortChienAvecExplosion_22: 7516772683667392547
+      mortChienAvecExplosion_23: -1404152152077044160
+      mortChienAvecExplosion_24: -6054334157266410082
+      mortChienAvecExplosion_25: 8990718165859383548
+      mortChienAvecExplosion_26: 6316797125224651626
+      mortChienAvecExplosion_27: -7386222297867875951
+      mortChienAvecExplosion_28: -8070409297682030712
+      mortChienAvecExplosion_3: 1720280426823377127
+      mortChienAvecExplosion_4: 5220137897339830556
+      mortChienAvecExplosion_5: 3195767206302073709
+      mortChienAvecExplosion_6: -8580193135008141644
+      mortChienAvecExplosion_7: -7560811999233095719
+      mortChienAvecExplosion_8: -5547677228370300051
+      mortChienAvecExplosion_9: 5164429917615328459
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

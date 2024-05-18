@@ -1,6 +1,6 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class DestructionPlateforme : MonoBehaviour
 {
@@ -15,18 +15,23 @@ public class DestructionPlateforme : MonoBehaviour
     {
         
     }
-        private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Check if the collided object is on the breakable layer and has the "BreakablePlatform" tag
-        if (collision.gameObject.layer == LayerMask.NameToLayer("BrisPlateforme") && collision.relativeVelocity.magnitude > 10f)
-        {
-            BreakPlatform();
-        }
-    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+{
+    // Check if the collision is with a platform tagged as "BrisPlateforme"
+    if (collision.gameObject.CompareTag("Player") && collision.relativeVelocity.magnitude > 15f)
+    {
+        // On appelle la fonction BreakPlatform
+        BreakPlatform();
+    }
+}
+
+
+    // Fonction pour détruire la plateforme
     public void BreakPlatform()
     {
-        // Destroy the platform GameObject
+         Debug.Log("BreakPlatform called");
+        // On détruit la plateforme
         Destroy(gameObject);
     }
 }

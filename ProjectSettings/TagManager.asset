@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Ground
+  - Boite
+  - Spike
+  - FallingPlatform
+  - PicSol
+  - BossStart
+  - bobo
+  - Vie
+  - BossHand
+  - BossFist
+  - switch
+  - Boss
+  - Wall
+  - BrisPlateforme
   layers:
   - Default
   - TransparentFX
@@ -13,7 +28,7 @@ TagManager:
   - UI
   - Ground
   - BrisPlateforme
-  - 
+  - Enemy
   - 
   - 
   - 

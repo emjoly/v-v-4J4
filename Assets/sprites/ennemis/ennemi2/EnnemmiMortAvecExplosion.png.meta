@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: b19d26f6497ba5c4da34565e4d43f163
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5091651507215115771
+    second: EnnemmiMortAvecExplosion_0
+  - first:
+      213: -7718726507442636322
+    second: EnnemmiMortAvecExplosion_1
+  - first:
+      213: -7315192029427348658
+    second: EnnemmiMortAvecExplosion_2
+  - first:
+      213: 6939630867672142893
+    second: EnnemmiMortAvecExplosion_3
+  - first:
+      213: -1501919468289053230
+    second: EnnemmiMortAvecExplosion_4
+  - first:
+      213: -334512494547878994
+    second: EnnemmiMortAvecExplosion_5
+  - first:
+      213: 1184032276236248476
+    second: EnnemmiMortAvecExplosion_6
+  - first:
+      213: -1347936536332783289
+    second: EnnemmiMortAvecExplosion_7
+  - first:
+      213: 1214477007259460378
+    second: EnnemmiMortAvecExplosion_8
+  - first:
+      213: -8471653703758207468
+    second: EnnemmiMortAvecExplosion_9
+  - first:
+      213: -9117647085489424761
+    second: EnnemmiMortAvecExplosion_10
+  - first:
+      213: -6841704683395240852
+    second: EnnemmiMortAvecExplosion_11
+  - first:
+      213: 3558722099205321434
+    second: EnnemmiMortAvecExplosion_12
+  - first:
+      213: 3104050135467521727
+    second: EnnemmiMortAvecExplosion_13
+  - first:
+      213: 7289927693905170877
+    second: EnnemmiMortAvecExplosion_14
+  - first:
+      213: -1264071777779707828
+    second: EnnemmiMortAvecExplosion_15
+  - first:
+      213: 1428062666154623299
+    second: EnnemmiMortAvecExplosion_16
+  - first:
+      213: -4385619624513105125
+    second: EnnemmiMortAvecExplosion_17
+  - first:
+      213: -491572519937393221
+    second: EnnemmiMortAvecExplosion_18
+  - first:
+      213: -1953672770771339403
+    second: EnnemmiMortAvecExplosion_19
+  - first:
+      213: 532018962867557676
+    second: EnnemmiMortAvecExplosion_20
+  - first:
+      213: 4864842005429929770
+    second: EnnemmiMortAvecExplosion_21
+  - first:
+      213: 6275232270585230361
+    second: EnnemmiMortAvecExplosion_22
+  - first:
+      213: 1295946846716784055
+    second: EnnemmiMortAvecExplosion_23
+  - first:
+      213: 5398581570776012588
+    second: EnnemmiMortAvecExplosion_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1002
+        height: 1586
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a5c505ee1d659b0800000000000000
+      internalID: -5091651507215115771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_1
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 108
+        width: 1012
+        height: 1596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed97d75132391e490800000000000000
+      internalID: -7718726507442636322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_2
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 230
+        width: 1065
+        height: 1609
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bc6365b973b7a90800000000000000
+      internalID: -7315192029427348658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_3
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 266
+        width: 1125
+        height: 1607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d241fe3a1858e4060800000000000000
+      internalID: 6939630867672142893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_4
+      rect:
+        serializedVersion: 2
+        x: 4850
+        y: 301
+        width: 1166
+        height: 1543
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd236b733c182be0800000000000000
+      internalID: -1501919468289053230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_5
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 706
+        width: 486
+        height: 492
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab3b8598a29b5bf0800000000000000
+      internalID: -334512494547878994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_6
+      rect:
+        serializedVersion: 2
+        x: 6842
+        y: 595
+        width: 707
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95a8abf4178e6010800000000000000
+      internalID: 1184032276236248476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_7
+      rect:
+        serializedVersion: 2
+        x: 7626
+        y: 512
+        width: 970
+        height: 874
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7413d14acda2b4de0800000000000000
+      internalID: -1347936536332783289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_8
+      rect:
+        serializedVersion: 2
+        x: 8713
+        y: 519
+        width: 996
+        height: 855
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13649d4760bad010800000000000000
+      internalID: 1214477007259460378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_13
+      rect:
+        serializedVersion: 2
+        x: 11988
+        y: 683
+        width: 407
+        height: 517
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb67b89f62dc31b20800000000000000
+      internalID: 3104050135467521727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_15
+      rect:
+        serializedVersion: 2
+        x: 9918
+        y: 520
+        width: 888
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4018da5a6d157ee0800000000000000
+      internalID: -1264071777779707828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiMortAvecExplosion_22
+      rect:
+        serializedVersion: 2
+        x: 11033
+        y: 574
+        width: 713
+        height: 738
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914fc43a08a161750800000000000000
+      internalID: 6275232270585230361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 27e70ac8a4aa1d44fa97b06e4c36b4f1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EnnemmiMortAvecExplosion_0: -5091651507215115771
+      EnnemmiMortAvecExplosion_1: -7718726507442636322
+      EnnemmiMortAvecExplosion_10: -9117647085489424761
+      EnnemmiMortAvecExplosion_11: -6841704683395240852
+      EnnemmiMortAvecExplosion_12: 3558722099205321434
+      EnnemmiMortAvecExplosion_13: 3104050135467521727
+      EnnemmiMortAvecExplosion_14: 7289927693905170877
+      EnnemmiMortAvecExplosion_15: -1264071777779707828
+      EnnemmiMortAvecExplosion_16: 1428062666154623299
+      EnnemmiMortAvecExplosion_17: -4385619624513105125
+      EnnemmiMortAvecExplosion_18: -491572519937393221
+      EnnemmiMortAvecExplosion_19: -1953672770771339403
+      EnnemmiMortAvecExplosion_2: -7315192029427348658
+      EnnemmiMortAvecExplosion_20: 532018962867557676
+      EnnemmiMortAvecExplosion_21: 4864842005429929770
+      EnnemmiMortAvecExplosion_22: 6275232270585230361
+      EnnemmiMortAvecExplosion_23: 1295946846716784055
+      EnnemmiMortAvecExplosion_24: 5398581570776012588
+      EnnemmiMortAvecExplosion_3: 6939630867672142893
+      EnnemmiMortAvecExplosion_4: -1501919468289053230
+      EnnemmiMortAvecExplosion_5: -334512494547878994
+      EnnemmiMortAvecExplosion_6: 1184032276236248476
+      EnnemmiMortAvecExplosion_7: -1347936536332783289
+      EnnemmiMortAvecExplosion_8: 1214477007259460378
+      EnnemmiMortAvecExplosion_9: -8471653703758207468
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

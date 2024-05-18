@@ -94,6 +94,27 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
+  - name: Hue/Saturation 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3438
+      width: 0
+      height: 0
+    spriteID: 67fdffd4e1eaa4e13b8aec4caf55b83b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3438}
+    spritePosition: {x: 0, y: 3426}
   - name: Layer 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -154,6 +175,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
+  - name: Hue/Saturation 1
+    spriteName: Hue/Saturation 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67fdffd4e1eaa4e13b8aec4caf55b83b
+    layerID: 4
+    mosaicPosition: {x: 4, y: 3438}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Layer 1
     spriteName: Layer 1
     isGroup: 0
