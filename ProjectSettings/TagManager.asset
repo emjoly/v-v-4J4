@@ -17,6 +17,8 @@ TagManager:
   - BossFist
   - switch
   - Boss
+  - Wall
+  - BrisPlateforme
   layers:
   - Default
   - TransparentFX

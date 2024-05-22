@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+ 
 public class DialogueActivation : MonoBehaviour
 {
     public Dialogue dialogue;
-    public AudioSource backgroundMusicSource; 
+    public AudioSource backgroundMusicSource;
     public AudioClip newBackgroundMusic;
-    public GameObject BossHealthSlider;
 
     private int hitCount = 0;
     private bool dialogueTriggered = false;
@@ -28,34 +27,35 @@ public class DialogueActivation : MonoBehaviour
         FindObjectOfType<DialogueReglages>().CommencerDialogue(dialogue);
         hitCount = 0;
         dialogueTriggered = true;
+        backgroundMusicSource.clip = newBackgroundMusic;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
     }
 
     public void TakeHit()
-{
-    hitCount++;
-    if (hitCount >= 3)
     {
-        PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
-        if (collider != null)
+        hitCount++;
+        if (hitCount >= 3)
         {
-            collider.enabled = false;
-        }
+            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            if (collider != null)
+            {
+                collider.enabled = false;
+            }
 
-        // Reduce the opacity by 50%
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>(); // get the SpriteRenderer component
-        if (spriteRenderer != null)
-        {
-            Color color = spriteRenderer.color;
-            color.a *= 0.5f; // reduce the alpha value by 50%
-            spriteRenderer.color = color; // apply the new color
-        }
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                Color color = spriteRenderer.color;
+                color.a *= 0.25f;
+                spriteRenderer.color = color;
+            }
 
-        BossHealthSlider.SetActive(true);
-        TriggerDialogue();
-        camPerso.enabled = false;
-        camBoss.enabled = true;
+            TriggerDialogue();
+            camPerso.enabled = false;
+            camBoss.enabled = true;
+        }
     }
-}
 
 }
 

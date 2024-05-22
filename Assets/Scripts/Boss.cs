@@ -11,14 +11,12 @@ public class Boss : MonoBehaviour
     private float damageCooldown = 1f;
     private float lastDamageTime;
     public Slider healthBar;
-/*     public Animator animator; */
-    private bool isDead = false;
+    public bool isDead = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-/* ß */
+        healthBar.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -32,7 +30,6 @@ public class Boss : MonoBehaviour
         if (Time.time >= lastDamageTime + damageCooldown)
         {
             currentHealth -= damage;
-/*             animator.SetTrigger("AMal"); */
 
             if (currentHealth <= 0)
             {
@@ -47,21 +44,48 @@ public class Boss : MonoBehaviour
         }
     }
 
-    void Die()
+void Die()
+{
+    Debug.Log("Boss mort");
+    GetComponent<Collider2D>().enabled = false;
+    this.enabled = false;
+    isDead = true;
+
+    PoingtAnim fist = GetComponent<PoingtAnim>();
+    if (fist != null)
     {
-        Debug.Log("Boss mort");
-/*         animator.SetBool("EstMort", true); */
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
-        isDead = true;
+        fist.StopFistRoutine();
+        fist.bossIsDead = true;
     }
+
+    HandAnim hand1 = GetComponentInChildren<HandAnim>();
+    if (hand1 != null)
+    {
+        hand1.StopHandRoutine();
+    }
+
+    HandAnim2 hand2 = GetComponentInChildren<HandAnim2>();
+    if (hand2 != null)
+    {
+        hand2.StopHandRoutine();
+    }
+}
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement player = collision.GetComponent<PlayerMovement>();
-        if (player != null)
+        HandAnim hand1 = GetComponent<HandAnim>();
+        HandAnim2 hand2 = GetComponent<HandAnim2>();
+        PoingtAnim fist = GetComponent<PoingtAnim>();
+        
+        if (player != null && ((hand1 != null && hand1.isMoving) || (hand2 != null && hand2.isMoving) || (fist != null && fist.isMoving)))
         {
             if (Time.time >= lastDamageTime + damageCooldown)
+            {
+                player.TakeDamage(damage);
+                lastDamageTime = Time.time;
+            }
+            else if (player.GetComponent<PlayerCombat>().hasAttacked)
             {
                 player.TakeDamage(damage);
                 lastDamageTime = Time.time;
@@ -69,5 +93,3 @@ public class Boss : MonoBehaviour
         }
     }
 }
-
-

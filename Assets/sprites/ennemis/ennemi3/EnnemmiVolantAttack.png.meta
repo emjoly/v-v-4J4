@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: 0d47fc716c0b54215ad0bea463ca5062
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6532992954360025786
+    second: EnnemmiVolantAttack_0
+  - first:
+      213: 4518795951680070355
+    second: EnnemmiVolantAttack_1
+  - first:
+      213: 3077514587180895876
+    second: EnnemmiVolantAttack_2
+  - first:
+      213: -3669777099116204324
+    second: EnnemmiVolantAttack_3
+  - first:
+      213: -4102802679528599287
+    second: EnnemmiVolantAttack_4
+  - first:
+      213: -2667970250813417153
+    second: EnnemmiVolantAttack_5
+  - first:
+      213: 4249325611669211809
+    second: EnnemmiVolantAttack_6
+  - first:
+      213: 8564090828660057369
+    second: EnnemmiVolantAttack_7
+  - first:
+      213: 2522469377513880313
+    second: EnnemmiVolantAttack_8
+  - first:
+      213: -8329497261329686950
+    second: EnnemmiVolantAttack_9
+  - first:
+      213: 5825230274887200644
+    second: EnnemmiVolantAttack_10
+  - first:
+      213: 1461585947584317362
+    second: EnnemmiVolantAttack_11
+  - first:
+      213: 3192511841554051801
+    second: EnnemmiVolantAttack_12
+  - first:
+      213: -1747443442920405364
+    second: EnnemmiVolantAttack_13
+  - first:
+      213: -4281734598140128187
+    second: EnnemmiVolantAttack_14
+  - first:
+      213: -5077492866576192280
+    second: EnnemmiVolantAttack_15
+  - first:
+      213: -1090931241789144692
+    second: EnnemmiVolantAttack_16
+  - first:
+      213: -6620720248025179092
+    second: EnnemmiVolantAttack_17
+  - first:
+      213: 4122653460684966950
+    second: EnnemmiVolantAttack_18
+  - first:
+      213: 4556537470767160064
+    second: EnnemmiVolantAttack_19
+  - first:
+      213: 3061930267748625236
+    second: EnnemmiVolantAttack_20
+  - first:
+      213: 5046678327206498811
+    second: EnnemmiVolantAttack_21
+  - first:
+      213: 1823460438214508923
+    second: EnnemmiVolantAttack_22
+  - first:
+      213: -7875177992357192447
+    second: EnnemmiVolantAttack_23
+  - first:
+      213: -7142547555947926561
+    second: EnnemmiVolantAttack_24
+  - first:
+      213: 8863229587843744717
+    second: EnnemmiVolantAttack_25
+  - first:
+      213: -4341902021817643231
+    second: EnnemmiVolantAttack_26
+  - first:
+      213: -6987903690303175559
+    second: EnnemmiVolantAttack_27
+  - first:
+      213: 1417556619899622337
+    second: EnnemmiVolantAttack_28
+  - first:
+      213: 8259878093887575568
+    second: EnnemmiVolantAttack_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 1019
+        height: 1397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec652ab32f1989b0800000000000000
+      internalID: -5077492866576192280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_16
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 40
+        width: 1021
+        height: 1396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8148cac0db3cd0f0800000000000000
+      internalID: -1090931241789144692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_17
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 58
+        width: 1021
+        height: 1394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c1933330a7e14a0800000000000000
+      internalID: -6620720248025179092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_18
+      rect:
+        serializedVersion: 2
+        x: 3266
+        y: 30
+        width: 1021
+        height: 1397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c8920da7b963930800000000000000
+      internalID: 4122653460684966950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_19
+      rect:
+        serializedVersion: 2
+        x: 4478
+        y: 51
+        width: 1020
+        height: 1395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b55d620b21c3f30800000000000000
+      internalID: 4556537470767160064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_20
+      rect:
+        serializedVersion: 2
+        x: 5673
+        y: 75
+        width: 1021
+        height: 1397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b6c201b592e7a20800000000000000
+      internalID: 3061930267748625236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_21
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 89
+        width: 1020
+        height: 1393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf15ecc3337690640800000000000000
+      internalID: 5046678327206498811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_22
+      rect:
+        serializedVersion: 2
+        x: 8012
+        y: 75
+        width: 1021
+        height: 1395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7101c18b9b3e4910800000000000000
+      internalID: 1823460438214508923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_23
+      rect:
+        serializedVersion: 2
+        x: 9252
+        y: 21
+        width: 1020
+        height: 1397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d5396275fb5b290800000000000000
+      internalID: -7875177992357192447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_24
+      rect:
+        serializedVersion: 2
+        x: 10447
+        y: 44
+        width: 1021
+        height: 1397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdba36837d290ec90800000000000000
+      internalID: -7142547555947926561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_25
+      rect:
+        serializedVersion: 2
+        x: 11582
+        y: 58
+        width: 1020
+        height: 1395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3882ac954800b70800000000000000
+      internalID: 8863229587843744717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_26
+      rect:
+        serializedVersion: 2
+        x: 12786
+        y: 44
+        width: 1021
+        height: 1399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f42049d177eb3c0800000000000000
+      internalID: -4341902021817643231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_27
+      rect:
+        serializedVersion: 2
+        x: 13950
+        y: 25
+        width: 1020
+        height: 1394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97486defd9af50f90800000000000000
+      internalID: -6987903690303175559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_28
+      rect:
+        serializedVersion: 2
+        x: 15131
+        y: 0
+        width: 1020
+        height: 1397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3de1a3c3c2ca310800000000000000
+      internalID: 1417556619899622337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantAttack_29
+      rect:
+        serializedVersion: 2
+        x: 16285
+        y: 0
+        width: 1020
+        height: 1394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016133a1d5bf0a270800000000000000
+      internalID: 8259878093887575568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9afe33471be37be45b3c7a83d055d3b5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EnnemmiVolantAttack_0: 6532992954360025786
+      EnnemmiVolantAttack_1: 4518795951680070355
+      EnnemmiVolantAttack_10: 5825230274887200644
+      EnnemmiVolantAttack_11: 1461585947584317362
+      EnnemmiVolantAttack_12: 3192511841554051801
+      EnnemmiVolantAttack_13: -1747443442920405364
+      EnnemmiVolantAttack_14: -4281734598140128187
+      EnnemmiVolantAttack_15: -5077492866576192280
+      EnnemmiVolantAttack_16: -1090931241789144692
+      EnnemmiVolantAttack_17: -6620720248025179092
+      EnnemmiVolantAttack_18: 4122653460684966950
+      EnnemmiVolantAttack_19: 4556537470767160064
+      EnnemmiVolantAttack_2: 3077514587180895876
+      EnnemmiVolantAttack_20: 3061930267748625236
+      EnnemmiVolantAttack_21: 5046678327206498811
+      EnnemmiVolantAttack_22: 1823460438214508923
+      EnnemmiVolantAttack_23: -7875177992357192447
+      EnnemmiVolantAttack_24: -7142547555947926561
+      EnnemmiVolantAttack_25: 8863229587843744717
+      EnnemmiVolantAttack_26: -4341902021817643231
+      EnnemmiVolantAttack_27: -6987903690303175559
+      EnnemmiVolantAttack_28: 1417556619899622337
+      EnnemmiVolantAttack_29: 8259878093887575568
+      EnnemmiVolantAttack_3: -3669777099116204324
+      EnnemmiVolantAttack_4: -4102802679528599287
+      EnnemmiVolantAttack_5: -2667970250813417153
+      EnnemmiVolantAttack_6: 4249325611669211809
+      EnnemmiVolantAttack_7: 8564090828660057369
+      EnnemmiVolantAttack_8: 2522469377513880313
+      EnnemmiVolantAttack_9: -8329497261329686950
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
