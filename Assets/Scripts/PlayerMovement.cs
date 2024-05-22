@@ -249,7 +249,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     // Fonction pour prendre des dégats
     public void TakeDamage(int damage)
     {
