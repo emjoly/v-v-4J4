@@ -44,19 +44,32 @@ public class Boss : MonoBehaviour
         }
     }
 
-    void Die()
-    {
-        Debug.Log("Boss mort");
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
-        isDead = true;
+void Die()
+{
+    Debug.Log("Boss mort");
+    GetComponent<Collider2D>().enabled = false;
+    this.enabled = false;
+    isDead = true;
 
-        PoingtAnim fist = GetComponent<PoingtAnim>();
-        if (fist != null)
-        {
-            fist.bossIsDead = true;  // Set the flag here
-        }
+    PoingtAnim fist = GetComponent<PoingtAnim>();
+    if (fist != null)
+    {
+        fist.StopFistRoutine();
+        fist.bossIsDead = true;
     }
+
+    HandAnim hand1 = GetComponentInChildren<HandAnim>();
+    if (hand1 != null)
+    {
+        hand1.StopHandRoutine();
+    }
+
+    HandAnim2 hand2 = GetComponentInChildren<HandAnim2>();
+    if (hand2 != null)
+    {
+        hand2.StopHandRoutine();
+    }
+}
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -64,6 +77,7 @@ public class Boss : MonoBehaviour
         HandAnim hand1 = GetComponent<HandAnim>();
         HandAnim2 hand2 = GetComponent<HandAnim2>();
         PoingtAnim fist = GetComponent<PoingtAnim>();
+        
         if (player != null && ((hand1 != null && hand1.isMoving) || (hand2 != null && hand2.isMoving) || (fist != null && fist.isMoving)))
         {
             if (Time.time >= lastDamageTime + damageCooldown)

@@ -21,13 +21,11 @@ public class EnnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
 {
-    // If player is null (in case it gets destroyed), find the new player
     if (player == null)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Now check if player is not null before proceeding
     if (player != null)
     {
         float distanceDuJoueur = Vector2.Distance(player.position, transform.position);
@@ -42,7 +40,6 @@ public class EnnemyFollow : MonoBehaviour
         }
     }
 }
-
 
     private void OnDrawGizmosSelected()
     {

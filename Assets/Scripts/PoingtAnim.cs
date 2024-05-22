@@ -14,7 +14,7 @@ public class PoingtAnim : MonoBehaviour
     public GameObject LumiereVie2;
     public GameObject ActivationMains;
     private Coroutine fistRoutine;
-    public bool bossIsDead = false;  // Add this flag
+    public bool bossIsDead = false;
 
     void Start()
     {
@@ -40,13 +40,29 @@ public class PoingtAnim : MonoBehaviour
         if (fistRoutine != null)
         {
             StopCoroutine(fistRoutine);
-            isMoving = false;
+            fistRoutine = null;
+        }
+        isMoving = false;
+        StartCoroutine(HandleDeathSequence());
+    }
+
+    private IEnumerator HandleDeathSequence()
+    {
+        yield return new WaitForSeconds(3); 
+        this.gameObject.SetActive(false);
+
+        if (vieObject != null)
+        {
+            vieObject.SetActive(true);
+            LumiereVie.SetActive(true);
+            LumiereVie2.SetActive(true);
+            ActivationMains.SetActive(true);
         }
     }
 
     IEnumerator FistRoutine()
     {
-        while (!bossIsDead)  // Check the flag here
+        while (true)
         {
             if (isFirstTime)
             {
@@ -54,26 +70,31 @@ public class PoingtAnim : MonoBehaviour
                 isFirstTime = false;
             }
 
+            if (bossIsDead)
+            {
+                StopFistRoutine();
+                yield break;
+            }
+
             isMoving = true;
             yield return new WaitForSeconds(10);
+
+            if (bossIsDead)
+            {
+                StopFistRoutine();
+                yield break;
+            }
 
             isMoving = false;
             yield return new WaitForSeconds(5);
 
-            isMoving = true;
-        }
-
-        if (bossIsDead)  // Check the flag here
-        {
-            this.gameObject.SetActive(false);
-
-            if (vieObject != null)
+            if (bossIsDead)
             {
-                vieObject.SetActive(true);
-                LumiereVie.SetActive(true);
-                LumiereVie2.SetActive(true);
-                ActivationMains.SetActive(true);
+                StopFistRoutine();
+                yield break;
             }
+
+            isMoving = true;
         }
     }
 }

@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class FermerImageSlam : MonoBehaviour
 {
     public GameObject Image;
-    //public PlayerMovement playerMovement;
+    public PlayerMovement playerMovement;
 
     void Start()
     {
-        //playerMovement.enabled = false;
+        playerMovement.enabled = false;
         Button button = GetComponent<Button>();
         button.onClick.AddListener(DeactivateUI);
     }
@@ -18,6 +18,6 @@ public class FermerImageSlam : MonoBehaviour
     void DeactivateUI()
     {
         Image.SetActive(false);
-        //playerMovement.enabled = true;
+        playerMovement.enabled = true;
     }
 }

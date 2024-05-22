@@ -18,7 +18,7 @@ public class BossManager : MonoBehaviour
     IEnumerator LoadSceneAfterDelay(int delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Lvl2");
+        SceneManager.LoadScene("Cine2");
     }
 }
 
