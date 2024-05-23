@@ -19,7 +19,6 @@ public class Boss : MonoBehaviour
         healthBar.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         healthBar.value = currentHealth;
@@ -30,6 +29,24 @@ public class Boss : MonoBehaviour
         if (Time.time >= lastDamageTime + damageCooldown)
         {
             currentHealth -= damage;
+
+            PoingtAnim fist = GetComponent<PoingtAnim>();
+            if (fist != null)
+            {
+                fist.PlayHurtAnimation();
+            }
+
+            HandAnim hand1 = GetComponentInChildren<HandAnim>();
+            if (hand1 != null)
+            {
+                hand1.PlayHurtAnimation();
+            }
+
+            HandAnim2 hand2 = GetComponentInChildren<HandAnim2>();
+            if (hand2 != null)
+            {
+                hand2.PlayHurtAnimation();
+            }
 
             if (currentHealth <= 0)
             {
@@ -44,32 +61,36 @@ public class Boss : MonoBehaviour
         }
     }
 
-void Die()
-{
-    Debug.Log("Boss mort");
-    GetComponent<Collider2D>().enabled = false;
-    this.enabled = false;
-    isDead = true;
-
-    PoingtAnim fist = GetComponent<PoingtAnim>();
-    if (fist != null)
+    void Die()
     {
-        fist.StopFistRoutine();
-        fist.bossIsDead = true;
-    }
+        Debug.Log("Boss mort");
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+        isDead = true;
 
-    HandAnim hand1 = GetComponentInChildren<HandAnim>();
-    if (hand1 != null)
-    {
-        hand1.StopHandRoutine();
-    }
+        PoingtAnim fist = GetComponent<PoingtAnim>();
+        if (fist != null)
+        {
+            fist.StopFistRoutine();
+            fist.bossIsDead = true;
 
-    HandAnim2 hand2 = GetComponentInChildren<HandAnim2>();
-    if (hand2 != null)
-    {
-        hand2.StopHandRoutine();
+            fist.PlayDeathAnimation();
+        }
+
+        HandAnim hand1 = GetComponentInChildren<HandAnim>();
+        if (hand1 != null)
+        {
+            hand1.StopHandRoutine();
+            hand1.PlayDeathAnimation();
+        }
+
+        HandAnim2 hand2 = GetComponentInChildren<HandAnim2>();
+        if (hand2 != null)
+        {
+            hand2.StopHandRoutine();
+            hand2.PlayDeathAnimation();
+        }
     }
-}
 
     void OnTriggerEnter2D(Collider2D collision)
     {

@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 465537c4adf31493b8eb2a2015dbd615
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5212568274804980305
+    second: EnnemmiVolantBlesser_0
+  - first:
+      213: -2595975599949096433
+    second: EnnemmiVolantBlesser_1
+  - first:
+      213: -1428743329411812394
+    second: EnnemmiVolantBlesser_2
+  - first:
+      213: 3910775414360728175
+    second: EnnemmiVolantBlesser_3
+  - first:
+      213: 5531784179651988205
+    second: EnnemmiVolantBlesser_4
+  - first:
+      213: -8904108081840342540
+    second: EnnemmiVolantBlesser_5
+  - first:
+      213: 1265249673620060644
+    second: EnnemmiVolantBlesser_6
+  - first:
+      213: 233724563447427552
+    second: EnnemmiVolantBlesser_7
+  - first:
+      213: 7768181652643518922
+    second: EnnemmiVolantBlesser_8
+  - first:
+      213: 374157162334535460
+    second: EnnemmiVolantBlesser_9
+  - first:
+      213: 7435296295323305599
+    second: EnnemmiVolantBlesser_10
+  - first:
+      213: 7914641011965068508
+    second: EnnemmiVolantBlesser_11
+  - first:
+      213: 1242327841847055494
+    second: EnnemmiVolantBlesser_12
+  - first:
+      213: -7114187637398951003
+    second: EnnemmiVolantBlesser_13
+  - first:
+      213: -8008407741759535298
+    second: EnnemmiVolantBlesser_14
+  - first:
+      213: -7307179808373582962
+    second: EnnemmiVolantBlesser_15
+  - first:
+      213: -590157733967910809
+    second: EnnemmiVolantBlesser_16
+  - first:
+      213: 9111990764802581518
+    second: EnnemmiVolantBlesser_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_0
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1237
+        width: 491
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ab8338a33c65840800000000000000
+      internalID: 5212568274804980305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_1
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1233
+        width: 491
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ad37722fd39fbd0800000000000000
+      internalID: -2595975599949096433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_2
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 1230
+        width: 491
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3333ff2851c2ce0800000000000000
+      internalID: -1428743329411812394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_3
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 1245
+        width: 491
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f626d49e48dd54630800000000000000
+      internalID: 3910775414360728175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_4
+      rect:
+        serializedVersion: 2
+        x: 4950
+        y: 1249
+        width: 491
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea484a1768d4cc40800000000000000
+      internalID: 5531784179651988205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_5
+      rect:
+        serializedVersion: 2
+        x: 6158
+        y: 1231
+        width: 491
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9b83420e04e6480800000000000000
+      internalID: -8904108081840342540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_6
+      rect:
+        serializedVersion: 2
+        x: 7318
+        y: 1258
+        width: 490
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e97d44efd11f8110800000000000000
+      internalID: 1265249673620060644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_7
+      rect:
+        serializedVersion: 2
+        x: 8458
+        y: 1230
+        width: 490
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1319b804b5e3300800000000000000
+      internalID: 233724563447427552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_8
+      rect:
+        serializedVersion: 2
+        x: 9601
+        y: 1244
+        width: 491
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac916843e002ecb60800000000000000
+      internalID: 7768181652643518922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 1019
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f3e1fe4f5413500800000000000000
+      internalID: 374157162334535460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_10
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1
+        width: 1021
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f760682369a7f2760800000000000000
+      internalID: 7435296295323305599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_11
+      rect:
+        serializedVersion: 2
+        x: 2251
+        y: 0
+        width: 1020
+        height: 1189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd48aea111476dd60800000000000000
+      internalID: 7914641011965068508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_12
+      rect:
+        serializedVersion: 2
+        x: 3455
+        y: 14
+        width: 1021
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6841fdb0792ad3110800000000000000
+      internalID: 1242327841847055494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_13
+      rect:
+        serializedVersion: 2
+        x: 4688
+        y: 18
+        width: 1020
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab2c5f4904554d90800000000000000
+      internalID: -7114187637398951003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_14
+      rect:
+        serializedVersion: 2
+        x: 5896
+        y: 0
+        width: 1020
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e374fe7d69b6cd090800000000000000
+      internalID: -8008407741759535298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_15
+      rect:
+        serializedVersion: 2
+        x: 7056
+        y: 27
+        width: 1020
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e835cfbedaea79a90800000000000000
+      internalID: -7307179808373582962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_16
+      rect:
+        serializedVersion: 2
+        x: 8195
+        y: 0
+        width: 1021
+        height: 1189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 768a461faa65fc7f0800000000000000
+      internalID: -590157733967910809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnnemmiVolantBlesser_17
+      rect:
+        serializedVersion: 2
+        x: 9339
+        y: 13
+        width: 1020
+        height: 1190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04a2bcb25b447e70800000000000000
+      internalID: 9111990764802581518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

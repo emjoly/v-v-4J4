@@ -11,7 +11,7 @@ public class BossManager : MonoBehaviour
     {
         if (hand1.isDead && hand2.isDead)
         {
-            StartCoroutine(LoadSceneAfterDelay(2));
+            StartCoroutine(LoadSceneAfterDelay(7));
         }
     }
 

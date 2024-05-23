@@ -9,11 +9,13 @@ public class HandAnim : MonoBehaviour
     private float moveStartTime;
     private Coroutine handRoutine;
     private Boss boss;
+    private Animator animator;
 
     void Start()
     {
         initialPosition = transform.position;
         boss = GetComponentInParent<Boss>();
+        animator = GetComponent<Animator>();
     }
 
     void OnEnable()
@@ -68,6 +70,38 @@ public class HandAnim : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         this.gameObject.SetActive(false);
+    }
+
+    public void PlayHurtAnimation()
+    {
+        if (animator != null && !animator.GetCurrentAnimatorStateInfo(0).IsName("handDommage"))
+        {
+            animator.SetTrigger("handDommage");
+            animator.SetBool("isHurt", true);
+            StartCoroutine(ResetHurtAfterDelay());
+        }
+    }
+
+    public void PlayDeathAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("handDeath");
+        }
+    }
+
+    private IEnumerator ResetHurtAfterDelay()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        ResetHurt();
+    }
+
+    public void ResetHurt()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("isHurt", false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -15,11 +15,13 @@ public class PoingtAnim : MonoBehaviour
     public GameObject ActivationMains;
     private Coroutine fistRoutine;
     public bool bossIsDead = false;
+    private Animator animator;
 
     void Start()
     {
         transform.position = new Vector3(player.position.x, player.position.y + 10, transform.position.z);
         fistRoutine = StartCoroutine(FistRoutine());
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -95,6 +97,37 @@ public class PoingtAnim : MonoBehaviour
             }
 
             isMoving = true;
+        }
+    }
+
+public void PlayHurtAnimation()
+{
+    if (animator != null && !animator.GetCurrentAnimatorStateInfo(0).IsName("handDommage"))
+    {
+        animator.SetTrigger("handDommage");
+        animator.SetBool("isHurt", true);
+        StartCoroutine(ResetHurtAfterDelay());
+    }
+}
+
+    public void PlayDeathAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("handDeath");
+        }
+    }
+    private IEnumerator ResetHurtAfterDelay()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // Wait for the animation to complete
+        ResetHurt();
+    }
+
+    public void ResetHurt()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("isHurt", false);
         }
     }
 }
