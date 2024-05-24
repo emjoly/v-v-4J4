@@ -1,0 +1,450 @@
+fileFormatVersion: 2
+guid: 22444cdc9b25ee749b57f146cb8f2e81
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3330894822948023565
+    second: Transformation Sprite Sheet_0
+  - first:
+      213: -4570898602016292708
+    second: Transformation Sprite Sheet_1
+  - first:
+      213: 7465112345038519530
+    second: Transformation Sprite Sheet_2
+  - first:
+      213: 3939492828972074399
+    second: Transformation Sprite Sheet_3
+  - first:
+      213: 1559273422532973177
+    second: Transformation Sprite Sheet_4
+  - first:
+      213: 8256892460953463272
+    second: Transformation Sprite Sheet_5
+  - first:
+      213: 5984031250182556153
+    second: Transformation Sprite Sheet_6
+  - first:
+      213: 7205083075301490517
+    second: Transformation Sprite Sheet_7
+  - first:
+      213: -6316985262631934044
+    second: Transformation Sprite Sheet_8
+  - first:
+      213: -5254438105647463486
+    second: Transformation Sprite Sheet_9
+  - first:
+      213: -6411429253984260167
+    second: Transformation Sprite Sheet_10
+  - first:
+      213: 6768628543013774544
+    second: Transformation Sprite Sheet_11
+  - first:
+      213: -2756174664899513150
+    second: Transformation Sprite Sheet_12
+  - first:
+      213: 4283482221890654568
+    second: Transformation Sprite Sheet_13
+  - first:
+      213: -2843666229827391602
+    second: Transformation Sprite Sheet_14
+  - first:
+      213: 7101803964144593071
+    second: Transformation Sprite Sheet_15
+  - first:
+      213: -1204021197686254465
+    second: Transformation Sprite Sheet_16
+  - first:
+      213: -4917388157504857654
+    second: Transformation Sprite Sheet_17
+  - first:
+      213: 6474508574059054259
+    second: Transformation Sprite Sheet_18
+  - first:
+      213: 6090161500624196075
+    second: Transformation Sprite Sheet_19
+  - first:
+      213: 4802225239183775692
+    second: Transformation Sprite Sheet_20
+  - first:
+      213: -270137117720192700
+    second: Transformation Sprite Sheet_21
+  - first:
+      213: 3054774020452909418
+    second: Transformation Sprite Sheet_22
+  - first:
+      213: 4370357202615156546
+    second: Transformation Sprite Sheet_23
+  - first:
+      213: 2516493955181235624
+    second: Transformation Sprite Sheet_24
+  - first:
+      213: -1166052460764711423
+    second: Transformation Sprite Sheet_25
+  - first:
+      213: -7967972933695231057
+    second: Transformation Sprite Sheet_26
+  - first:
+      213: -7773004944774607304
+    second: Transformation Sprite Sheet_27
+  - first:
+      213: 7676573011957772105
+    second: Transformation Sprite Sheet_28
+  - first:
+      213: 427269311275511471
+    second: Transformation Sprite Sheet_29
+  - first:
+      213: -5138213597161332141
+    second: Transformation Sprite Sheet_30
+  - first:
+      213: -8566808823325104319
+    second: Transformation Sprite Sheet_31
+  - first:
+      213: -6203914270972002587
+    second: Transformation Sprite Sheet_32
+  - first:
+      213: 599791566789592122
+    second: Transformation Sprite Sheet_33
+  - first:
+      213: -1868127121748448311
+    second: Transformation Sprite Sheet_34
+  - first:
+      213: 16565343222852200
+    second: Transformation Sprite Sheet_35
+  - first:
+      213: 3641367193988513496
+    second: Transformation Sprite Sheet_36
+  - first:
+      213: 5908591324102892665
+    second: Transformation Sprite Sheet_37
+  - first:
+      213: -7616077315763268915
+    second: Transformation Sprite Sheet_38
+  - first:
+      213: 8092962573108179362
+    second: Transformation Sprite Sheet_39
+  - first:
+      213: 8175366745773898781
+    second: Transformation Sprite Sheet_40
+  - first:
+      213: -7484039641627771736
+    second: Transformation Sprite Sheet_41
+  - first:
+      213: 8984822388665254312
+    second: Transformation Sprite Sheet_42
+  - first:
+      213: -5175646954617767763
+    second: Transformation Sprite Sheet_43
+  - first:
+      213: -7478947803778137747
+    second: Transformation Sprite Sheet_44
+  - first:
+      213: 3101396404911212767
+    second: Transformation Sprite Sheet_45
+  - first:
+      213: -7978300679592048389
+    second: Transformation Sprite Sheet_46
+  - first:
+      213: 1825942260206828804
+    second: Transformation Sprite Sheet_47
+  - first:
+      213: 2351118076173575209
+    second: Transformation Sprite Sheet_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 6242
+        y: 43
+        width: 730
+        height: 639
+      alignment: 9
+      pivot: {x: 0.24568574, y: 0.053993344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab2b2b35d21c6190800000000000000
+      internalID: -7967972933695231057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 7386
+        y: 43
+        width: 1133
+        height: 1251
+      alignment: 9
+      pivot: {x: 0.27247646, y: 0.02831619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faea002cc27fde500800000000000000
+      internalID: 427269311275511471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 79
+        width: 745
+        height: 648
+      alignment: 9
+      pivot: {x: 0.49865314, y: 0.04315294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb29e0d7441316e0800000000000000
+      internalID: -1868127121748448311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 79
+        width: 774
+        height: 792
+      alignment: 9
+      pivot: {x: 0.5103725, y: 0.038788516}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1f4a6f49aff4070800000000000000
+      internalID: 8092962573108179362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 4120
+        y: 66
+        width: 748
+        height: 442
+      alignment: 9
+      pivot: {x: 0.5053665, y: 0.034568734}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cf4668dbcb47170800000000000000
+      internalID: 8175366745773898781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 5126
+        y: 62
+        width: 749
+        height: 445
+      alignment: 9
+      pivot: {x: 0.5040197, y: 0.039961636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acb5db1999532890800000000000000
+      internalID: -7484039641627771736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 82
+        width: 725
+        height: 275
+      alignment: 9
+      pivot: {x: 0.46539602, y: 0.09129567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61cd1ef890753890800000000000000
+      internalID: -7478947803778137747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Transformation Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 87
+        width: 724
+        height: 266
+      alignment: 9
+      pivot: {x: 0.4487153, y: 0.11519362}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d7008bfcc075910800000000000000
+      internalID: 1825942260206828804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 65b60d576b18e5b468a7246ba5054676
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Transformation Sprite Sheet_26: -7967972933695231057
+      Transformation Sprite Sheet_29: 427269311275511471
+      Transformation Sprite Sheet_34: -1868127121748448311
+      Transformation Sprite Sheet_39: 8092962573108179362
+      Transformation Sprite Sheet_40: 8175366745773898781
+      Transformation Sprite Sheet_41: -7484039641627771736
+      Transformation Sprite Sheet_44: -7478947803778137747
+      Transformation Sprite Sheet_47: 1825942260206828804
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

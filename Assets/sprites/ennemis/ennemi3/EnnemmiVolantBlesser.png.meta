@@ -551,7 +551,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnnemmiVolantBlesser_0: 5212568274804980305
+      EnnemmiVolantBlesser_1: -2595975599949096433
+      EnnemmiVolantBlesser_10: 7435296295323305599
+      EnnemmiVolantBlesser_11: 7914641011965068508
+      EnnemmiVolantBlesser_12: 1242327841847055494
+      EnnemmiVolantBlesser_13: -7114187637398951003
+      EnnemmiVolantBlesser_14: -8008407741759535298
+      EnnemmiVolantBlesser_15: -7307179808373582962
+      EnnemmiVolantBlesser_16: -590157733967910809
+      EnnemmiVolantBlesser_17: 9111990764802581518
+      EnnemmiVolantBlesser_2: -1428743329411812394
+      EnnemmiVolantBlesser_3: 3910775414360728175
+      EnnemmiVolantBlesser_4: 5531784179651988205
+      EnnemmiVolantBlesser_5: -8904108081840342540
+      EnnemmiVolantBlesser_6: 1265249673620060644
+      EnnemmiVolantBlesser_7: 233724563447427552
+      EnnemmiVolantBlesser_8: 7768181652643518922
+      EnnemmiVolantBlesser_9: 374157162334535460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -40,6 +40,7 @@ public class EnnemyFollowDamage : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Die();
+                Destroy(gameObject, 1.5f);
             }
 
             lastDamageTakenTime = Time.time;
