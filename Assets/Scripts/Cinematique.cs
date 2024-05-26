@@ -8,7 +8,6 @@ public class VideoPlayerController : MonoBehaviour
 
     void Start()
     {
-       
         videoPlayer.loopPointReached += OnVideoFinished;
     }
 

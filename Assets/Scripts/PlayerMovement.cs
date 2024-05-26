@@ -67,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip SonSaut;
     public AudioClip SonMort;
 
-
     // Si le joueur est mort ou blesse
     public bool isDead = false;
     public bool isBlesse = false;
@@ -306,7 +305,7 @@ public class PlayerMovement : MonoBehaviour
     void ExtraJump()
     {
         SceneCourante = SceneManager.GetActiveScene().name;
-        if (SceneCourante != "Lvl2")
+        if (SceneCourante != "Lvl2" && SceneCourante != "Lvl3")
         {
             return;
         }
@@ -359,9 +358,13 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);// Détruire l'objet avec le tag "Vie"
             // Ajouter un son !!!
         }
-        if (collision.gameObject.CompareTag("PicSol"))
+        else if (collision.gameObject.CompareTag("PicSol"))
         {
             Die();
+        }
+        else if (collision.gameObject.name == "Level3")
+        {
+            SceneManager.LoadScene("Lvl3");
         }
     }
 

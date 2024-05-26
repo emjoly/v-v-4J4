@@ -119,7 +119,7 @@ public void PlayHurtAnimation()
     }
     private IEnumerator ResetHurtAfterDelay()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // Wait for the animation to complete
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         ResetHurt();
     }
 

@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     private Vector2 target;
     Rigidbody2D bulletRB;
 
-    private float damageCooldown = 1.5f; // 2 seconds cooldown
+    private float damageCooldown = 1.5f;
     private float lastDamageTime;
 
     // Start is called before the first frame update

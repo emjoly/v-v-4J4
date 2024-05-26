@@ -3,15 +3,13 @@ using UnityEngine;
 
 public class EnnemyFollowDamage : MonoBehaviour
 {
-    // Int for the maximum health of the enemy
     public int maxHealth = 100;
-    // Int for the current health
     int currentHealth;
 
     public Animator animator;
     public AudioClip SonBlesse;
 
-    private float damageCooldown = 1.5f; // 2 seconds cooldown
+    private float damageCooldown = 1.5f;
     private float lastDamageTakenTime;
 
     private bool isDead = false;
@@ -22,7 +20,6 @@ public class EnnemyFollowDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Initialize the current health to the maximum health
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
     }
@@ -35,12 +32,12 @@ public class EnnemyFollowDamage : MonoBehaviour
             currentHealth -= damage;
             animator.SetTrigger("AMal");
             GetComponent<AudioSource>().PlayOneShot(SonBlesse);
-            StartCoroutine(BlesseBack2False(1.0f)); // freeze when it is hurt
+            StartCoroutine(BlesseBack2False(1.0f));
 
             if (currentHealth <= 0)
             {
                 Die();
-                Destroy(gameObject, 1.5f);
+                Destroy(gameObject, 1f);
             }
 
             lastDamageTakenTime = Time.time;
@@ -52,13 +49,11 @@ public class EnnemyFollowDamage : MonoBehaviour
         isBlesse = false;
     }
 
-    // Function for the death of the enemy
     void Die()
     {
         Debug.Log("Ennemi mort");
         animator.SetBool("EstMort", true);
         GetComponent<Collider2D>().enabled = false;
-        // Disable the enemy
         this.enabled = false;
         ennemyFollow.enabled = false; 
         isDead = true;
