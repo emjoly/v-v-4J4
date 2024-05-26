@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 22
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -161,10 +161,10 @@ TextureImporter:
       name: Side Hand death spriteSheet_1
       rect:
         serializedVersion: 2
-        x: 91
+        x: 87
         y: 68
-        width: 129
-        height: 242
+        width: 133
+        height: 243
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Side Hand death spriteSheet_4
       rect:
         serializedVersion: 2
-        x: 331
+        x: 327
         y: 68
-        width: 129
-        height: 242
+        width: 133
+        height: 244
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
         serializedVersion: 2
         x: 501
         y: 69
-        width: 286
-        height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 280
+        height: 237
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48216558}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,10 +224,10 @@ TextureImporter:
       name: Side Hand death spriteSheet_9
       rect:
         serializedVersion: 2
-        x: 845
+        x: 850
         y: 69
-        width: 322
-        height: 72
+        width: 317
+        height: 232
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Side Hand death spriteSheet_15
       rect:
         serializedVersion: 2
-        x: 1258
+        x: 1261
         y: 68
-        width: 190
-        height: 33
+        width: 187
+        height: 229
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

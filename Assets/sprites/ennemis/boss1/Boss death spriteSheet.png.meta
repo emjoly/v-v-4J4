@@ -114,7 +114,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -179,12 +179,12 @@ TextureImporter:
       name: Boss death spriteSheet_4
       rect:
         serializedVersion: 2
-        x: 68
-        y: 77
-        width: 309
+        x: 72
+        y: 73
+        width: 310
         height: 487
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45887294, y: 0.4799804}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,9 +203,9 @@ TextureImporter:
         x: 502
         y: 73
         width: 309
-        height: 491
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 487
+      alignment: 9
+      pivot: {x: 0.45873985, y: 0.47382057}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,12 +221,12 @@ TextureImporter:
       name: Boss death spriteSheet_6
       rect:
         serializedVersion: 2
-        x: 926
+        x: 931
         y: 86
-        width: 318
-        height: 478
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 313
+        height: 468
+      alignment: 9
+      pivot: {x: 0.4373093, y: 0.4631036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,12 +242,12 @@ TextureImporter:
       name: Boss death spriteSheet_7
       rect:
         serializedVersion: 2
-        x: 1312
-        y: 61
-        width: 331
-        height: 498
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1308
+        y: 62
+        width: 335
+        height: 491
+      alignment: 9
+      pivot: {x: 0.43439758, y: 0.48881018}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,12 +263,12 @@ TextureImporter:
       name: Boss death spriteSheet_18
       rect:
         serializedVersion: 2
-        x: 1698
-        y: 55
-        width: 382
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1705
+        y: 61
+        width: 368
+        height: 571
+      alignment: 9
+      pivot: {x: 0.5106523, y: 0.77305305}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

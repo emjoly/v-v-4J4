@@ -112,19 +112,18 @@ void FinDialogue()
     // On désactive l'animation
     animator.SetBool("IsOpen", false);
     PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-    playerMovement.enabled = true; 
+    playerMovement.enabled = true;
 
-    // Find and activate GameObjects with the tag "BossHand"
-    foreach (GameObject bossHand in Resources.FindObjectsOfTypeAll<GameObject>())
-    {
-        if (bossHand.tag == "Boss")
+        foreach (GameObject bossHand in Resources.FindObjectsOfTypeAll<GameObject>())
         {
-            bossHand.SetActive(true);
+            if (bossHand.name == "Fist")
+            {
+                bossHand.SetActive(true);
+            }
         }
-    }
 
-    // Find and activate the BossHealthSlider GameObject
-    GameObject bossHealthSlider = System.Array.Find(Resources.FindObjectsOfTypeAll<GameObject>(), obj => obj.name == "BossHealthSlider");
+        // Find and activate the BossHealthSlider GameObject
+        GameObject bossHealthSlider = System.Array.Find(Resources.FindObjectsOfTypeAll<GameObject>(), obj => obj.name == "BossHealthSlider");
     if (bossHealthSlider != null)
     {
         bossHealthSlider.SetActive(true);

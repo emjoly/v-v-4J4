@@ -34,10 +34,11 @@ public class DialogueActivation : MonoBehaviour
 
     public void TakeHit()
     {
+        Debug.Log("Boss hit count: " + hitCount); // Add this line for debugging
         hitCount++;
-        if (hitCount >= 3)
+        if (hitCount == 1)
         {
-            PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+            CapsuleCollider2D collider = GetComponent<CapsuleCollider2D>();
             if (collider != null)
             {
                 collider.enabled = false;
@@ -54,6 +55,16 @@ public class DialogueActivation : MonoBehaviour
             TriggerDialogue();
             camPerso.enabled = false;
             camBoss.enabled = true;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Boss collided with player!"); // Debug for collision with player
+
+            // Call TakeHit() when the boss collides with the player
+            TakeHit();
         }
     }
 

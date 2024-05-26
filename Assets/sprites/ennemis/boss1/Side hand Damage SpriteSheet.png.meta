@@ -132,7 +132,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 22
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -197,12 +197,12 @@ TextureImporter:
       name: Side hand Damage SpriteSheet_13
       rect:
         serializedVersion: 2
-        x: 9
+        x: 36
         y: 18
-        width: 185
-        height: 334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 133
+        height: 243
+      alignment: 9
+      pivot: {x: 0.5046232, y: 0.49240878}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,10 +218,10 @@ TextureImporter:
       name: Side hand Damage SpriteSheet_15
       rect:
         serializedVersion: 2
-        x: 236
+        x: 268
         y: 18
-        width: 194
-        height: 334
+        width: 133
+        height: 243
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,12 +239,12 @@ TextureImporter:
       name: Side hand Damage SpriteSheet_17
       rect:
         serializedVersion: 2
-        x: 435
+        x: 460
         y: 18
-        width: 235
-        height: 335
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 189
+        height: 305
+      alignment: 9
+      pivot: {x: 0.49023953, y: 0.3951663}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: Side hand Damage SpriteSheet_20
       rect:
         serializedVersion: 2
-        x: 747
+        x: 749
         y: 18
-        width: 240
-        height: 334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 234
+        height: 329
+      alignment: 9
+      pivot: {x: 0.49733844, y: 0.36052623}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
