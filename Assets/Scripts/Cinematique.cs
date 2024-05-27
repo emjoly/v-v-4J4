@@ -8,10 +8,18 @@ public class VideoPlayerController : MonoBehaviour
 
     void Start()
     {
-        videoPlayer.loopPointReached += OnVideoFinished;
+        videoPlayer.loopPointReached += vp => LoadNextScene();
     }
 
-    void OnVideoFinished(VideoPlayer vp)
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadNextScene();
+        }
+    }
+
+    void LoadNextScene()
     {
         SceneManager.LoadScene("Lvl1");
     }
