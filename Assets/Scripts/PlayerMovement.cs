@@ -308,7 +308,7 @@ public class PlayerMovement : MonoBehaviour
     void ExtraJump()
     {
         SceneCourante = SceneManager.GetActiveScene().name;
-        if (SceneCourante != "Lvl2" && SceneCourante != "Lvl3")
+        if (SceneCourante != "Lvl2" && SceneCourante != "lvl3")
         {
             return;
         }
@@ -368,7 +368,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.name == "Level3")
         {
-            SceneManager.LoadScene("Lvl3");
+            SceneManager.LoadScene("Cine3");
         }
 
     }
