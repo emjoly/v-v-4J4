@@ -78,7 +78,7 @@ public class Ennemi : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Die();
-                Destroy(gameObject, 1.5f);
+                Destroy(gameObject, 1f);
             }
 
             lastDamageTakenTime = Time.time;

@@ -16,6 +16,7 @@ public class PoingtAnim : MonoBehaviour
     private Coroutine fistRoutine;
     public bool bossIsDead = false;
     private Animator animator;
+    private float startTime;
 
     void Start()
     {
@@ -34,6 +35,14 @@ public class PoingtAnim : MonoBehaviour
         if (isMoving)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Ground") && Time.time - startTime >= 10)
+        {
+            isMoving = false;
         }
     }
 
@@ -79,7 +88,17 @@ public class PoingtAnim : MonoBehaviour
             }
 
             isMoving = true;
-            yield return new WaitForSeconds(10);
+            startTime = Time.time;
+
+            while (Time.time - startTime < 10)
+            {
+                yield return null;
+            }
+
+            while (isMoving)
+            {
+                yield return null;
+            }
 
             if (bossIsDead)
             {
@@ -87,8 +106,7 @@ public class PoingtAnim : MonoBehaviour
                 yield break;
             }
 
-            isMoving = false;
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(4);
 
             if (bossIsDead)
             {
@@ -100,34 +118,19 @@ public class PoingtAnim : MonoBehaviour
         }
     }
 
-public void PlayHurtAnimation()
-{
-    if (animator != null && !animator.GetCurrentAnimatorStateInfo(0).IsName("handDommage"))
+    public void PlayHurtAnimation()
     {
-        animator.SetTrigger("handDommage");
-        animator.SetBool("isHurt", true);
-        StartCoroutine(ResetHurtAfterDelay());
+        if (animator != null)
+        {
+            animator.SetTrigger("handHurt");
+        }
     }
-}
 
     public void PlayDeathAnimation()
     {
         if (animator != null)
         {
             animator.SetTrigger("handDeath");
-        }
-    }
-    private IEnumerator ResetHurtAfterDelay()
-    {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        ResetHurt();
-    }
-
-    public void ResetHurt()
-    {
-        if (animator != null)
-        {
-            animator.SetBool("isHurt", false);
         }
     }
 }

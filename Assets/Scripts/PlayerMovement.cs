@@ -70,6 +70,9 @@ public class PlayerMovement : MonoBehaviour
     // Si le joueur est mort ou blesse
     public bool isDead = false;
     public bool isBlesse = false;
+
+    private bool canTakeDamage = true;
+    private float damageCooldown = 2f;
     
 
     void Start()
@@ -336,18 +339,13 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si le joueur entre en collision avec un ennemi qui a le tag Enemy
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamage(10); // Réduit la vie du joueur de 10
-            // faudrait ajouter que sil attaque il perd pas de vie et linsecte recul un peu?
-        }
         if (collision.gameObject.CompareTag("Ground"))
         {
             animator.SetBool("Monte", false);
             isJumping = false;
         }
     }
+    
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -358,6 +356,12 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);// Détruire l'objet avec le tag "Vie"
             // Ajouter un son !!!
         }
+        // Si le joueur entre en collision avec un ennemi qui a le tag SnB
+        else if (collision.gameObject.CompareTag("SnB") && canTakeDamage)
+        {
+            TakeDamage(20);
+            StartCoroutine(DamageCooldown());
+        }
         else if (collision.gameObject.CompareTag("PicSol"))
         {
             Die();
@@ -366,6 +370,14 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("Lvl3");
         }
+
+    }
+
+    private IEnumerator DamageCooldown()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageCooldown);
+        canTakeDamage = true;
     }
 
     void Die()

@@ -51,7 +51,7 @@ public class HandAnim2 : MonoBehaviour
             yield return new WaitUntil(() => Time.time - moveStartTime > 15);
 
             isMoving = false;
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(4);
         }
     }
 

@@ -19,6 +19,7 @@ TagManager:
   - Boss
   - Wall
   - BrisPlateforme
+  - SnB
   layers:
   - Default
   - TransparentFX
