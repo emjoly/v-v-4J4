@@ -11,8 +11,8 @@ public class DialogueActivation2 : MonoBehaviour
 
     private bool dialogueTriggered = false;
 
-/*     public CinemachineVirtualCamera camPerso;
-    public CinemachineVirtualCamera camBoss; */
+    public CinemachineVirtualCamera camPerso;
+    public CinemachineVirtualCamera camBoss;
 
     public void TriggerDialogue()
     {
@@ -53,8 +53,8 @@ public class DialogueActivation2 : MonoBehaviour
             spriteRenderer.color = color;
         }
         TriggerDialogue();
-/*         camPerso.enabled = false;
-        camBoss.enabled = true; */
+        camPerso.enabled = false;
+        camBoss.enabled = true; 
     }
 
     void OnTriggerEnter2D(Collider2D collision)
