@@ -7,6 +7,7 @@ public class SpikesAndBeam : MonoBehaviour
     public GameObject[] beamObjects;
 
     private float timer = 0;
+    private float cycleDuration = 15f; // Total duration of one cycle
 
     void OnEnable()
     {
@@ -68,7 +69,7 @@ public class SpikesAndBeam : MonoBehaviour
             beamObjects[4].SetActive(true); // Activate beam 5
             beamObjects[5].SetActive(true); // Activate beam 6
         }
-        // New behavior (18 to 20 seconds)
+        // New behavior (13 to 15 seconds)
         else if (timer >= 13 && timer < 15)
         {
             foreach (GameObject spike in spikeObjects)
@@ -91,6 +92,12 @@ public class SpikesAndBeam : MonoBehaviour
             {
                 beam.SetActive(false);
             }
+        }
+
+        // Reset timer and loop
+        if (timer >= cycleDuration)
+        {
+            timer = 0;
         }
     }
 }
