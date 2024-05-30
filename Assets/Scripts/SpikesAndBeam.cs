@@ -7,11 +7,10 @@ public class SpikesAndBeam : MonoBehaviour
     public GameObject[] beamObjects;
 
     private float timer = 0;
-    private float cycleDuration = 15f; // Total duration of one cycle
+    private float cycleDuration = 15f;
 
     void OnEnable()
     {
-        // Reset the timer whenever the GameObject is activated
         timer = 0;
     }
 
@@ -19,7 +18,6 @@ public class SpikesAndBeam : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // Previous behavior (2 to 3.5 seconds)
         if (timer > 2 && timer < 3.5)
         {
             foreach (GameObject spike in spikeObjects)
@@ -34,7 +32,6 @@ public class SpikesAndBeam : MonoBehaviour
                 spike.SetActive(false);
             }
         }
-        // Previous behavior (5 to 6.5 seconds)
         else if (timer > 4.5 && timer < 6.5)
         {
             foreach (GameObject beam in beamObjects)
@@ -51,25 +48,25 @@ public class SpikesAndBeam : MonoBehaviour
         }
         else if (timer >= 7.5 && timer < 9.5)
         {
-            spikeObjects[0].SetActive(true); // Activate spike 1
-            spikeObjects[1].SetActive(true); // Activate spike 2
-            spikeObjects[5].SetActive(true); // Activate spike 3
-            spikeObjects[6].SetActive(true); // Activate spike 4
-            beamObjects[2].SetActive(true); // Activate beam 3
-            beamObjects[3].SetActive(true); // Activate beam 4
+            spikeObjects[0].SetActive(true);
+            spikeObjects[1].SetActive(true);
+            spikeObjects[5].SetActive(true);
+            spikeObjects[6].SetActive(true);
+            beamObjects[2].SetActive(true);
+            beamObjects[3].SetActive(true);
         }
 
         else if (timer >= 10.5 && timer < 12)
         {
-            spikeObjects[2].SetActive(true); // Activate spike 5
-            spikeObjects[3].SetActive(true); // Activate spike 6
-            spikeObjects[4].SetActive(true); // Activate spike 7
-            beamObjects[0].SetActive(true); // Activate beam 1
-            beamObjects[1].SetActive(true); // Activate beam 2
-            beamObjects[4].SetActive(true); // Activate beam 5
-            beamObjects[5].SetActive(true); // Activate beam 6
+            spikeObjects[2].SetActive(true);
+            spikeObjects[3].SetActive(true);
+            spikeObjects[4].SetActive(true);
+            beamObjects[0].SetActive(true);
+            beamObjects[1].SetActive(true);
+            beamObjects[4].SetActive(true);
+            beamObjects[5].SetActive(true);
         }
-        // New behavior (13 to 15 seconds)
+
         else if (timer >= 13 && timer < 15)
         {
             foreach (GameObject spike in spikeObjects)
@@ -83,7 +80,6 @@ public class SpikesAndBeam : MonoBehaviour
         }
         else
         {
-            // Deactivate all spikes and beams
             foreach (GameObject spike in spikeObjects)
             {
                 spike.SetActive(false);
@@ -94,7 +90,6 @@ public class SpikesAndBeam : MonoBehaviour
             }
         }
 
-        // Reset timer and loop
         if (timer >= cycleDuration)
         {
             timer = 0;

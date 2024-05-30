@@ -64,6 +64,19 @@ public class PlayerCombat : MonoBehaviour
                 Boss boss = enemy.GetComponent<Boss>();
                 boss.TakeDamage(DommageAttaque);
             }
+        else if (enemy.CompareTag("BossVV"))
+        {
+            Boss2 boss2 = enemy.GetComponent<Boss2>();
+            if (boss2 != null)
+            {
+                boss2.TakeDamage(DommageAttaque);
+                Debug.Log("BossVV hit with damage: " + DommageAttaque);
+            }
+            else
+            {
+                Debug.LogError("Boss2 component not found on " + enemy.name);
+            }
+        }
             else
             {
                 EnnemyFollowDamage EnnemiVolant = enemy.GetComponent<EnnemyFollowDamage>();

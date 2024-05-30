@@ -22,6 +22,9 @@ public class DialogueReglages2 : MonoBehaviour
     public AudioClip newBackgroundMusic; 
 
     public GameObject spikesAndBeamController;
+    public GameObject Boss;
+    public GameObject Plat1;
+    public GameObject Plat2;
 
     // Delay duration
     private float delayDuration = 2f;
@@ -122,6 +125,9 @@ public class DialogueReglages2 : MonoBehaviour
         animator.SetBool("IsOpen", false);
         PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         playerMovement.enabled = true;
+        Boss.SetActive(true);
+        Plat1.SetActive(true);
+        Plat2.SetActive(true);
 
         // Start the delay coroutine
         StartCoroutine(ActivateSpikesAndBeamControllerWithDelay());
