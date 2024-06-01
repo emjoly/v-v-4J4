@@ -45,18 +45,13 @@ public class Boss2 : MonoBehaviour
                 animator.SetTrigger("Pardon");
                 // Désactiver les spikes et les beams
                 SpikesAndBEAMS.SetActive(false);
-                // Activer l'image pour choix du joueur
-                choixJoueur.SetActive(true);
+                // Attendre 3 secondes avant d'activer l'image pour choix du joueur
+                StartCoroutine(ActivateChoixJoueur());
                 // Désactiver les mouvements du joueur
                 if (playerMovement != null)
                 {
                     playerMovement.enabled = false;
                 }
-
-                // Pause tout. Donner un choix au joueur pour tuer le boss ou le sauver
-                //Canvas avec 2 boutons qui ammenent au scenes.
-                // Si il le tue, On voit l'image en enfer etc.
-                // Si il le sauve, On voit l'autre image
             }
 
             lastDamageTime = Time.time;
@@ -65,5 +60,10 @@ public class Boss2 : MonoBehaviour
                 healthBar.value = currentHealth;
             }
         }
+    }
+        IEnumerator ActivateChoixJoueur()
+    {
+        yield return new WaitForSeconds(3);
+        choixJoueur.SetActive(true);
     }
 }
