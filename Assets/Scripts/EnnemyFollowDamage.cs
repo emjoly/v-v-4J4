@@ -8,6 +8,7 @@ public class EnnemyFollowDamage : MonoBehaviour
 
     public Animator animator;
     public AudioClip SonBlesse;
+    public AudioClip SonExplose;
 
     private float damageCooldown = 1.5f;
     private float lastDamageTakenTime;
@@ -53,6 +54,7 @@ public class EnnemyFollowDamage : MonoBehaviour
     {
         Debug.Log("Ennemi mort");
         animator.SetBool("EstMort", true);
+        GetComponent<AudioSource>().PlayOneShot(SonExplose);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         ennemyFollow.enabled = false; 

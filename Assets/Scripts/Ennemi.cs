@@ -26,6 +26,7 @@ public class Ennemi : MonoBehaviour
     private bool isBlesse = false;
 
     public AudioClip SonBlesse;
+    public AudioClip SonExplose;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +96,7 @@ public class Ennemi : MonoBehaviour
     {
         Debug.Log("Ennemi mort");
         animator.SetBool("EstMort", true);
+        GetComponent<AudioSource>().PlayOneShot(SonExplose);
         GetComponent<Collider2D>().enabled = false;
         rb.velocity = Vector2.zero;
         // On disable l'ennemy

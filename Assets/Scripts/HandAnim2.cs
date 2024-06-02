@@ -10,6 +10,8 @@ public class HandAnim2 : MonoBehaviour
     private Coroutine handRoutine;
     private Boss boss;
     private Animator animator;
+    public AudioClip SonMort;
+    public AudioClip SonBlesse;
 
     void Start()
     {
@@ -78,6 +80,7 @@ public class HandAnim2 : MonoBehaviour
         {
             animator.SetTrigger("handDommage");
             animator.SetBool("isHurt", true);
+            GetComponent<AudioSource>().PlayOneShot(SonBlesse);
             StartCoroutine(ResetHurtAfterDelay());
         }
     }
@@ -87,6 +90,7 @@ public class HandAnim2 : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("handDeath");
+            GetComponent<AudioSource>().PlayOneShot(SonMort);
         }
     }
 

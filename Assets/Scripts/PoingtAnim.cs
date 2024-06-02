@@ -17,6 +17,8 @@ public class PoingtAnim : MonoBehaviour
     public bool bossIsDead = false;
     private Animator animator;
     private float startTime;
+    public AudioClip SonMort;
+    public AudioClip SonBlesse;
 
     void Start()
     {
@@ -123,6 +125,7 @@ public class PoingtAnim : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("handHurt");
+            GetComponent<AudioSource>().PlayOneShot(SonBlesse);
         }
     }
 
@@ -131,6 +134,7 @@ public class PoingtAnim : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("handDeath");
+            GetComponent<AudioSource>().PlayOneShot(SonMort);
         }
     }
 }
