@@ -19,7 +19,7 @@ public class DialogueReglages2 : MonoBehaviour
 
     public DialogueActivation2 dialogueActivation;
     public AudioSource backgroundMusicSource;
-    public AudioClip newBackgroundMusic; 
+    public AudioClip newBackgroundMusic;
 
     public GameObject spikesAndBeamController;
     public GameObject Boss;
@@ -166,5 +166,3 @@ public class DialogueReglages2 : MonoBehaviour
         isDelayActive = false;
     }
 }
-
-

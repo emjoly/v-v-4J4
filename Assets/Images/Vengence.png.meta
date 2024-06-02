@@ -131,120 +131,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 9_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 642
-        width: 64
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ea4aa5c8f0b0df10800000000000000
-      internalID: 2292526792846232288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 9_1
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 605
-        width: 64
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9fdffb9155c087a0800000000000000
-      internalID: -6376880118056362081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 9_2
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 566
-        width: 64
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 399c28a0f7b163b90800000000000000
-      internalID: -7262587116637206125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 9_3
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 527
-        width: 64
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 607a5d79a701b5670800000000000000
-      internalID: 8528428438075582214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 9_4
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 487
-        width: 64
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f56c8ca22edc89370800000000000000
-      internalID: 8329633882085836383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Asset 9_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 146
-        height: 476
+        width: 239
+        height: 679
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,31 +151,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Asset 9_6
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 95
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1407ad82064af9960800000000000000
-      internalID: 7610982628188647489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ca428c8b3ea247f45884284c2ea1e35c
     internalID: 0
     vertices: []
     indices: 
